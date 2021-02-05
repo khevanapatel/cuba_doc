@@ -1,0 +1,67 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card.gulp-section
+                              #section-1-1
+                                  .card-header
+                                    h4.mb-0 JWT
+                                  .card-body
+                                    h6.text-primary Basically JWT use for:
+                                    p Here are some scenarios where JSON Web Tokens are useful:
+                                    p
+                                      b Authorization: 
+                                      | This is the most common scenario for using JWT. Once the user is logged in, each subsequent request will include the JWT, allowing the user to access routes, services, and resources that are permitted with that token. Single Sign On is a feature that widely uses JWT nowadays, because of its small overhead and its ability to be easily used across different domains.
+                                    p
+                                      b Information Exchange: 
+                                      | JSON Web Tokens are a good way of securely transmitting information between parties. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are. Additionally, as the signature is calculated using the header and the payload, you can also verify that the content hasn't been tampered with.
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Login with Jwt
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Jwt
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

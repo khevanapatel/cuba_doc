@@ -1,0 +1,435 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card
+                              #section-1-1
+                                  .card-body
+                                    h4.main-title.mb-0 Loader
+                                    hr.hr
+                                    h5.text-primary How to Remove Loader from Application?
+                                    p.mb-1 Go to app.jsx file and comment or remove Loader section
+                                    p Remove design of loader from src >> layout >> loader >> index.jsx between comment of 
+                                      b Loader starts 
+                                      | to 
+                                      b Loader ends
+                                    .mb-4
+                                      .code-box-copy.mb-3
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#loadercode' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#loadercode.language-html
+                                            | &lt;!-- Loader starts --&gt;
+                                            | &lt;div className={`loader-wrapper ${show ? '' : 'loderhide'}`}&gt;
+                                            |   &lt;div className="loader-index"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+                                            |   &lt;svg&gt;
+                                            |       &lt;defs&gt;&lt;/defs&gt;
+                                            |       &lt;filter id="goo"&gt;
+                                            |       &lt;fegaussianblur in="SourceGraphic" stdDeviation="11" result="blur"&gt;&lt;/fegaussianblur&gt;
+                                            |       &lt;fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"&gt;    &lt;/fecolormatrix&gt;
+                                            |       &lt;/filter&gt;
+                                            |   &lt;/svg&gt;
+                                            | &lt;/div&gt;
+                                      p.mb-1.mt-4 correspondingly remove methods of useEffect from script tag in loader.jsx
+                                      .code-box-copy.mb-3
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#loadercode1' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#loadercode1.language-js
+                                            | const [show, setShow] = useState(true);
+                                            | useEffect(() => {
+                                            |     const timeout = setTimeout(() => {
+                                            |         setShow(false)
+                                            |       }, 3000);
+                                            | 
+                                            |     return () => {
+                                            |         clearTimeout(timeout);
+                                            |       }
+                                            |     
+                                            | },[show]);
+                            .card  
+                              #section-1-2
+                                .card-header
+                                    h4.mb-0 Routing
+                                .card-body
+                                  p Your complete route structure is place at 
+                                    b index.jsx
+                                  p Suppose you are creating a new component (For creating a new component refer 
+                                    a(href="#section-2") create new component 
+                                    | ) then you have to add new routes for that components.
+                                  .mb-1 Import that component in index.jsx
+                                  .code-box-copy.mb-3
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#routecode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#routecode.language-js
+                                        | /* Dashboards */
+                                        | import Default from './components/dashboard/default'
+                                        | import Ecommerce from './components/dashboard/ecommerce'
+                                  p Use that component name with path in routes array in index.jsx
+                                  p.mb-1 
+                                    b %process.env.PUBLIC_URL% :-
+                                    | When you run npm run build, Create React App will substitute %PUBLIC_URL% with a correct absolute path so your project works even if you use client-side routing or host it at a non-root URL.
+                                  .code-box-copy.mb-3
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#routecode1' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#routecode1.language-html
+                                        | &lt;Route exact path={`${process.env.PUBLIC_URL}/`} component={Default} /&gt;
+                                        | &lt;Route path={`${process.env.PUBLIC_URL}/dashboard/default`} component={Default}/&gt;
+                                        | &lt;Route path={`${process.env.PUBLIC_URL}/dashboard/ecommerce`} component={Ecommerce}/&gt; 
+                            .card.gulp-section
+                              #section-1-3
+                                .card-header
+                                  h4.mb-0 Customize or Replace Menu Sidebar
+                                .card-body
+                                  p Suppose you want to change in your menu sidebar or want to add new menu in your menu section then you just need to open src >> layout >> sidebar >> menu.jsx and
+                                  .code-box-copy.mb-3
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#menucode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#menucode.language-js
+                                        | {
+                                        |     title: 'Dashboard', icon: Home, type: 'sub', active: false, children: [
+                                        |         { path: `${process.env.PUBLIC_URL}/dashboard/default`, title: 'Default', type: 'link' },
+                                        |         { path: `${process.env.PUBLIC_URL}/dashboard/ecommerce`, title: 'Ecommerce', type: 'link' },
+                                        |     ]
+                                        | },
+                                  h6.text-primary Variables :
+                                  ul
+                                    li 
+                                      b Path :  
+                                      | Here you have to give path name same as you have given in index.jsx
+                                    li
+                                      b title :  
+                                      | Title is the name that you can see on frontside so here you can give attractive title to showcase your menu item
+                                    li 
+                                      b type : 
+                                      | It denote how you want to open your particular routes means on same page, or on new page on live application. Means suppose you want to open "ecommerce" dashboard on new page then write "extTabLink" in type attribute. Here we have four type attribute:
+                                    li 
+                                      b link : 
+                                      | It simply link with particular routes without loading your page.
+                                    li 
+                                      b sub : 
+                                      | It stop to route your page to next. In most case it use when our menu have children item.
+                                    li 
+                                      b extLink : 
+                                      | It change route with reloading a page (Work like href)
+                                    li 
+                                      b extTabLink : 
+                                      | It change routes and taking us on new tab.
+                            .card.gulp-section
+                              #section-2
+                                .card-header
+                                  h4.mb-0 Add Components
+                                .card-body
+                                  p React provide two types Components :-
+                                  ul.list-none.mb-4
+                                    li - Class Components
+                                    li - Functional Components (Hooks)
+                                  h6.text-primary Class Components
+                                  p Suppose if you want to create a new class component then you just need to create a folder in src >> pages and then create a react file with .jsx extension and then paste code as per your needs.
+                                  .code-box-copy.mb-4
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#componentcode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#componentcode.language-js
+                                        | import React, { Component } from 'react';
+                                        | 
+                                        | class Demo extends Component {
+                                        |     render() {
+                                        |         return (
+                                        |             &lt;div&gt;
+                                        |                 //write Html code or structure
+                                        |             &lt;/div&gt;
+                                        |         );
+                                        |     }
+                                        | }
+                                        | 
+                                        | export default Demo;
+                                  h6.text-primary Functional Component : (Hooks)
+                                  p Suppose if you want to create a new class component then you just need to create a folder in src >> pages and then create a react file with .jsx extension and then paste code as per your needs.
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#componentcode1' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#componentcode1.language-js
+                                        | import React from 'react';
+                                        | const Demo = () => {
+                                        |   return (
+                                        |       &lt;div&gt;
+                                        |         //write Html code or structure
+                                        |       >&lt;/div&gt;
+                                        |     );
+                                        |   };
+                                        | 
+                                        | export default Demo;
+                            .card.gulp-section
+                              #section-1-4
+                                .card-header
+                                  h4.mb-0 Use of Widgets
+                                .card-body
+                                  p Suppose you want to use widget then you need to integrate a particular widget in your existing file. Suppose you want to use calneder components in your dashboard then you need to import that widget in your dashboard
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#widgetcode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#widgetcode.language-js
+                                        | import React, { Component } from 'react';
+                                        | import Datepicker from './datepicker';  //import external dependacy
+                                        |
+                                        | class Demo extends Component {
+                                        |     render() {
+                                        |         return (
+                                        |             &lt;Datepicker&gt; 
+                                        |                 //declare like this here
+                                        |             &lt;/Datepicker&gt;
+                                        |         );
+                                        |     }
+                                        | }
+                                        |
+                                        | export default Demo;
+                            .card.gulp-section
+                              #section-1-5
+                                .card-header
+                                  h4.mb-0 Style customization
+                                .card-body
+                                  p Suppose you want to customize color and font as per your project then you can change it by:
+                                  h6.text-primary Theme Color
+                                  p Suppose you want to customize your theme primary and secondary color then go to 
+                                    b assets >> scss >> color.scss 
+                                    | and give primary and secondary color as per your choice :
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#stylecode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#stylecode.language-css
+                                        | $primary-color: #7366ff;
+                                        | $secondary-color: #f73164;
+                                  p And if you want to convert default color to your require color then go to 
+                                    b assets >> scss >> theme >> _variable.scss 
+                                    | and change 
+                                    b primary 
+                                    | and 
+                                    b secondary 
+                                    | color from there
+                                  p.mb-4 For changing charts color you need to go in 
+                                    b src >> layout >> theme-customizer >> index.jsx 
+                                    | and find color data and change your color their also
+                                  h6.text-primary Variable customization of complete theme
+                                  p.mb-4 Suppose you want to change color and size of card-body, Alert, Badge, Form input, breadcrumb,buttons, footer, sidebar and many more then you just need to change that particular color from 
+                                    b _variable.scss 
+                                    | in 
+                                    b assets >> scss >> theme >> _variable.scss
+                                  h6.text-primary Google Font
+                                  p You can change font of your theme from index.html in public folder
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#fontcode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#fontcode.language-html
+                                        | &lt;link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet"&gt;
+                                        | &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap"&gt;
+                            .card.gulp-section
+                              #section-1-6
+                                .card-header
+                                  h4.mb-0 Theme Customize
+                                .card-body
+                                  h6.text-primary Layouts
+                                  p.mb-1 We have provided a bunch of page layouts and menu layouts that can be implemented with just a options change to body!
+                                  p For creating your dream layout open customizer by click on setting icon
+                                  img.img-fluid.img-70(src="../assets/images/document/custom1.jpg" alt="")
+                                  p.mt-4 You can change your theme by clicking particular setting
+                                  img.img-fluid.img-70(src="../assets/images/document/custom2.jpg" alt="")
+                                  p.mt-4 Then you just need to click on configuration button
+                                  img.img-fluid.img-70(src="../assets/images/document/custom3.jpg" alt="")
+                                  p.mt-4 Configuration popup will be open then just click on copy json button which will copy configuration of theme which you want
+                                  img.img-fluid.img-70(src="../assets/images/document/custom4.jpg" alt="")
+                                  p.mt-4 Now go to our theme >> src >> data >> customizer >> config.jsx and then just replace complete 
+                                    b config.jsx 
+                                    | with your new configuration and re-run theme using npm start.
+                                  .code-box-copy.mb-4
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#themecode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#themecode.language-js
+                                        | {
+                                        |   "settings": {
+                                        |     "layout_type": "ltr",
+                                        |     "sidebar": {
+                                        |     "type": "compact-wrapper",
+                                        |     "body_type": "sidebar-icon"
+                                        |     },
+                                        |     "sidebar_setting": "default-sidebar",
+                                        |   },
+                                        |   "color": {
+                                        |       "primary_color": "#7366ff", 
+                                        |       "secondary_color": "#f73164", 
+                                        |       "mix_background_layout": "light-only",  
+                                        |     },
+                                        |     "router_animation": "fade"
+                                        |   }
+                                        | }
+                                  p Please refer the below table for corresponding classes. it is just for your inforamation you do not need to bother about this it's dynamically take particular classes according to your needs.
+                                  .table-responsive
+                                    table.table
+                                      thead
+                                        tr
+                                          th Layout
+                                          th Options
+                                      tbody
+                                        tr
+                                          td Boxed Layout
+                                            
+                                          td Class: box-layout
+                                        tr
+                                          td RTL Layout
+                                            
+                                          td Class: rtl
+                                        tr
+                                          td Light Layout
+                                            
+                                          td Class: light
+                                        tr
+                                          td Dark Sidebar
+                                            
+                                          td Class: dark-sidebar
+                                        tr
+                                          td Dark Layout
+                                            
+                                          td Class: dark-only
+                                  h6.text-primary.pt-4 Theme options
+                                  p.mb-1 We have some inbuilt themes for sidebar that can be switched with just a class change
+                                  .table-responsive.mb-4
+                                    table.table
+                                      thead
+                                        tr
+                                          th Sidebar
+                                          th Options
+                                      tbody
+                                        tr
+                                          td Horizontal Sidebar type
+                                          td Class: "page-wrapper horizontal-wrapper" and "page-body-wrapper horizontal-menu"
+                                        tr
+                                          td Bordered Navigation
+                                          td Attribute: sidebar-layout="border-sidebar"  
+                                        tr
+                                          td Sidebar icons color
+                                          td Attribute: sidebar-layout="iconcolor-sidebar" 
+                                  .table-responsive
+                                    table.table
+                                      thead
+                                        tr
+                                          th Router Animation
+                                          th Options
+                                      tbody
+                                        tr
+                                          td Select Animation type
+                                          td Zoom Fade, Slide Fade, Fade Bottom, Fade, Zoom Out, None
+                            .card.gulp-section
+                              #section-1-7
+                                .card-header
+                                  h4.mb-0 RTL
+                                .card-body
+                                  p Suppose you want to add RTL in your application then you just need to set "layout_type" as RTL so application will be converted in RTL layout.  
+                                  p.mb-1 Suppose you want to change Colors from config.jsx then you have to first clear localStorage then you will get your color in theme.
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#rtlcode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#rtlcode.language-js
+                                        | {
+                                        |   "settings": {
+                                        |     "layout_type": "rtl",
+                                        |     "sidebar": {
+                                        |       "type": "compact-wrapper",
+                                        |       "body_type": "sidebar-icon"
+                                        |       },
+                                        |       "sidebar_setting": "default-sidebar",
+                                        |   },
+                                        |     "color": {
+                                        |         "primary_color": "#7366ff", 
+                                        |         "secondary_color": "#f73164", 
+                                        |         "mix_background_layout": "light-only",  
+                                        |       },
+                                        |     "router_animation": "fade"
+                                        |   }
+                                        | }
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Customization
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Loader
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-2' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Routing
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-3' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Menu Sidebar
+                                    li.nav-item
+                                      a.nav-link(href='#section-2' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Add Components
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-4' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Use of Widgets
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-5' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Style customization
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-6' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Theme Customize
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-7' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | RTL
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

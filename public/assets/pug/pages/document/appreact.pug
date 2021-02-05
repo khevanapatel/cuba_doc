@@ -1,0 +1,240 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card
+                              #section-1-1
+                                  .card-body
+                                    h4.main-title.mb-0 Application
+                                    hr.hr
+                                    h5.text-primary E-commerce
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/ecommerce.gif" alt="img1")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p You can directly use complete E-commerce app to manage your E-commerce with
+                                          | readymade functionality of Add to cart,Quickview, and Checkout.
+                                          | Apart from that if you want it to use it in your frontend application then you just need
+                                          | to change your json with your API data and you get complete workable E-commerce for your
+                                          | frontend.
+                              #section-1-2
+                                  .card-body
+                                      h5.text-primary Chat
+                                      .row
+                                        .col-xxl-7.col-xl-12.col-md-7
+                                          img.img-border.img-fluid(src="../assets/images/apps/chats.gif" alt="")
+                                        .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                          p In Chat application we provide complete chat designing with basic feature like chat with a people.
+                              #section-1-3
+                                .card-body
+                                    h5.text-primary Gallery
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/gallery.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p Present your amazing ideas and images using our smooth and attractive gallery
+                              #section-1-4
+                                .card-body
+                                    h5.text-primary To-Do
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/to-do.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p Now it's time to Decrease your burden by listing your daily task in our To-do app and feel relax.
+                              #section-1-5
+                                .card-body
+                                    h5.text-primary To-Do with Firebase
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/to-do-firebase.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p Now it's time to Decrease your burden by listing your important task in our To-do Firebase app and feel relax.
+                              #section-1-6
+                                .card-body
+                                    h5.text-primary Email
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/email.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p Use our Email application design to build complete email app
+                              #section-1-7
+                                .card-body
+                                    h5.text-primary Bookmark Search
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/bookmark-search.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p You can Bookmark your Favioute application and pages using search bookmark so you can reach to your favioute app quickly.
+                              #section-1-8
+                                .card-body
+                                    h5.text-primary Task
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/task-app.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p You can ADD New Task to Assigned to me and remove Completed Task
+                              #section-1-9
+                                .card-body
+                                    h5.text-primary Bookmark
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/bookmark-app.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p You Can ADD New Bookmark and then add to your Favioute bookmark or remove from  Favioute bookmark
+                              #section-1-10
+                                .card-body
+                                    h5.text-primary Project
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/project.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p You Can Create New Project  and then list of project to manage  doing and done project
+                              #section-1-11
+                                .card-body
+                                    h5.text-primary File Manager
+                                    .row
+                                      .col-xxl-7.col-xl-12.col-md-7
+                                        img.img-border.img-fluid(src="../assets/images/apps/file-manager.gif" alt="")
+                                      .col-xxl-5.col-xl-12.col-md-5.appDesc
+                                        p You Can Add Selected Files and Upload to upload selected file
+                              #section-1-12
+                                .card-body.gulp-section
+                                    h5.text-primary Calender
+                                    p
+                                       b Installing and usage
+                                    .mb-4
+                                      .code-box-copy.mb-3
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#calendercode' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#calendercode.language-html
+                                            | npm i react-big-calendar
+                                      .code-box-copy.mb-3
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#calendercode1' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#calendercode1.language-js
+                                            | import { Calendar, momentLocalizer } from 'react-big-calendar'
+                                            | import moment from 'moment'
+                                            |  
+                                            | const localizer = momentLocalizer(moment)
+                                            | 
+                                            | const MyCalendar = props => (
+                                            |   &lt;div&gt;
+                                            |     &lt;Calendar
+                                            |         localizer={localizer}
+                                            |         events={myEventsList}
+                                            |         startAccessor="start"
+                                            |         endAccessor="end"
+                                            |         style={{height: 500}}
+                                            |     /&gt;
+                                            |   &lt;/div&gt;
+                                            | )
+                                      a(href="https://www.npmjs.com/package/react-big-calendar" target="_blank").btn.btn-solid  Supplemental 
+                                    h5.text-primary Others
+                                    p There are many others application in Cuba which is help you in improve your knowledge and solve your issues.
+                                    ul
+                                      li Knowledge Base
+                                      li Job Search
+                                      li Learning
+                                      li Social App
+                                      li Kanban Board
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Applications
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | E-commerce
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-2' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Chat
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-3' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Gallery
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-4' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  To-Do
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-5' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | To-Do with Firebase
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-6' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Email
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-7' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Bookmark Search
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-8' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Task
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-9' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Bookmark
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-10' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Project
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-11' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | File Manager
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-12' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Calender
+                        
+                              
+
+
+
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

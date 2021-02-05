@@ -1,0 +1,1600 @@
+- var tree_view             = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                            .row
+                              .col-sm-12.col-xl-6
+                                .card
+                                  .card-header
+                                    h5.main-title React folder Structure
+                                  .card-body
+                                    #treeBasic
+                                      ul
+                                        li(data-jstree='{"opened":true}')
+                                          | cuba
+                                          ul
+                                            li(data-jstree='{"opened":false}')
+                                              | document
+                                              ul
+                                                li.html-icon(data-jstree='{"type":"file"}')
+                                                  | index.html
+                                            li(data-jstree='{"opened":false}')
+                                              | staterkit
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | public
+                                                  ul
+                                                    li.img-icon favicon.png
+                                                    li.html-icon index.html
+                                                    li.img-icon logo192.png
+                                                    li.img-icon logo512.png
+                                                    li.json-icon manifest.json
+                                                    li.txt-icon robots.txt
+                                                li(data-jstree='{"opened":false}')
+                                                  | src
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | assets
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | audio
+                                                          ul
+                                                            li.music-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                              | horse.ogg
+                                                        li(data-jstree='{"opened":false}')
+                                                          | fonts
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | calendar
+                                                            li(data-jstree='{"opened":false}')
+                                                              | feather
+                                                            li(data-jstree='{"opened":false}')
+                                                              | flag-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | font-awesome
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ico
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ionic-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | material-design-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | pe7-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | simple-line-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | summernote
+                                                            li(data-jstree='{"opened":false}')
+                                                              | themify
+                                                            li(data-jstree='{"opened":false}')
+                                                              | typicon-icon
+                                                        li(data-jstree='{"opened":false}')
+                                                          | images
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | appointment
+                                                            li(data-jstree='{"opened":false}')
+                                                              | avtar
+                                                            li(data-jstree='{"opened":false}')
+                                                              | banner
+                                                            li(data-jstree='{"opened":false}')
+                                                              | big-lightgallry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | big-masonry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | blog
+                                                            li(data-jstree='{"opened":false}')
+                                                              | Carousel
+                                                            li(data-jstree='{"opened":false}')
+                                                              | dashboard
+                                                            li(data-jstree='{"opened":false}')
+                                                              | dashboard-2
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ecommerce
+                                                            li(data-jstree='{"opened":false}')
+                                                              | email
+                                                            li(data-jstree='{"opened":false}')
+                                                              | faq
+                                                            li(data-jstree='{"opened":false}')
+                                                              | job-search
+                                                            li(data-jstree='{"opened":false}')
+                                                              | lightgallry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | logo
+                                                            li(data-jstree='{"opened":false}')
+                                                              | masonry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | notification
+                                                            li(data-jstree='{"opened":false}')
+                                                              | other-images
+                                                            li(data-jstree='{"opened":false}')
+                                                              | product
+                                                            li(data-jstree='{"opened":false}')
+                                                              | sidebar-image
+                                                            li(data-jstree='{"opened":false}')
+                                                              | sidebar-pattern
+                                                            li(data-jstree='{"opened":false}')
+                                                              | social-app
+                                                            li(data-jstree='{"opened":false}')
+                                                              | user
+                                                            li(data-jstree='{"opened":false}')
+                                                              | user-card
+                                                            li(data-jstree='{"opened":false}')
+                                                              | welcome
+                                                            li.img-icon
+                                                              | color-picker.png
+                                                            li.img-icon
+                                                              | favicon.png
+                                                            li.img-icon
+                                                              | settings.png
+                                                            li.img-icon
+                                                              | smiley.png
+                                                            li.img-icon
+                                                              | User.jpg
+                                                        li(data-jstree='{"opened":false}')
+                                                          | scss
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | base
+                                                              ul
+                                                                li.scss-icon _reset.scss
+                                                                li.scss-icon _typography.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | components
+                                                              ul
+                                                                li.scss-icon _according.scss
+                                                                li.scss-icon _alert.scss
+                                                                li.scss-icon _avatars.scss
+                                                                li.scss-icon _badge.scss
+                                                                li.scss-icon _bookmark.scss
+                                                                li.scss-icon _breadcrumb.scss
+                                                                li.scss-icon _builders.scss
+                                                                li.scss-icon _buttons.scss
+                                                                li.scss-icon _card.scss
+                                                                li.scss-icon _color.scss
+                                                                li.scss-icon _datatable.scss
+                                                                li.scss-icon _datepicker.scss
+                                                                li.scss-icon _dropdown.scss
+                                                                li.scss-icon _form-input.scss
+                                                                li.scss-icon _form-wizard.scss
+                                                                li.scss-icon _forms.scss
+                                                                li.scss-icon _general.scss
+                                                                li.scss-icon _icons.scss
+                                                                li.scss-icon _list.scss
+                                                                li.scss-icon _loader.scss
+                                                                li.scss-icon _popover.scss
+                                                                li.scss-icon _print.scss
+                                                                li.scss-icon _radio.scss
+                                                                li.scss-icon _react-plugin.scss
+                                                                li.scss-icon _ribbon.scss
+                                                                li.scss-icon slick.scss
+                                                                li.scss-icon slick-theme.scss
+                                                                li.scss-icon _switch.scss
+                                                                li.scss-icon _tab.scss
+                                                                li.scss-icon _table.scss
+                                                                li.scss-icon _touchspin.scss
+                                                                li.scss-icon _tour.scss
+                                                                li.scss-icon _typeahead-search.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | layout
+                                                              ul 
+                                                                li.scss-icon _box-layout.scss
+                                                                li.scss-icon _footer.scss
+                                                                li.scss-icon _grid.scss
+                                                                li.scss-icon _header.scss
+                                                                li.scss-icon _navs.scss
+                                                                li.scss-icon _rtl.scss
+                                                                li.scss-icon _search.scss
+                                                                li.scss-icon _select2.scss
+                                                                li.scss-icon _sidebar.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | pages
+                                                              ul
+                                                                li.scss-icon _blog.scss
+                                                                li.scss-icon _bookmark-app.scss
+                                                                li.scss-icon _calendar.scss
+                                                                li.scss-icon _cart.scss
+                                                                li.scss-icon _chart.scss
+                                                                li.scss-icon _chat.scss
+                                                                li.scss-icon _checkout.scss
+                                                                li.scss-icon _comingsoon.scss
+                                                                li.scss-icon _contacts.scss
+                                                                li.scss-icon _dashboard_2.scss
+                                                                li.scss-icon _dashboard_default.scss
+                                                                li.scss-icon _ecommerce.scss
+                                                                li.scss-icon _email-application.scss
+                                                                li.scss-icon _errorpage.scss
+                                                                li.scss-icon _faq.scss
+                                                                li.scss-icon _file.scss
+                                                                li.scss-icon _gallery.scss
+                                                                li.scss-icon _job-search.scss
+                                                                li.scss-icon _kanban.scss
+                                                                li.scss-icon _knowledgebase.scss
+                                                                li.scss-icon _language.scss
+                                                                li.scss-icon _learning.scss
+                                                                li.scss-icon _login.scss
+                                                                li.scss-icon _megaoption.scss
+                                                                li.scss-icon _order-history.scss
+                                                                li.scss-icon _page.scss
+                                                                li.scss-icon _pricing.scss
+                                                                li.scss-icon _progress.scss
+                                                                li.scss-icon _projectlist.scss
+                                                                li.scss-icon _social-app.scss
+                                                                li.scss-icon _task.scss
+                                                                li.scss-icon _timeline-v.scss
+                                                                li.scss-icon _timeliny.scss
+                                                                li.scss-icon _user-profile.scss
+                                                                li.scss-icon _wishlist.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | themes
+                                                              ul
+                                                                li.scss-icon _dark-sidebar.scss
+                                                                li.scss-icon _dark.scss
+                                                                li.scss-icon _responsive.scss
+                                                                li.scss-icon _theme-customizer.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | utils
+                                                              ul
+                                                                li.scss-icon  _variables.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | vendors
+                                                              ul 
+                                                                li.scss-icon
+                                                                  | chartist.scss
+                                                                li.scss-icon
+                                                                  | feather-icon.scss
+                                                                li.scss-icon
+                                                                  | flag-icon.css
+                                                                li.scss-icon
+                                                                  | icofont.scss
+                                                                li.scss-icon
+                                                                  | ionic-icon.scss
+                                                                li.scss-icon
+                                                                  | simple-line-icon.scss
+                                                                li.scss-icon
+                                                                  | sweetalert2.scss
+                                                                li.scss-icon
+                                                                  | themify.scss
+                                                                li.scss-icon
+                                                                  | todo.scss
+                                                                li.scss-icon
+                                                                  | typicon-icon.scss
+                                                                li.scss-icon
+                                                                  | whether-icon.scss
+                                                                li(data-jstree='{"opened":false}') chartist
+                                                                  ul
+                                                                    li.scss-icon  _chartist-settings.scss
+                                                                    li.scss-icon  _chartist.scss
+                                                                li(data-jstree='{"opened":false}') feather-icon
+                                                                  ul
+                                                                    li.scss-icon  _feather-icon.scss
+                                                                li(data-jstree='{"opened":false}') flag-icon
+                                                                  ul
+                                                                    li.scss-icon _flag-icon-base.scss
+                                                                    li.scss-icon  _flag-icon-list.scss
+                                                                    li.scss-icon _flag-icon-more.scss
+                                                                li(data-jstree='{"opened":false}') font-awesome
+                                                                  ul
+                                                                    li.scss-icon _animated.scss
+                                                                    li.scss-icon _bordered-pulled.scss
+                                                                    li.scss-icon _core.scss
+                                                                    li.scss-icon _fixed-width.scss
+                                                                    li.scss-icon _icons.scss
+                                                                    li.scss-icon _larger.scss
+                                                                    li.scss-icon _list.scss
+                                                                    li.scss-icon _mixins.scss
+                                                                    li.scss-icon _path.scss
+                                                                    li.scss-icon _rotated-flipped.scss
+                                                                    li.scss-icon _screen-reader.scss
+                                                                    li.scss-icon _stacked.scss
+                                                                    li.scss-icon _variables.scss
+                                                                li(data-jstree='{"opened":false}') icoicon
+                                                                  ul
+                                                                    li.scss-icon  _icons.scss
+                                                                li(data-jstree='{"opened":false}') ionic-icon
+                                                                  ul
+                                                                    li.scss-icon  _ionicons-font.scss
+                                                                    li.scss-icon  _ionicons-icons.scss
+                                                                    li.scss-icon  _ionicons-variables.scss
+                                                                li(data-jstree='{"opened":false}') simple-line-icon
+                                                                  ul
+                                                                    li.scss-icon  _simple-line-icons.scss
+                                                                li(data-jstree='{"opened":false}') simple-mde
+                                                                  ul
+                                                                    li.scss-icon   _elements.scss
+                                                                    li.scss-icon   _simplemde.scss
+                                                                li(data-jstree='{"opened":false}') sticky
+                                                                  ul
+                                                                    li.scss-icon   _sticky.scss
+                                                                li(data-jstree='{"opened":false}') themify
+                                                                  ul
+                                                                    li.scss-icon   _core.scss
+                                                                    li.scss-icon   _extras.scss
+                                                                    li.scss-icon   _icons.scss
+                                                                    li.scss-icon   _mixins.scss
+                                                                    li.scss-icon   _path.scss
+                                                                    li.scss-icon   _themify-icons.scss
+                                                                    li.scss-icon   _variables.scss
+                                                                li(data-jstree='{"opened":false}') todo
+                                                                  ul
+                                                                    li.scss-icon   _todo.scss
+                                                                li(data-jstree='{"opened":false}') typicon-icon
+                                                                  ul
+                                                                    li.scss-icon  _typicon-icon.scss
+                                                                li(data-jstree='{"opened":false}') whether-icon
+                                                                  ul
+                                                                    li.scss-icon  _whether-icon.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | video
+                                                          ul
+                                                            li.video-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                              | auth-bg.mp4
+                                                    li(data-jstree='{"opened":false}')
+                                                      | components
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dashboard
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | default
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ecommerce
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | starter-kits
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li.react-icon
+                                                          | app.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | data
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | customizer
+                                                          ul
+                                                            li.react-icon
+                                                              | config.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | layout
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | bookmark
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | breadcrumb
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | footer
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | header
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                            li.react-icon
+                                                              | leftbar.jsx
+                                                            li.react-icon
+                                                              | rightbar.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | loader
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | scroll_to_top
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sidebar
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                            li.react-icon
+                                                              | menu.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | theme-customizer
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | redux
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | customizer
+                                                          ul
+                                                            li.react-icon
+                                                              | reducer.jsx
+                                                        li.react-icon
+                                                          | actionTypes.jsx
+                                                        li.react-icon
+                                                          | index.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | route
+                                                      ul
+                                                        li.react-icon
+                                                          | index.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | store
+                                                      ul
+                                                        li.react-icon
+                                                          | index.jsx
+                                                    li.js-icon App.test.js
+                                                    li.react-icon index.jsx
+                                                    li.scss-icon index.scss
+                                                    li.svg-icon logo.svg
+                                                    li.js-icon serviceWorker.js
+                                                    li.js-icon setupTests.js
+                                                li.nodejs-icon(data-jstree='{"type":"file"}')
+                                                  | package.json
+                                            li(data-jstree='{"opened":false}')
+                                              | theme
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | public
+                                                  ul
+                                                    li.img-icon favicon.png
+                                                    li.html-icon index.html
+                                                    li.img-icon logo192.png
+                                                    li.img-icon logo512.png
+                                                    li.json-icon manifest.json
+                                                    li.txt-icon robots.txt
+                                                li(data-jstree='{"opened":false}')
+                                                  | src
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | assets
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | audio
+                                                          ul
+                                                            li.music-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                              | horse.ogg
+                                                        li(data-jstree='{"opened":false}')
+                                                          | fonts
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | calendar
+                                                            li(data-jstree='{"opened":false}')
+                                                              | feather
+                                                            li(data-jstree='{"opened":false}')
+                                                              | flag-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | font-awesome
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ico
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ionic-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | material-design-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | pe7-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | simple-line-icon
+                                                            li(data-jstree='{"opened":false}')
+                                                              | summernote
+                                                            li(data-jstree='{"opened":false}')
+                                                              | themify
+                                                            li(data-jstree='{"opened":false}')
+                                                              | typicon-icon
+                                                        li(data-jstree='{"opened":false}')
+                                                          | images
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | appointment
+                                                            li(data-jstree='{"opened":false}')
+                                                              | avtar
+                                                            li(data-jstree='{"opened":false}')
+                                                              | banner
+                                                            li(data-jstree='{"opened":false}')
+                                                              | big-lightgallry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | big-masonry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | blog
+                                                            li(data-jstree='{"opened":false}')
+                                                              | Carousel
+                                                            li(data-jstree='{"opened":false}')
+                                                              | dashboard
+                                                            li(data-jstree='{"opened":false}')
+                                                              | dashboard-2
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ecommerce
+                                                            li(data-jstree='{"opened":false}')
+                                                              | email
+                                                            li(data-jstree='{"opened":false}')
+                                                              | faq
+                                                            li(data-jstree='{"opened":false}')
+                                                              | job-search
+                                                            li(data-jstree='{"opened":false}')
+                                                              | lightgallry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | logo
+                                                            li(data-jstree='{"opened":false}')
+                                                              | masonry
+                                                            li(data-jstree='{"opened":false}')
+                                                              | notification
+                                                            li(data-jstree='{"opened":false}')
+                                                              | other-images
+                                                            li(data-jstree='{"opened":false}')
+                                                              | product
+                                                            li(data-jstree='{"opened":false}')
+                                                              | sidebar-image
+                                                            li(data-jstree='{"opened":false}')
+                                                              | sidebar-pattern
+                                                            li(data-jstree='{"opened":false}')
+                                                              | social-app
+                                                            li(data-jstree='{"opened":false}')
+                                                              | user
+                                                            li(data-jstree='{"opened":false}')
+                                                              | user-card
+                                                            li(data-jstree='{"opened":false}')
+                                                              | welcome
+                                                            li.img-icon
+                                                              | color-picker.png
+                                                            li.img-icon
+                                                              | favicon.png
+                                                            li.img-icon
+                                                              | settings.png
+                                                            li.img-icon
+                                                              | smiley.png
+                                                            li.img-icon
+                                                              | User.jpg
+                                                        li(data-jstree='{"opened":false}')
+                                                          | scss
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | base
+                                                              ul
+                                                                li.scss-icon _reset.scss
+                                                                li.scss-icon _typography.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | components
+                                                              ul
+                                                                li.scss-icon _according.scss
+                                                                li.scss-icon _alert.scss
+                                                                li.scss-icon _avatars.scss
+                                                                li.scss-icon _badge.scss
+                                                                li.scss-icon _bookmark.scss
+                                                                li.scss-icon _breadcrumb.scss
+                                                                li.scss-icon _builders.scss
+                                                                li.scss-icon _buttons.scss
+                                                                li.scss-icon _card.scss
+                                                                li.scss-icon _color.scss
+                                                                li.scss-icon _datatable.scss
+                                                                li.scss-icon _datepicker.scss
+                                                                li.scss-icon _dropdown.scss
+                                                                li.scss-icon _form-input.scss
+                                                                li.scss-icon _form-wizard.scss
+                                                                li.scss-icon _forms.scss
+                                                                li.scss-icon _general.scss
+                                                                li.scss-icon _icons.scss
+                                                                li.scss-icon _list.scss
+                                                                li.scss-icon _loader.scss
+                                                                li.scss-icon _popover.scss
+                                                                li.scss-icon _print.scss
+                                                                li.scss-icon _radio.scss
+                                                                li.scss-icon _react-plugin.scss
+                                                                li.scss-icon _ribbon.scss
+                                                                li.scss-icon slick.scss
+                                                                li.scss-icon slick-theme.scss
+                                                                li.scss-icon _switch.scss
+                                                                li.scss-icon _tab.scss
+                                                                li.scss-icon _table.scss
+                                                                li.scss-icon _touchspin.scss
+                                                                li.scss-icon _tour.scss
+                                                                li.scss-icon _typeahead-search.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | layout
+                                                              ul 
+                                                                li.scss-icon _box-layout.scss
+                                                                li.scss-icon _footer.scss
+                                                                li.scss-icon _grid.scss
+                                                                li.scss-icon _header.scss
+                                                                li.scss-icon _navs.scss
+                                                                li.scss-icon _rtl.scss
+                                                                li.scss-icon _search.scss
+                                                                li.scss-icon _select2.scss
+                                                                li.scss-icon _sidebar.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | pages
+                                                              ul
+                                                                li.scss-icon _blog.scss
+                                                                li.scss-icon _bookmark-app.scss
+                                                                li.scss-icon _calendar.scss
+                                                                li.scss-icon _cart.scss
+                                                                li.scss-icon _chart.scss
+                                                                li.scss-icon _chat.scss
+                                                                li.scss-icon _checkout.scss
+                                                                li.scss-icon _comingsoon.scss
+                                                                li.scss-icon _contacts.scss
+                                                                li.scss-icon _dashboard_2.scss
+                                                                li.scss-icon _dashboard_default.scss
+                                                                li.scss-icon _ecommerce.scss
+                                                                li.scss-icon _email-application.scss
+                                                                li.scss-icon _errorpage.scss
+                                                                li.scss-icon _faq.scss
+                                                                li.scss-icon _file.scss
+                                                                li.scss-icon _gallery.scss
+                                                                li.scss-icon _job-search.scss
+                                                                li.scss-icon _kanban.scss
+                                                                li.scss-icon _knowledgebase.scss
+                                                                li.scss-icon _language.scss
+                                                                li.scss-icon _learning.scss
+                                                                li.scss-icon _login.scss
+                                                                li.scss-icon _megaoption.scss
+                                                                li.scss-icon _order-history.scss
+                                                                li.scss-icon _page.scss
+                                                                li.scss-icon _pricing.scss
+                                                                li.scss-icon _progress.scss
+                                                                li.scss-icon _projectlist.scss
+                                                                li.scss-icon _social-app.scss
+                                                                li.scss-icon _task.scss
+                                                                li.scss-icon _timeline-v.scss
+                                                                li.scss-icon _timeliny.scss
+                                                                li.scss-icon _user-profile.scss
+                                                                li.scss-icon _wishlist.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | themes
+                                                              ul
+                                                                li.scss-icon _dark-sidebar.scss
+                                                                li.scss-icon _dark.scss
+                                                                li.scss-icon _responsive.scss
+                                                                li.scss-icon _theme-customizer.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | utils
+                                                              ul
+                                                                li.scss-icon  _variables.scss
+                                                            li(data-jstree='{"opened":false}')
+                                                              | vendors
+                                                              ul 
+                                                                li.scss-icon
+                                                                  | chartist.scss
+                                                                li.scss-icon
+                                                                  | feather-icon.scss
+                                                                li.scss-icon
+                                                                  | flag-icon.css
+                                                                li.scss-icon
+                                                                  | icofont.scss
+                                                                li.scss-icon
+                                                                  | ionic-icon.scss
+                                                                li.scss-icon
+                                                                  | simple-line-icon.scss
+                                                                li.scss-icon
+                                                                  | sweetalert2.scss
+                                                                li.scss-icon
+                                                                  | themify.scss
+                                                                li.scss-icon
+                                                                  | todo.scss
+                                                                li.scss-icon
+                                                                  | typicon-icon.scss
+                                                                li.scss-icon
+                                                                  | whether-icon.scss
+                                                                li(data-jstree='{"opened":false}') chartist
+                                                                  ul
+                                                                    li.scss-icon  _chartist-settings.scss
+                                                                    li.scss-icon  _chartist.scss
+                                                                li(data-jstree='{"opened":false}') feather-icon
+                                                                  ul
+                                                                    li.scss-icon  _feather-icon.scss
+                                                                li(data-jstree='{"opened":false}') flag-icon
+                                                                  ul
+                                                                    li.scss-icon _flag-icon-base.scss
+                                                                    li.scss-icon  _flag-icon-list.scss
+                                                                    li.scss-icon _flag-icon-more.scss
+                                                                li(data-jstree='{"opened":false}') font-awesome
+                                                                  ul
+                                                                    li.scss-icon _animated.scss
+                                                                    li.scss-icon _bordered-pulled.scss
+                                                                    li.scss-icon _core.scss
+                                                                    li.scss-icon _fixed-width.scss
+                                                                    li.scss-icon _icons.scss
+                                                                    li.scss-icon _larger.scss
+                                                                    li.scss-icon _list.scss
+                                                                    li.scss-icon _mixins.scss
+                                                                    li.scss-icon _path.scss
+                                                                    li.scss-icon _rotated-flipped.scss
+                                                                    li.scss-icon _screen-reader.scss
+                                                                    li.scss-icon _stacked.scss
+                                                                    li.scss-icon _variables.scss
+                                                                li(data-jstree='{"opened":false}') icoicon
+                                                                  ul
+                                                                    li.scss-icon  _icons.scss
+                                                                li(data-jstree='{"opened":false}') ionic-icon
+                                                                  ul
+                                                                    li.scss-icon  _ionicons-font.scss
+                                                                    li.scss-icon  _ionicons-icons.scss
+                                                                    li.scss-icon  _ionicons-variables.scss
+                                                                li(data-jstree='{"opened":false}') simple-line-icon
+                                                                  ul
+                                                                    li.scss-icon  _simple-line-icons.scss
+                                                                li(data-jstree='{"opened":false}') simple-mde
+                                                                  ul
+                                                                    li.scss-icon   _elements.scss
+                                                                    li.scss-icon   _simplemde.scss
+                                                                li(data-jstree='{"opened":false}') sticky
+                                                                  ul
+                                                                    li.scss-icon   _sticky.scss
+                                                                li(data-jstree='{"opened":false}') themify
+                                                                  ul
+                                                                    li.scss-icon   _core.scss
+                                                                    li.scss-icon   _extras.scss
+                                                                    li.scss-icon   _icons.scss
+                                                                    li.scss-icon   _mixins.scss
+                                                                    li.scss-icon   _path.scss
+                                                                    li.scss-icon   _themify-icons.scss
+                                                                    li.scss-icon   _variables.scss
+                                                                li(data-jstree='{"opened":false}') todo
+                                                                  ul
+                                                                    li.scss-icon   _todo.scss
+                                                                li(data-jstree='{"opened":false}') typicon-icon
+                                                                  ul
+                                                                    li.scss-icon  _typicon-icon.scss
+                                                                li(data-jstree='{"opened":false}') whether-icon
+                                                                  ul
+                                                                    li.scss-icon  _whether-icon.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | video
+                                                          ul
+                                                            li.video-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                              | auth-bg.mp4
+                                                    li(data-jstree='{"opened":false}')
+                                                      | auth
+                                                      ul
+                                                        li.react-icon signin.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | components
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | application
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | bookmark
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chat-app
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | contact-app
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                                li.react-icon
+                                                                  | printpreview.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ecommerce-app
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | filters
+                                                                  ul
+                                                                    li.react-icon
+                                                                      | allfilters.jsx
+                                                                    li.react-icon
+                                                                      | carousal.jsx
+                                                                li.react-icon
+                                                                  | cart.jsx
+                                                                li.react-icon
+                                                                  | checkout.jsx
+                                                                li.react-icon
+                                                                  | invoice.jsx
+                                                                li.react-icon
+                                                                  | orderHistory.jsx
+                                                                li.react-icon
+                                                                  | paymentdetails.jsx
+                                                                li.react-icon
+                                                                  | pricing.jsx
+                                                                li.react-icon
+                                                                  | product.jsx
+                                                                li.react-icon
+                                                                  | productlist.jsx
+                                                                li.react-icon
+                                                                  | productpage.jsx
+                                                                li.react-icon
+                                                                  | tabsets.jsx
+                                                                li.react-icon
+                                                                  | wishlist.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | email-app
+                                                              ul
+                                                                li.react-icon
+                                                                  | email.jsx
+                                                                li.react-icon
+                                                                  | emailDefault.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | task-app
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | todo-app
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | todo-firebase-app
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | blog
+                                                          ul
+                                                            li.react-icon
+                                                              | blogDetail.jsx
+                                                            li.react-icon
+                                                              | blogPost.jsx
+                                                            li.react-icon
+                                                              | blogSingle.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | bonus_ui
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | cards
+                                                              ul
+                                                                li.react-icon
+                                                                  | basicCards.jsx
+                                                                li.react-icon
+                                                                  | draggingCards.jsx
+                                                                li.react-icon
+                                                                  | tabCard.jsx
+                                                                li.react-icon
+                                                                  | themeCards.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | carousel
+                                                              ul
+                                                                li.react-icon
+                                                                  | carouselComponent.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | steps
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                                li.react-icon
+                                                                  | stepsComponent.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | timelines
+                                                              ul
+                                                                li.react-icon
+                                                                  | timeline.jsx
+                                                                li.react-icon
+                                                                  | timeline1.jsx
+                                                                li.react-icon
+                                                                  | timeline2.jsx
+                                                                li.react-icon
+                                                                  | verticalTimelineComp.jsx
+                                                            li.react-icon
+                                                              | bootstrapNotify.jsx
+                                                            li.react-icon
+                                                              | breadcrumb.jsx
+                                                            li.react-icon
+                                                              | dragAndDrop.jsx
+                                                            li.react-icon
+                                                              | dropzone.jsx
+                                                            li.react-icon
+                                                              | imagecrop.jsx
+                                                            li.react-icon
+                                                              | pagination.jsx
+                                                            li.react-icon
+                                                              | rangeSlider.jsx
+                                                            li.react-icon
+                                                              | rating.jsx
+                                                            li.react-icon
+                                                              | ribbons.jsx
+                                                            li.react-icon
+                                                              | scrolling.jsx
+                                                            li.react-icon
+                                                              | sticky.jsx
+                                                            li.react-icon
+                                                              | sweetAlert.jsx
+                                                            li.react-icon
+                                                              | tour.jsx
+                                                            li.react-icon
+                                                              | uploadImage.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | buttons
+                                                          ul
+                                                            li.react-icon
+                                                              | default-Button.jsx
+                                                            li.react-icon
+                                                              | edgeButton.jsx
+                                                            li.react-icon
+                                                              | flatButton.jsx
+                                                            li.react-icon
+                                                              | groupButton.jsx
+                                                            li.react-icon
+                                                              | raisedButton.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | calendar
+                                                          ul
+                                                            li.react-icon
+                                                              | basicCalendar.jsx
+                                                            li.react-icon
+                                                              | draggableCalendar.jsx
+                                                            li.react-icon
+                                                              | events.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | charts
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | apexCharts
+                                                              ul
+                                                                li.react-icon
+                                                                  | apexData.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chartistCharts
+                                                              ul
+                                                                li.react-icon
+                                                                  | chartistData.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chartsjs
+                                                              ul
+                                                                li.react-icon
+                                                                  | chartsData.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | googleCharts
+                                                              ul
+                                                                li.react-icon
+                                                                  | googlechartData.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | knobChart
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dashboard
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chartsData
+                                                              ul
+                                                                li.react-icon
+                                                                  | apex-charts-data.jsx
+                                                                li.react-icon
+                                                                  | chartist-charts-data.jsx
+                                                            li.react-icon
+                                                              | default.jsx
+                                                            li.react-icon
+                                                              | ecommerce.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | editor
+                                                          ul
+                                                            li.react-icon
+                                                              | aceCodeEditor.jsx
+                                                            li.react-icon
+                                                              | ckEditor.jsx
+                                                            li.react-icon
+                                                              | mdeEditor.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | faq
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | forms
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-control
+                                                              ul
+                                                                li.react-icon
+                                                                  | baseInput.jsx
+                                                                li.react-icon
+                                                                  | checkboxandRadio.jsx
+                                                                li.react-icon
+                                                                  | form-validation.jsx
+                                                                li.react-icon
+                                                                  | inputGroup.jsx
+                                                                li.react-icon
+                                                                  | megaOption.jsx
+                                                                li.react-icon
+                                                                  | tooltipForm.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-layout
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | form-wizard-1
+                                                                  ul
+                                                                    li.react-icon
+                                                                      | birthdate.jsx
+                                                                    li.react-icon
+                                                                      | email.jsx
+                                                                    li.react-icon
+                                                                      | formwizard1.jsx
+                                                                    li.react-icon
+                                                                      | registration.jsx
+                                                                li.react-icon
+                                                                  | formDefault.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-widget
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | timepickerComponent
+                                                                  ul
+                                                                    li.react-icon
+                                                                      | timepicker-four.jsx
+                                                                    li.react-icon
+                                                                      | timepicker-one.jsx
+                                                                    li.react-icon
+                                                                      | timepicker-three.jsx
+                                                                    li.react-icon
+                                                                      | timepicker-two.jsx
+                                                                    li.react-icon
+                                                                      | timepicker.jsx
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | typeaheadComponent
+                                                                  ul
+                                                                    li.react-icon
+                                                                      | typeahead.jsx
+                                                                    li.react-icon
+                                                                      | typeahead-one.jsx
+                                                                li.react-icon
+                                                                  | datepicker.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | gallery
+                                                          ul
+                                                            li.react-icon
+                                                              | imageGallery.jsx
+                                                            li.react-icon
+                                                              | imageHover.jsx
+                                                            li.react-icon
+                                                              | imageWithDesc.jsx
+                                                            li.react-icon
+                                                              | mesonryDesc.jsx
+                                                            li.react-icon
+                                                              | mesonryGallery.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | icons
+                                                          ul
+                                                            li.react-icon
+                                                              | featherIcons.jsx
+                                                            li.react-icon
+                                                              | flagIcons.jsx
+                                                            li.react-icon
+                                                              | fontAwsomeIcon.jsx
+                                                            li.react-icon
+                                                              | icoIcons.jsx
+                                                            li.react-icon
+                                                              | Icon-markup.jsx
+                                                            li.react-icon
+                                                              | ionic-icon.jsx
+                                                            li.react-icon
+                                                              | materialdesignicon.jsx
+                                                            li.react-icon
+                                                              | pe7icons.jsx
+                                                            li.react-icon
+                                                              | simplelineicon.jsx
+                                                            li.react-icon
+                                                              | themifyIcons.jsx
+                                                            li.react-icon
+                                                              | typicon.jsx
+                                                            li.react-icon
+                                                              | weatherIcons.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | jobSearch
+                                                          ul
+                                                            li.react-icon
+                                                              | cardView.jsx
+                                                            li.react-icon
+                                                              | job-apply.jsx
+                                                            li.react-icon
+                                                              | job-detail.jsx
+                                                            li.react-icon
+                                                              | job-filter.jsx
+                                                            li.react-icon
+                                                              | job-list.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | knowledgebase
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | learning
+                                                          ul
+                                                            li.react-icon
+                                                              | learning-deatil.jsx
+                                                            li.react-icon
+                                                              | learning-filter.jsx
+                                                            li.react-icon
+                                                              | learning-list.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | map
+                                                          ul
+                                                            li.react-icon
+                                                              | googleMap.jsx
+                                                            li.react-icon
+                                                              | leafletMap.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sample
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | search
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | social-app
+                                                          ul
+                                                            li.react-icon
+                                                              | aboutTab.jsx
+                                                            li.react-icon
+                                                              | friendsTab.jsx
+                                                            li.react-icon
+                                                              | index.jsx
+                                                            li.react-icon
+                                                              | leftBar.jsx
+                                                            li.react-icon
+                                                              | photosTab.jsx
+                                                            li.react-icon
+                                                              | rightBar.jsx
+                                                            li.react-icon
+                                                              | timelineTab.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | support-ticket
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | tables
+                                                          ul
+                                                            li.react-icon
+                                                              | basicTable.jsx
+                                                            li.react-icon
+                                                              | borderTable.jsx
+                                                            li.react-icon
+                                                              | dataTable.jsx
+                                                            li.react-icon
+                                                              | sizingTable.jsx
+                                                            li.react-icon
+                                                              | stylingTable.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ui-kits
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | accordian
+                                                              ul
+                                                                li.react-icon
+                                                                  | accordianComponent.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | alert
+                                                              ul
+                                                                li.react-icon
+                                                                  | alertComponent.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | dropDown
+                                                              ul
+                                                                li.react-icon
+                                                                  | dropDownComponent.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | nav
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                                li.react-icon
+                                                                  | navComponent.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | popover
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                                li.react-icon
+                                                                  | popoverComponent.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tabs
+                                                              ul
+                                                                li.react-icon
+                                                                  | tabBootstrap.jsx
+                                                                li.react-icon
+                                                                  | tabLine.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tooltip
+                                                              ul
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                                li.react-icon
+                                                                  | tooltipComponent.jsx
+                                                            li.react-icon
+                                                              | avatars.jsx
+                                                            li.react-icon
+                                                              | grid.jsx
+                                                            li.react-icon
+                                                              | helperClasses.jsx
+                                                            li.react-icon
+                                                              | list.jsx
+                                                            li.react-icon
+                                                              | modal.jsx
+                                                            li.react-icon
+                                                              | progress.jsx
+                                                            li.react-icon
+                                                              | shadow.jsx
+                                                            li.react-icon
+                                                              | spinner.jsx
+                                                            li.react-icon
+                                                              | statecolor.jsx
+                                                            li.react-icon
+                                                              | tagAndPills.jsx
+                                                            li.react-icon
+                                                              | typography.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | users
+                                                          ul
+                                                            li.react-icon
+                                                              | userCards.jsx
+                                                            li.react-icon
+                                                              | userEdit.jsx
+                                                            li.react-icon
+                                                              | userProfile.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | widgets
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | charts
+                                                              ul
+                                                                li.react-icon
+                                                                  | charts-data.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | general
+                                                              ul
+                                                                li.react-icon
+                                                                  | general-data.jsx
+                                                                li.react-icon
+                                                                  | index.jsx
+                                                        li.react-icon
+                                                          | app.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | data
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | bookmark
+                                                          ul
+                                                            li.js-icon
+                                                              | data.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | chat
+                                                          ul
+                                                            li.json-icon
+                                                              | chat.chats.json
+                                                            li.js-icon
+                                                              | chatMember.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | customizer
+                                                          ul
+                                                            li.react-icon
+                                                              | config.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | e-commerce
+                                                          ul
+                                                            li.react-icon
+                                                              | product.jsx
+                                                            li.react-icon
+                                                              | productdata.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | email
+                                                          ul
+                                                            li.react-icon
+                                                              | data.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | galleryData
+                                                          ul
+                                                            li.react-icon
+                                                              | Images.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | icons
+                                                          ul
+                                                            li.react-icon
+                                                              | featherComponent.jsx
+                                                            li.react-icon
+                                                              | featherData.jsx
+                                                            li.react-icon
+                                                              | flagIconData.jsx
+                                                            li.react-icon
+                                                              | fontawsomeData.jsx
+                                                            li.react-icon
+                                                              | icoData.jsx
+                                                            li.react-icon
+                                                              | ionic-icon-data.jsx
+                                                            li.react-icon
+                                                              | material-icon-data.jsx
+                                                            li.react-icon
+                                                              | pe7iconData.jsx
+                                                            li.react-icon
+                                                              | simple-line-data.jsx
+                                                            li.react-icon
+                                                              | themifyData.jsx
+                                                            li.react-icon
+                                                              | typ-icon-data.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | jobdata
+                                                          ul
+                                                            li.react-icon
+                                                              | data.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | knowledgebaseData
+                                                          ul
+                                                            li.react-icon
+                                                              | data.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | learningData
+                                                          ul
+                                                            li.react-icon
+                                                              | data.jsx
+                                                        li.react-icon
+                                                          | base.jsx
+                                                        li.react-icon
+                                                          | dummyTableData.jsx
+                                                        li.react-icon
+                                                          | product-list.jsx
+                                                        li.react-icon
+                                                          | stickyData.jsx
+                                                        li.react-icon
+                                                          | supportdb.jsx
+                                                        li.react-icon
+                                                          | typeaheadData.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | layout
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | bookmark
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | breadcrumb
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | footer
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | header
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                            li.react-icon
+                                                              | leftbar.jsx
+                                                            li.react-icon
+                                                              | rightbar.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | loader
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | scroll_to_top
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sidebar
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                            li.react-icon
+                                                              | menu.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | theme-customizer
+                                                          ul
+                                                            li.react-icon
+                                                              | index.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | pages
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | authentication
+                                                          ul
+                                                            li.react-icon
+                                                              | forgetpwd.jsx
+                                                            li.react-icon
+                                                              | login.jsx
+                                                            li.react-icon
+                                                              | loginWithBgImage.jsx
+                                                            li.react-icon
+                                                              | loginWithBgVideo.jsx
+                                                            li.react-icon
+                                                              | register.jsx
+                                                            li.react-icon
+                                                              | registerWithBgImage.jsx
+                                                            li.react-icon
+                                                              | registerWithBgVideo.jsx
+                                                            li.react-icon
+                                                              | resetpwd.jsx
+                                                            li.react-icon
+                                                              | unlockUser.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | comingSoon
+                                                          ul
+                                                            li.react-icon
+                                                              | comingsoon.jsx
+                                                            li.react-icon
+                                                              | comingsoonImg.jsx
+                                                            li.react-icon
+                                                              | comingsoonVideo.jsx
+                                                            li.react-icon
+                                                              | countdownData.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | errors
+                                                          ul
+                                                            li.react-icon
+                                                              | error400.jsx
+                                                            li.react-icon
+                                                              | error401.jsx
+                                                            li.react-icon
+                                                              | error403.jsx
+                                                            li.react-icon
+                                                              | error404.jsx
+                                                            li.react-icon
+                                                              | error500.jsx
+                                                            li.react-icon
+                                                              | error503.jsx
+                                                        li.react-icon maintenance.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | redux
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | bookmark
+                                                          ul
+                                                            li.react-icon
+                                                              | action.jsx
+                                                            li.react-icon
+                                                              | reducer.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | chap-app
+                                                          ul
+                                                            li.react-icon
+                                                              | action.jsx
+                                                            li.react-icon
+                                                              | reducer.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | customizer
+                                                          ul
+                                                            li.react-icon
+                                                              | reducer.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ecommerce
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | cart
+                                                              ul
+                                                                li.react-icon
+                                                                  | action.jsx
+                                                                li.react-icon
+                                                                  | reducer.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | filter
+                                                              ul
+                                                                li.react-icon
+                                                                  | action.jsx
+                                                                li.react-icon
+                                                                  | reducer.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | product
+                                                              ul
+                                                                li.react-icon
+                                                                  | action.jsx
+                                                                li.react-icon
+                                                                  | reducer.jsx
+                                                            li(data-jstree='{"opened":false}')
+                                                              | wishlist
+                                                              ul
+                                                                li.react-icon
+                                                                  | action.jsx
+                                                                li.react-icon
+                                                                  | reducer.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | email
+                                                          ul
+                                                            li.react-icon
+                                                              | action.jsx
+                                                            li.react-icon
+                                                              | reducer.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | task-app
+                                                          ul
+                                                            li.react-icon
+                                                              | action.jsx
+                                                            li.react-icon
+                                                              | reducer.jsx
+                                                        li(data-jstree='{"opened":false}')
+                                                          | todo
+                                                          ul
+                                                            li.react-icon
+                                                              | reducer.jsx
+                                                        li.react-icon
+                                                          | actionTypes.jsx
+                                                        li.react-icon
+                                                          | index.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | route
+                                                      ul
+                                                        li.react-icon
+                                                          | index.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | services
+                                                      ul
+                                                        li.react-icon
+                                                          | contact.service.jsx
+                                                        li.react-icon
+                                                          | ecommerce.service.jsx
+                                                        li.react-icon
+                                                          | todo-firebase.service.jsx
+                                                    li(data-jstree='{"opened":false}')
+                                                      | store
+                                                      ul
+                                                        li.react-icon
+                                                          | index.jsx
+                                                    li.js-icon App.test.js
+                                                    li.react-icon index.jsx
+                                                    li.scss-icon index.scss
+                                                    li.js-icon serviceWorker.js
+                                                    li.js-icon setupTests.js
+                                                li.nodejs-icon(data-jstree='{"type":"file"}')
+                                                  | package.json
+
+                                      
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

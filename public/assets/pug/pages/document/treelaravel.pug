@@ -1,0 +1,2236 @@
+- var tree_view             = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                            .row
+                              .col-sm-12.col-xl-6
+                                .card
+                                  .card-header
+                                    h5.main-title Laravel folder Structure
+                                  .card-body
+                                    #treeBasic
+                                      ul
+                                        li(data-jstree='{"opened":true}')
+                                          | Cuba
+                                          ul
+                                            li(data-jstree='{"opened":false}')
+                                              | app
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | Console
+                                                  ul
+                                                    li.php-icon Kernel.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | Exceptions
+                                                  ul
+                                                    li.php-icon Handler.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | Http
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | Controllers
+                                                      ul
+                                                        li.php-icon Controller.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | Middleware
+                                                      ul
+                                                        li.php-icon Authenticate.php
+                                                        li.php-icon
+                                                          | CheckForMaintenanceMode.php
+                                                        li.php-icon EncryptCookies.php
+                                                        li.php-icon
+                                                          | RedirectIfAuthenticated.php
+                                                        li.php-icon TrimStrings.php
+                                                        li.php-icon TrustHosts.php
+                                                        li.php-icon TrustProxies.php
+                                                        li.php-icon
+                                                          | VerifyCsrfToken.php
+                                                    li.php-icon Kernel.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | Providers
+                                                  ul
+                                                    li.php-icon AppServiceProvider.php
+                                                    li.php-icon AuthServiceProvider.php
+                                                    li.php-icon
+                                                      | BroadcastServiceProvider.php
+                                                    li.php-icon EventServiceProvider.php
+                                                    li.php-icon RouteServiceProvider.php
+                                                li.php-icon(data-jstree='{"type":"file"}')
+                                                  | User.php
+                                            li(data-jstree='{"opened":false}')
+                                              | bootstrap
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | cache
+                                                  ul
+                                                    li.php-icon packages.php
+                                                    li.php-icon services.php
+                                                li.php-icon app.php
+                                            li(data-jstree='{"opened":false}')
+                                              | config
+                                              ul
+                                                li.php-icon app.php
+                                                li.php-icon auth.php
+                                                li.php-icon broadcasting.php
+                                                li.php-icon cache.php
+                                                li.php-icon cors.php
+                                                li.php-icon database.php
+                                                li.php-icon filesystems.php
+                                                li.php-icon hashing.php
+                                                li.php-icon logging.php
+                                                li.php-icon mail.php
+                                                li.php-icon queue.php
+                                                li.php-icon services.php
+                                                li.php-icon session.php
+                                                li.php-icon view.php
+                                            li(data-jstree='{"opened":false}')
+                                              | database
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | factories
+                                                  ul
+                                                    li.php-icon UserFactory.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | migrations
+                                                  ul
+                                                    li.php-icon
+                                                      | 2014_10_12_000000_create_users_table.php
+                                                    li.php-icon
+                                                      | 2019_08_19_000000_create_failed_jobs_table.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | seeds
+                                                  ul
+                                                    li.php-icon DatabaseSeeder.php
+                                            li(data-jstree='{"opened":false}')
+                                              | public
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | assets
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | ajax
+                                                      ul
+                                                        li.txt-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                          | api.txt
+                                                        li.txt-icon(data-jstree='{"type":"file"}')
+                                                          | arrays.txt
+                                                        li.txt-icon(data-jstree='{"type":"file"}')
+                                                          | object.txt
+                                                        li.txt-icon(data-jstree='{"type":"file"}')
+                                                          | object_nested.txt
+                                                        li.txt-icon(data-jstree='{"type":"file"}')
+                                                          | orthogonal.txt
+                                                        li.php-icon(data-jstree='{"type":"file"}')
+                                                          | post.php
+                                                        li.php-icon(data-jstree='{"type":"file"}')
+                                                          | server-processing.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | audio
+                                                      ul
+                                                        li.music-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                          | horse.ogg
+                                                    li(data-jstree='{"opened":false}')
+                                                      | css
+                                                      ul
+                                                        li.css-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                          | animate.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | aos.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | bootstrap.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | button-builder.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | calendar.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | chartist.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | color-1.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | color-2.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | color-3.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | color-4.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | color-5.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | color-6.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | datatable-extension.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | datatables.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | date-picker.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | daterange-picker.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | dropzone.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | feather-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | flag-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | fontawesome.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | icofont.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | image-cropper.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | ionic-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | jsgrid.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | mapsjs-ui.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | material-design-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | owlcarousel.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | page-builder.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | pe7-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | photoswipe.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | print.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | prism.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | range-slider.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | rating.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | responsive.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | scrollable.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | select2.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | simple-line-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | simple-mde.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | sticky.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | style.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | summernote.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | svg-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | sweetalert2.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | themify.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | timepicker.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | todo.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | tour.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | tree.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | typicon-icon.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | vector-map.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | vertical-menu.css
+                                                        li.css-icon(data-jstree='{"type":"file"}')
+                                                          | whether-icon.css
+                                                    li(data-jstree='{"opened":false}')
+                                                      | fonts
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | calendar
+                                                        li(data-jstree='{"opened":false}')
+                                                          | feather
+                                                        li(data-jstree='{"opened":false}')
+                                                          | flag-icon
+                                                        li(data-jstree='{"opened":false}')
+                                                          | font-awesome
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ico
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ionic-icon
+                                                        li(data-jstree='{"opened":false}')
+                                                          | material-design-icon
+                                                        li(data-jstree='{"opened":false}')
+                                                          | pe7-icon
+                                                        li(data-jstree='{"opened":false}')
+                                                          | simple-line-icon
+                                                        li(data-jstree='{"opened":false}')
+                                                          | summernote
+                                                        li(data-jstree='{"opened":false}')
+                                                          | themify
+                                                        li(data-jstree='{"opened":false}')
+                                                          | typicon-icon
+                                                    li(data-jstree='{"opened":false}')
+                                                      | images
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | appointment
+                                                        li(data-jstree='{"opened":false}')
+                                                          | avtar
+                                                        li(data-jstree='{"opened":false}')
+                                                          | banner
+                                                        li(data-jstree='{"opened":false}')
+                                                          | big-lightgallry
+                                                        li(data-jstree='{"opened":false}')
+                                                          | big-masonry
+                                                        li(data-jstree='{"opened":false}')
+                                                          | blog
+                                                        li(data-jstree='{"opened":false}')
+                                                          | button_builder
+                                                        li(data-jstree='{"opened":false}')
+                                                          | calender
+                                                        li(data-jstree='{"opened":false}')
+                                                          | checkout
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dashboard
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dashboard-2
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ecommerce
+                                                        li(data-jstree='{"opened":false}')
+                                                          | email
+                                                        li(data-jstree='{"opened":false}')
+                                                          | email-template
+                                                        li(data-jstree='{"opened":false}')
+                                                          | faq
+                                                        li(data-jstree='{"opened":false}')
+                                                          | job-search
+                                                        li(data-jstree='{"opened":false}')
+                                                          | landing
+                                                        li(data-jstree='{"opened":false}')
+                                                          | lightgallry
+                                                        li(data-jstree='{"opened":false}')
+                                                          | logo
+                                                        li(data-jstree='{"opened":false}')
+                                                          | masonry
+                                                        li(data-jstree='{"opened":false}')
+                                                          | notification
+                                                        li(data-jstree='{"opened":false}')
+                                                          | other-images
+                                                        li(data-jstree='{"opened":false}')
+                                                          | product
+                                                        li(data-jstree='{"opened":false}')
+                                                          | range-slider
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sidebar-image
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sidebar-pattern
+                                                        li(data-jstree='{"opened":false}')
+                                                          | slider
+                                                        li(data-jstree='{"opened":false}')
+                                                          | slider-auto-width
+                                                        li(data-jstree='{"opened":false}')
+                                                          | social-app
+                                                        li(data-jstree='{"opened":false}')
+                                                          | tree
+                                                        li(data-jstree='{"opened":false}')
+                                                          | user
+                                                        li(data-jstree='{"opened":false}')
+                                                          | user-card
+                                                        li(data-jstree='{"opened":false}')
+                                                          | welcome
+                                                        li.img-icon
+                                                          | color-picker.png
+                                                        li.img-icon
+                                                          | cuba-logo1.png
+                                                        li.img-icon
+                                                          | favicon.png
+                                                        li.svg-icon
+                                                          | hour.svg
+                                                        li.img-icon
+                                                          | js-grid.png
+                                                        li.svg-icon
+                                                          | min.svg
+                                                        li.svg-icon
+                                                          | sec.svg
+                                                        li.img-icon
+                                                          | settings.png
+                                                        li.img-icon
+                                                          | smiley.png
+                                                        li.img-icon
+                                                          | sort_asc.png
+                                                        li.img-icon
+                                                          | sort_asc_disabled.png
+                                                        li.img-icon
+                                                          | sort_both.png
+                                                        li.img-icon
+                                                          | sort_desc.png
+                                                        li.img-icon
+                                                          | sort_desc_disabled.png
+                                                        li.img-icon
+                                                          | User.jpg
+                                                    li(data-jstree='{"opened":false}')
+                                                      | js
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | animation
+                                                          ul
+                                                            li.js-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                              | animate-custom.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | aos
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | aos.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | aos-init.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | scroll-reveal
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | reveal-custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | scrollreveal.min.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tilt
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | tilt.jquery.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | tilt-custom.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | wow
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | wow.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | wow-init.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | bookmark
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.validate.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | bootstrap
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | bootstrap.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | popper.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | button-builder
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | clipboard.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | colorpicker.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | extend-1.0.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | generator.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | calendar
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | app.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | calendars.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | chance.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | inital.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | moment.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | schedules.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tui-calendar.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tui-code-snippet.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tui-date-picker.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tui-time-picker.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | chart
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | apex-chart
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | apex-chart.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | chart-custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | moment.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | stock-prices.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chartist
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | chartist.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | chartist-custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | chartist-plugin-tooltip.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chartjs
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | chart.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | chart.min.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | flot-chart
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | excanvas.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | excanvas.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | flot-script.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.canvas.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.categories.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.crosshair.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.errorbars.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.fillbetween.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.image.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.navigate.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.pie.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.resize.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.selection.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.stack.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.symbol.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.threshold.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.flot.time.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | google
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | google-chart.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | google-chart-loader.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | knob
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | knob.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | knob-chart.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | morris-chart
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | morris.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | morris.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | morris-script.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | prettify.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | raphael.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | peity-chart
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | peity.jquery.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | peity-custom.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | sparkline
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | sparkline.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | sparkline-script.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | clipboard
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | clipboard.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | clipboard-script.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | contacts
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | counter
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | counter-custom.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.counterup.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.waypoints.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | custom-card
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | custom-card.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dashboard
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dashboard_2.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | default.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | datatable
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | datatable-extension
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | buttons.bootstrap4.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | buttons.colVis.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | buttons.html5.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | buttons.print.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.autoFill.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.bootstrap4.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.buttons.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.colReorder.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.fixedHeader.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.keyTable.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.responsive.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.rowReorder.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.scroller.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | dataTables.select.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jszip.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | pdfmake.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | responsive.bootstrap4.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | vfs_fonts.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | datatables
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | datatable.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.dataTables.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | datepicker
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | date-picker
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | datepicker.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | datepicker.en.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | datepicker.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | daterange-picker
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | daterangepicker.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | daterange-picker.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | moment.min.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | date-time-picker
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | datetimepicker.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | moment.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | tempusdominus-bootstrap-4.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dragable
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery-ui.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | sortable.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | sortable-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | drilldown
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dropdown-collapse-main.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dropdown-coolapse-menu-aim.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dropzone
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dropzone.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dropzone-scrip.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | dropzone-script.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | editor
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ace-editor
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | ace.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | ace-custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | mode-css.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | mode-html.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | mode-javascript.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | mode-php.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | theme-monokai.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | worker-css.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | worker-html.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | worker-javascript.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | worker-php.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ckeditor
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | adapters
+                                                                  ul
+                                                                    li.js-icon(data-jstree='{"type":"file"}')
+                                                                      | jquery.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | build-config.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | ckeditor.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | ckeditor.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | config.js
+                                                                li.css-icon(data-jstree='{"type":"file"}')
+                                                                  | contents.css
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | lang
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | plugins
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | skins
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | styles.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | simple-mde
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | simplemde.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | simplemde.min.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | summernote
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | summernote.custom.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | summernote.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | form-builder
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-builder-1
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | main-built.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | require.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-builder-2
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | beautifyhtml.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | form-builder-2.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | form-wizard
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard-five.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard-three.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | form-wizard-two.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.backstretch.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | icons
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | feather-icon
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | feather.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | feather-icon.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | feather-icon-clipart.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | flag-icon-clipart.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | icon-clipart.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | icons-notify.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | whether-icon-clipart.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | image-cropper
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | cropper.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | cropper-main.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | internationalization
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | language-picker.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | jarallax_libs
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jarallax.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | libs.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | jsgrid
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | griddata.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jsgrid.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jsgrid.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | map-js
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | custom.js
+                                                            li.img-icon(data-jstree='{"type":"file"}')
+                                                              | download.png
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mapsjs-core.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mapsjs-mapevents.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mapsjs-service.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | mapsjs-ui.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | notify
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | bootstrap-notify.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | index.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | notify-script.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | owlcarousel
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | owl.carousel.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | owl-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | page-builder
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | ckeditor.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | config.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.grideditor.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | lang
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | page-builder-custom.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | skins
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | styles.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | photoswipe
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | photoswipe.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | photoswipe.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | photoswipe-ui-default.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | prism
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | prism.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | range-slider
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | ion.rangeSlider.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | rangeslider-script.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | rating
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery.barrating.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | rating-script.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | scrollable
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | perfect-scrollbar.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | scrollable-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | select2
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | select2.full.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | select2-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sticky
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | sticky.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | sweet-alert
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | app.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | sweetalert.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | task
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | theme-customizer
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | customizer.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | timeline
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | timeline-v-1
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | main.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | timeline-v-2
+                                                              ul
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | jquery.timeliny.min.js
+                                                                li.js-icon(data-jstree='{"type":"file"}')
+                                                                  | timeline-v-2-custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | time-picker
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | clockpicker.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | highlight.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery-clockpicker.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | todo
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | todo.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | touchspin
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | input-groups.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | touchspin.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | vendors.min.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | tour
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | intro.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | intro-init.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | tree
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jstree.min.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | tree.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | typeahead
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | data
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | handlebars.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | typeahead.bundle.js
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | typeahead.custom.js
+                                                        li(data-jstree='{"opened":false}')
+                                                          | vector-map
+                                                          ul
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | jquery-jvectormap-2.0.2.min.js
+                                                            li(data-jstree='{"opened":false}')
+                                                              | map
+                                                            li.js-icon(data-jstree='{"type":"file"}')
+                                                              | map-vector.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | button-tooltip-custom.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | chart-widget.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | comapct-menu.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | config.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | countdown.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | ecommerce.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | email-app.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | form-validation-custom.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | fullscreen.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | general-widget.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | height-equal.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | hide-on-scroll.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | isotope.pkgd.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | jquery.drilldown.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | jquery.ui.min.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | jquery-3.5.1.min.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | landing_sticky.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | login.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | masonry-gallery.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | megamenu.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | modal-animated.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | modernizr.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | popover-custom.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | print.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | product-list-custom.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | product-tab.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | radial-chart-tooltip.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | script.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | scrollpy_landing.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | sidebar-menu.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | support-ticket-custom.js
+                                                        li.js-icon(data-jstree='{"opened":false}')
+                                                          | tooltip-init.js
+                                                    li(data-jstree='{"opened":false}')
+                                                      | json
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | datatable-extension
+                                                          ul
+                                                            li.txt-icon
+                                                              | data.txt
+                                                        li.json-icon
+                                                          | airports.json
+                                                        li.json-icon
+                                                          | German.json
+                                                        li.json-icon
+                                                          | server-side.json
+                                                    li(data-jstree='{"opened":false}')
+                                                      | scss
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | base
+                                                          ul
+                                                            li.scss-icon _reset.scss
+                                                            li.scss-icon _typography.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | components
+                                                          ul
+                                                            li.scss-icon _according.scss
+                                                            li.scss-icon _alert.scss
+                                                            li.scss-icon _avatars.scss
+                                                            li.scss-icon _badge.scss
+                                                            li.scss-icon _bookmark.scss
+                                                            li.scss-icon _breadcrumb.scss
+                                                            li.scss-icon _builders.scss
+                                                            li.scss-icon _buttons.scss
+                                                            li.scss-icon _card.scss
+                                                            li.scss-icon _color.scss
+                                                            li.scss-icon _datatable.scss
+                                                            li.scss-icon _datepicker.scss
+                                                            li.scss-icon _dropdown.scss
+                                                            li.scss-icon _dropzone.scss
+                                                            li.scss-icon _form-builder.scss
+                                                            li.scss-icon _form-input.scss
+                                                            li.scss-icon _form-wizard.scss
+                                                            li.scss-icon _forms.scss
+                                                            li.scss-icon _form_builder-2.scss
+                                                            li.scss-icon _general.scss
+                                                            li.scss-icon _icons.scss
+                                                            li.scss-icon _list.scss
+                                                            li.scss-icon _loader.scss
+                                                            li.scss-icon _popover.scss
+                                                            li.scss-icon _print.scss
+                                                            li.scss-icon _radio.scss
+                                                            li.scss-icon _ribbon.scss
+                                                            li.scss-icon _switch.scss
+                                                            li.scss-icon _tab.scss
+                                                            li.scss-icon _table.scss
+                                                            li.scss-icon _touchspin.scss
+                                                            li.scss-icon _tour.scss
+                                                            li.scss-icon _tree.scss
+                                                            li.scss-icon _typeahead-search.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | layout
+                                                          ul 
+                                                            li.scss-icon _box-layout.scss
+                                                            li.scss-icon _footer.scss
+                                                            li.scss-icon _grid.scss
+                                                            li.scss-icon _header.scss
+                                                            li.scss-icon _navs.scss
+                                                            li.scss-icon _rtl.scss
+                                                            li.scss-icon _search.scss
+                                                            li.scss-icon _select2.scss
+                                                            li.scss-icon _sidebar.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | pages
+                                                          ul
+                                                            li.scss-icon _blog.scss
+                                                            li.scss-icon _bookmark-app.scss
+                                                            li.scss-icon _cart.scss
+                                                            li.scss-icon _chart.scss
+                                                            li.scss-icon _chat.scss
+                                                            li.scss-icon _checkout.scss
+                                                            li.scss-icon _comingsoon.scss
+                                                            li.scss-icon _contacts.scss
+                                                            li.scss-icon _dashboard_2.scss
+                                                            li.scss-icon _dashboard_default.scss
+                                                            li.scss-icon _ecommerce.scss
+                                                            li.scss-icon _email-application.scss
+                                                            li.scss-icon _errorpage.scss
+                                                            li.scss-icon _faq.scss
+                                                            li.scss-icon _file.scss
+                                                            li.scss-icon _gallery.scss
+                                                            li.scss-icon _internationalization.scss
+                                                            li.scss-icon _job-search.scss
+                                                            li.scss-icon _jsgrid.scss
+                                                            li.scss-icon _kanban.scss
+                                                            li.scss-icon _knowledgebase.scss
+                                                            li.scss-icon _landing.scss
+                                                            li.scss-icon _language.scss
+                                                            li.scss-icon _learning.scss
+                                                            li.scss-icon _login.scss
+                                                            li.scss-icon _megaoption.scss
+                                                            li.scss-icon _order-history.scss
+                                                            li.scss-icon _page.scss
+                                                            li.scss-icon _pricing.scss
+                                                            li.scss-icon _progress.scss
+                                                            li.scss-icon _projectlist.scss
+                                                            li.scss-icon _social-app.scss
+                                                            li.scss-icon _task.scss
+                                                            li.scss-icon _timeline-v.scss
+                                                            li.scss-icon _timeliny.scss
+                                                            li.scss-icon _user-profile.scss
+                                                            li.scss-icon _wishlist.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | themes
+                                                          ul
+                                                            li.scss-icon _dark-sidebar.scss
+                                                            li.scss-icon _dark.scss
+                                                            li.scss-icon _document.scss
+                                                            li.scss-icon _responsive.scss
+                                                            li.scss-icon _theme-customizer.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | utils
+                                                          ul
+                                                            li.scss-icon  _variables.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | vendors
+                                                          ul 
+                                                            li.scss-icon
+                                                              | chartist.scss
+                                                            li.scss-icon
+                                                              | feather-icon.scss
+                                                            li.scss-icon
+                                                              | flag-icon.css
+                                                            li.scss-icon
+                                                              | icofont.scss
+                                                            li.scss-icon
+                                                              | image-cropper.scss
+                                                            li.scss-icon
+                                                              | ionic-icon.scss
+                                                            li.scss-icon
+                                                              | page-builder.scss
+                                                            li.scss-icon
+                                                              | scrollable.scss
+                                                            li.scss-icon
+                                                              | select2.scss
+                                                            li.scss-icon
+                                                              | simple-line-icon.scss
+                                                            li.scss-icon
+                                                              | simple-mde.scss
+                                                            li.scss-icon
+                                                              | sticky.scss
+                                                            li.scss-icon
+                                                              | summernote.scss
+                                                            li.scss-icon
+                                                              | svg-icon.scss
+                                                            li.scss-icon
+                                                              | sweetalert2.scss
+                                                            li.scss-icon
+                                                              | themify.scss
+                                                            li.scss-icon
+                                                              | timepicker.scss
+                                                            li.scss-icon
+                                                              | todo.scss
+                                                            li.scss-icon
+                                                              | tour.scss
+                                                            li.scss-icon
+                                                              | tree.scss
+                                                            li.scss-icon
+                                                              | typicon-icon.scss
+                                                            li.scss-icon
+                                                              | vector-map.scss
+                                                            li.scss-icon
+                                                              | whether-icon.scss
+                                                            li(data-jstree='{"opened":false}') chartist
+                                                              ul
+                                                                li.scss-icon  _chartist-settings.scss
+                                                                li.scss-icon  _chartist.scss
+                                                            li(data-jstree='{"opened":false}') feather-icon
+                                                              ul
+                                                                li.scss-icon  _feather-icon.scss
+                                                            li(data-jstree='{"opened":false}') flag-icon
+                                                              ul
+                                                                li.scss-icon _flag-icon-base.scss
+                                                                li.scss-icon  _flag-icon-list.scss
+                                                                li.scss-icon _flag-icon-more.scss
+                                                            li(data-jstree='{"opened":false}') font-awesome
+                                                              ul
+                                                                li.scss-icon _animated.scss
+                                                                li.scss-icon _bordered-pulled.scss
+                                                                li.scss-icon _core.scss
+                                                                li.scss-icon _fixed-width.scss
+                                                                li.scss-icon _icons.scss
+                                                                li.scss-icon _larger.scss
+                                                                li.scss-icon _list.scss
+                                                                li.scss-icon _mixins.scss
+                                                                li.scss-icon _path.scss
+                                                                li.scss-icon _rotated-flipped.scss
+                                                                li.scss-icon _screen-reader.scss
+                                                                li.scss-icon _stacked.scss
+                                                                li.scss-icon _variables.scss
+                                                            li(data-jstree='{"opened":false}') icoicon
+                                                              ul
+                                                                li.scss-icon  _icons.scss
+                                                            li(data-jstree='{"opened":false}') image-cropper
+                                                              ul
+                                                                li.scss-icon  _cropper-custom.scss
+                                                                li.scss-icon  _cropper-main.scss
+                                                            li(data-jstree='{"opened":false}') ionic-icon
+                                                              ul
+                                                                li.scss-icon  _ionicons-font.scss
+                                                                li.scss-icon  _ionicons-icons.scss
+                                                                li.scss-icon  _ionicons-variables.scss
+                                                            li(data-jstree='{"opened":false}') page-builder
+                                                              ul
+                                                                li.scss-icon  _page-builder.scss
+                                                            li(data-jstree='{"opened":false}') scrollable
+                                                              ul
+                                                                li.scss-icon  _scrollable.scss
+                                                            li select2
+                                                            li(data-jstree='{"opened":false}') simple-line-icon
+                                                              ul
+                                                                li.scss-icon  _simple-line-icons.scss
+                                                            li(data-jstree='{"opened":false}') simple-mde
+                                                              ul
+                                                                li.scss-icon   _elements.scss
+                                                                li.scss-icon   _simplemde.scss
+                                                            li(data-jstree='{"opened":false}') sticky
+                                                              ul
+                                                                li.scss-icon   _sticky.scss
+                                                            li(data-jstree='{"opened":false}') summernote
+                                                              ul
+                                                                li.scss-icon   _elements.scss
+                                                                li.scss-icon   _fonts.scss
+                                                                li.scss-icon   _summernote-bs4.scss
+                                                            li(data-jstree='{"opened":false}') svg-icon
+                                                              ul
+                                                                li.scss-icon   _svg-icon.scss
+                                                            li(data-jstree='{"opened":false}') sweetalert2-master
+                                                              ul
+                                                                li.scss-icon   _animations.scss
+                                                                li.scss-icon   _mixins.scss
+                                                                li.scss-icon   _toasts.scss
+                                                                li.scss-icon   _variables.scss
+                                                            li(data-jstree='{"opened":false}') themify
+                                                              ul
+                                                                li.scss-icon   _core.scss
+                                                                li.scss-icon   _extras.scss
+                                                                li.scss-icon   _icons.scss
+                                                                li.scss-icon   _mixins.scss
+                                                                li.scss-icon   _path.scss
+                                                                li.scss-icon   _themify-icons.scss
+                                                                li.scss-icon   _variables.scss
+                                                            li(data-jstree='{"opened":false}') time-picker
+                                                              ul
+                                                                li.scss-icon   _timepicker.scss
+                                                            li(data-jstree='{"opened":false}') todo
+                                                              ul
+                                                                li.scss-icon   _todo.scss
+                                                            li(data-jstree='{"opened":false}') tour
+                                                              ul
+                                                                li.scss-icon  _tour.scss
+                                                            li(data-jstree='{"opened":false}') tree
+                                                              ul
+                                                                li.scss-icon  _tree-default.scss
+                                                                li.scss-icon  _tree.scss
+                                                            li(data-jstree='{"opened":false}') typicon-icon
+                                                              ul
+                                                                li.scss-icon  _typicon-icon.scss
+                                                            li(data-jstree='{"opened":false}') vector-map
+                                                              ul
+                                                                li.scss-icon  _vector-map.scss
+                                                            li(data-jstree='{"opened":false}') whether-icon
+                                                              ul
+                                                                li.scss-icon  _whether-icon.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | video
+                                                      ul
+                                                        li.video-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                          | auth-bg.mp4
+                                                li.favicon-icon favicon.ico
+                                                li.php-icon index.php
+                                                li.txt-icon robots.txt
+                                                li.web-icon web.config
+                                            li(data-jstree='{"opened":false}')
+                                              | resources
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | js
+                                                  ul
+                                                    li.js-icon app.js
+                                                    li.js-icon bootstrap.js
+                                                li(data-jstree='{"opened":false}')
+                                                  | lang
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | en
+                                                      ul
+                                                        li.php-icon auth.php
+                                                        li.php-icon pagination.php
+                                                        li.php-icon passwords.php
+                                                        li.php-icon validation.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | sass
+                                                  ul
+                                                    li.scss-icon app.scss
+                                                li(data-jstree='{"opened":false}')
+                                                  | views
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | animation
+                                                      ul
+                                                        li.laravel-icon
+                                                          | animate.blade.php
+                                                        li.laravel-icon aos.blade.php
+                                                        li.laravel-icon
+                                                          | scroll-reval.blade.php
+                                                        li.laravel-icon tilt.blade.php
+                                                        li.laravel-icon wow.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | apps
+                                                      ul
+                                                        li.laravel-icon
+                                                          | ace-code-editor.blade.php
+                                                        li.laravel-icon
+                                                          | add-post.blade.php
+                                                        li.laravel-icon
+                                                          | blog.blade.php
+                                                        li.laravel-icon
+                                                          | blog-single.blade.php
+                                                        li.laravel-icon
+                                                          | bookmark.blade.php
+                                                        li.laravel-icon
+                                                          | calender-basic.blade.php
+                                                        li.laravel-icon cart.blade.php
+                                                        li.laravel-icon chat.blade.php
+                                                        li.laravel-icon
+                                                          | chat-video.blade.php
+                                                        li.laravel-icon
+                                                          | checkout.blade.php
+                                                        li.laravel-icon
+                                                          | ckeditor.blade.php
+                                                        li.laravel-icon
+                                                          | contacts.blade.php
+                                                        li.laravel-icon
+                                                          | edit-profile.blade.php
+                                                        li.laravel-icon
+                                                          | email-application.blade.php
+                                                        li.laravel-icon
+                                                          | email-compose.blade.php
+                                                        li.laravel-icon faq.blade.php
+                                                        li.laravel-icon
+                                                          | gallery.blade.php
+                                                        li.laravel-icon
+                                                          | gallery-hover.blade.php
+                                                        li.laravel-icon
+                                                          | gallery-masonry.blade.php
+                                                        li.laravel-icon
+                                                          | gallery-with-description.blade.php
+                                                        li.laravel-icon
+                                                          | invoice-template.blade.php
+                                                        li.laravel-icon
+                                                          | job-apply.blade.php
+                                                        li.laravel-icon
+                                                          | job-cards-view.blade.php
+                                                        li.laravel-icon
+                                                          | job-details.blade.php
+                                                        li.laravel-icon
+                                                          | job-list-view.blade.php
+                                                        li.laravel-icon
+                                                          | knowledgebase.blade.php
+                                                        li.laravel-icon
+                                                          | learning-detailed.blade.php
+                                                        li.laravel-icon
+                                                          | learning-list-view.blade.php
+                                                        li.laravel-icon
+                                                          | list-products.blade.php
+                                                        li.laravel-icon
+                                                          | list-wish.blade.php
+                                                        li.laravel-icon
+                                                          | map-js.blade.php
+                                                        li.laravel-icon
+                                                          | masonry-gallery-with-disc.blade.php
+                                                        li.laravel-icon
+                                                          | order-history.blade.php
+                                                        li.laravel-icon
+                                                          | payment-details.blade.php
+                                                        li.laravel-icon
+                                                          | pricing.blade.php
+                                                        li.laravel-icon
+                                                          | product.blade.php
+                                                        li.laravel-icon
+                                                          | product-page.blade.php
+                                                        li.laravel-icon
+                                                          | simple-mde.blade.php
+                                                        li.laravel-icon
+                                                          | social-app.blade.php
+                                                        li.laravel-icon
+                                                          | summernote.blade.php
+                                                        li.laravel-icon
+                                                          | support-ticket.blade.php
+                                                        li.laravel-icon task.blade.php
+                                                        li.laravel-icon
+                                                          | to-do.blade.php
+                                                        li.laravel-icon
+                                                          | user-cards.blade.php
+                                                        li.laravel-icon
+                                                          | user-profile.blade.php
+                                                        li.laravel-icon
+                                                          | vector-map.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | authentication
+                                                      ul
+                                                        li.laravel-icon
+                                                          | forget-password.blade.php
+                                                        li.laravel-icon
+                                                          | login.blade.php
+                                                        li.laravel-icon
+                                                          | login-image.blade.php
+                                                        li.laravel-icon
+                                                          | login-video.blade.php
+                                                        li.laravel-icon
+                                                          | maintenance.blade.php
+                                                        li.laravel-icon
+                                                          | reset-password.blade.php
+                                                        li.laravel-icon
+                                                          | signup.blade.php
+                                                        li.laravel-icon
+                                                          | signup-image.blade.php
+                                                        li.laravel-icon
+                                                          | signup-video.blade.php
+                                                        li.laravel-icon
+                                                          | unlock.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | bonus-ui
+                                                      ul
+                                                        li.laravel-icon
+                                                          | basic-card.blade.php
+                                                        li.laravel-icon
+                                                          | bootstrap-notify.blade.php
+                                                        li.laravel-icon
+                                                          | breadcrumb.blade.php
+                                                        li.laravel-icon
+                                                          | creative-card.blade.php
+                                                        li.laravel-icon
+                                                          | dragable-card.blade.php
+                                                        li.laravel-icon
+                                                          | dropzone.blade.php
+                                                        li.laravel-icon
+                                                          | image-cropper.blade.php
+                                                        li.laravel-icon
+                                                          | modal-animated.blade.php
+                                                        li.laravel-icon
+                                                          | owl-carousel.blade.php
+                                                        li.laravel-icon
+                                                          | pagination.blade.php
+                                                        li.laravel-icon
+                                                          | range-slider.blade.php
+                                                        li.laravel-icon
+                                                          | rating.blade.php
+                                                        li.laravel-icon
+                                                          | ribbons.blade.php
+                                                        li.laravel-icon
+                                                          | scrollable.blade.php
+                                                        li.laravel-icon
+                                                          | steps.blade.php
+                                                        li.laravel-icon
+                                                          | sticky.blade.php
+                                                        li.laravel-icon
+                                                          | sweet-alert2.blade.php
+                                                        li.laravel-icon
+                                                          | tabbed-card.blade.php
+                                                        li.laravel-icon
+                                                          | timeline-small.blade.php
+                                                        li.laravel-icon
+                                                          | timeline-v-1.blade.php
+                                                        li.laravel-icon
+                                                          | timeline-v-2.blade.php
+                                                        li.laravel-icon tour.blade.php
+                                                        li.laravel-icon tree.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | builders
+                                                      ul
+                                                        li.laravel-icon
+                                                          | button-builder.blade.php
+                                                        li.laravel-icon
+                                                          | form-builder-1.blade.php
+                                                        li.laravel-icon
+                                                          | form-builder-2.blade.php
+                                                        li.laravel-icon
+                                                          | pagebuild.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | buttons
+                                                      ul
+                                                        li.laravel-icon
+                                                          | button-group.blade.php
+                                                        li.laravel-icon
+                                                          | buttons.blade.php
+                                                        li.laravel-icon
+                                                          | buttons-edge.blade.php
+                                                        li.laravel-icon
+                                                          | buttons-flat.blade.php
+                                                        li.laravel-icon
+                                                          | raised-button.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | charts
+                                                      ul
+                                                        li.laravel-icon
+                                                          | chart-apex.blade.php
+                                                        li.laravel-icon
+                                                          | chart-flot.blade.php
+                                                        li.laravel-icon
+                                                          | chart-google.blade.php
+                                                        li.laravel-icon
+                                                          | chartist.blade.php
+                                                        li.laravel-icon
+                                                          | chartjs.blade.php
+                                                        li.laravel-icon
+                                                          | chart-knob.blade.php
+                                                        li.laravel-icon
+                                                          | chart-morris.blade.php
+                                                        li.laravel-icon
+                                                          | chart-peity.blade.php
+                                                        li.laravel-icon
+                                                          | chart-sparkline.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | comingsoon
+                                                      ul
+                                                        li.laravel-icon
+                                                          | comingsoon.blade.php
+                                                        li.laravel-icon
+                                                          | comingsoon-bg-img.blade.php
+                                                        li.laravel-icon
+                                                          | comingsoon-bg-video.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | dashboard
+                                                      ul
+                                                        li.laravel-icon
+                                                          | dashboard-02.blade.php
+                                                        li.laravel-icon
+                                                          | index.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | document
+                                                      ul
+                                                        li.laravel-icon
+                                                          | change-log.blade.php
+                                                        li.laravel-icon
+                                                          | index.blade.php
+                                                        li.laravel-icon
+                                                          | review.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | email-templates
+                                                      ul
+                                                        li.laravel-icon
+                                                          | basic-template.blade.php
+                                                        li.laravel-icon
+                                                          | ecommerce-templates.blade.php
+                                                        li.laravel-icon
+                                                          | email-header.blade.php
+                                                        li.laravel-icon
+                                                          | email-order-success.blade.php
+                                                        li.laravel-icon
+                                                          | template-email.blade.php
+                                                        li.laravel-icon
+                                                          | template-email-2.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | errors
+                                                      ul
+                                                        li.laravel-icon
+                                                          | 400.blade.php
+                                                        li.laravel-icon 401.blade.php
+                                                        li.laravel-icon
+                                                          | 403.blade.php
+                                                        li.laravel-icon 404.blade.php
+                                                        li.laravel-icon 500.blade.php
+                                                        li.laravel-icon 503.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | forms
+                                                      ul
+                                                        li.laravel-icon
+                                                          | base-input.blade.php
+                                                        li.laravel-icon
+                                                          | clipboard.blade.php
+                                                        li.laravel-icon
+                                                          | datepicker.blade.php
+                                                        li.laravel-icon
+                                                          | daterangepicker.blade.php
+                                                        li.laravel-icon
+                                                          | datetimepicker.blade.php
+                                                        li.laravel-icon
+                                                          | default-form.blade.php
+                                                        li.laravel-icon
+                                                          | form-validation.blade.php
+                                                        li.laravel-icon
+                                                          | form-wizard.blade.php
+                                                        li.laravel-icon
+                                                          | form-wizard-four.blade.php
+                                                        li.laravel-icon
+                                                          | form-wizard-three.blade.php
+                                                        li.laravel-icon
+                                                          | form-wizard-two.blade.php
+                                                        li.laravel-icon
+                                                          | input-group.blade.php
+                                                        li.laravel-icon
+                                                          | megaoptions.blade.php
+                                                        li.laravel-icon
+                                                          | radio-checkbox-control.blade.php
+                                                        li.laravel-icon
+                                                          | select2.blade.php
+                                                        li.laravel-icon
+                                                          | switch.blade.php
+                                                        li.laravel-icon
+                                                          | time-picker.blade.php
+                                                        li.laravel-icon
+                                                          | touchspin.blade.php
+                                                        li.laravel-icon
+                                                          | typeahead.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | icons
+                                                      ul
+                                                        li.laravel-icon
+                                                          | feather-icon.blade.php
+                                                        li.laravel-icon
+                                                          | flag-icon.blade.php
+                                                        li.laravel-icon
+                                                          | font-awesome.blade.php
+                                                        li.laravel-icon
+                                                          | ico-icon.blade.php
+                                                        li.laravel-icon
+                                                          | ionic-icon.blade.php
+                                                        li.laravel-icon
+                                                          | material-design-icon.blade.php
+                                                        li.laravel-icon
+                                                          | pe7-icon.blade.php
+                                                        li.laravel-icon
+                                                          | simple-line-icon.blade.php
+                                                        li.laravel-icon
+                                                          | themify-icon.blade.php
+                                                        li.laravel-icon
+                                                          | typicons-icon.blade.php
+                                                        li.laravel-icon
+                                                          | whether-icon.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | layouts
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | authentication
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | box
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | comingsoon
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | compact
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | compact_dark
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | compact_rtl
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dark
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dark_box
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dark_rtl
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | errors
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | landing
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | light
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | rtl
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | simple
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | vertical
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | vertical_box
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                        li(data-jstree='{"opened":false}')
+                                                          | vertical_rtl
+                                                          ul
+                                                            li.laravel-icon
+                                                              | css.blade.php
+                                                            li.laravel-icon
+                                                              | footer.blade.php
+                                                            li.laravel-icon
+                                                              | header.blade.php
+                                                            li.laravel-icon
+                                                              | master.blade.php
+                                                            li.laravel-icon
+                                                              | script.blade.php
+                                                            li.laravel-icon
+                                                              | sidebar.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | others
+                                                      ul
+                                                        li.laravel-icon
+                                                          | search.blade.php
+                                                        li.laravel-icon
+                                                          | search-images.blade.php
+                                                        li.laravel-icon
+                                                          | search-video.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | page-layouts
+                                                      ul
+                                                        li.laravel-icon
+                                                          | compact-dark-layout.blade.php
+                                                        li.laravel-icon
+                                                          | compact-layout.blade.php
+                                                        li.laravel-icon
+                                                          | compact-rtl-layout.blade.php
+                                                        li.laravel-icon
+                                                          | dark-box-layout.blade.php
+                                                        li.laravel-icon
+                                                          | dark-rtl-layout.blade.php
+                                                        li.laravel-icon
+                                                          | layout-box.blade.php
+                                                        li.laravel-icon
+                                                          | layout-dark.blade.php
+                                                        li.laravel-icon
+                                                          | layout-light.blade.php
+                                                        li.laravel-icon
+                                                          | layout-rtl.blade.php
+                                                        li.laravel-icon
+                                                          | vertical-box-layout.blade.php
+                                                        li.laravel-icon
+                                                          | vertical-layout.blade.php
+                                                        li.laravel-icon
+                                                          | vertical-rtl-layout.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | pages
+                                                      ul
+                                                        li.laravel-icon
+                                                          | internationalization.blade.php
+                                                        li.laravel-icon
+                                                          | landing-page.blade.php
+                                                        li.laravel-icon
+                                                          | sample-page.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | starter-kit
+                                                      ul
+                                                        li.laravel-icon
+                                                          | compact-dark-layout.blade.php
+                                                        li.laravel-icon
+                                                          | compact-layout.blade.php
+                                                        li.laravel-icon
+                                                          | compact-rtl-layout.blade.php
+                                                        li.laravel-icon
+                                                          | dark-box-layout.blade.php
+                                                        li.laravel-icon
+                                                          | dark-rtl-layout.blade.php
+                                                        li.laravel-icon
+                                                          | footer-dark.blade.php
+                                                        li.laravel-icon
+                                                          | footer-fixed.blade.php
+                                                        li.laravel-icon
+                                                          | footer-light.blade.php
+                                                        li.laravel-icon
+                                                          | hide-on-scroll.blade.php
+                                                        li.laravel-icon
+                                                          | layout-box.blade.php
+                                                        li.laravel-icon
+                                                          | layout-dark.blade.php
+                                                        li.laravel-icon
+                                                          | layout-light.blade.php
+                                                        li.laravel-icon
+                                                          | layout-rtl.blade.php
+                                                        li.laravel-icon
+                                                          | vertical-box-layout.blade.php
+                                                        li.laravel-icon
+                                                          | vertical-layout.blade.php
+                                                        li.laravel-icon
+                                                          | vertical-rtl-layout.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | tables
+                                                      ul
+                                                        li.laravel-icon
+                                                          | bootstrap-basic-table.blade.php
+                                                        li.laravel-icon
+                                                          | bootstrap-border-table.blade.php
+                                                        li.laravel-icon
+                                                          | bootstrap-sizing-table.blade.php
+                                                        li.laravel-icon
+                                                          | bootstrap-styling-table.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-advance.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ajax.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-api.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-basic-init.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-data-source.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-autofill.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-basic-button.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-col-reorder.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-fixed-header.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-html-5-data-export.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-key-table.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-responsive.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-row-reorder.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-ext-scroller.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-plugin.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-server-side.blade.php
+                                                        li.laravel-icon
+                                                          | datatable-styling.blade.php
+                                                        li.laravel-icon
+                                                          | jsgrid-table.blade.php
+                                                        li.laravel-icon
+                                                          | table-components.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | ui-kits
+                                                      ul
+                                                        li.laravel-icon
+                                                          | accordion.blade.php
+                                                        li.laravel-icon
+                                                          | alert.blade.php
+                                                        li.laravel-icon
+                                                          | avatars.blade.php
+                                                        li.laravel-icon
+                                                          | box-shadow.blade.php
+                                                        li.laravel-icon
+                                                          | dropdown.blade.php
+                                                        li.laravel-icon
+                                                          | grid.blade.php
+                                                        li.laravel-icon
+                                                          | helper-classes.blade.php
+                                                        li.laravel-icon
+                                                          | list.blade.php
+                                                        li.laravel-icon
+                                                          | loader.blade.php
+                                                        li.laravel-icon
+                                                          | modal.blade.php
+                                                        li.laravel-icon
+                                                          | popover.blade.php
+                                                        li.laravel-icon
+                                                          | progress-bar.blade.php
+                                                        li.laravel-icon
+                                                          | state-color.blade.php
+                                                        li.laravel-icon
+                                                          | tab-bootstrap.blade.php
+                                                        li.laravel-icon
+                                                          | tab-material.blade.php
+                                                        li.laravel-icon
+                                                          | tag-pills.blade.php
+                                                        li.laravel-icon
+                                                          | tooltip.blade.php
+                                                        li.laravel-icon
+                                                          | typography.blade.php
+                                                    li(data-jstree='{"opened":false}')
+                                                      | widgets
+                                                      ul
+                                                        li.laravel-icon
+                                                          | chart-widget.blade.php
+                                                        li.laravel-icon
+                                                          | general-widget.blade.php
+                                                    li.laravel-icon welcome.blade.php
+                                            li(data-jstree='{"opened":false}')
+                                              | routes
+                                              ul
+                                                li.php-icon api.php
+                                                li.php-icon channels.php
+                                                li.php-icon console.php
+                                                li.php-icon web.php
+                                            li(data-jstree='{"opened":false}')
+                                              | storage
+                                              ul
+                                                li({&quot;type&quot;:&quot;file&quot;}='') app
+                                                li({&quot;type&quot;:&quot;file&quot;}='') framework
+                                                li({&quot;type&quot;:&quot;file&quot;}='') logs
+                                            li(data-jstree='{"opened":false}')
+                                              | tests
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | Feature
+                                                  ul
+                                                    li.php-icon ExampleTest.php
+                                                li(data-jstree='{"opened":false}')
+                                                  | Unit
+                                                  ul
+                                                    li.php-icon ExampleTest.php
+                                                li.php-icon CreatesApplication.php
+                                                li.php-icon TestCase.php
+                                        li.editorconfig-icon(data-jstree='{"type":"file"}')
+                                          | .editorconfig
+                                        li.env-icon(data-jstree='{"type":"file"}')
+                                          | .env
+                                        li.env-icon(data-jstree='{"type":"file"}')
+                                          | .env.example
+                                        li.php-icon(data-jstree='{"type":"file"}')
+                                          | artisan
+                                        li.json-icon(data-jstree='{"type":"file"}')
+                                          | composer.json
+                                        li.json-icon(data-jstree='{"type":"file"}')
+                                          | composer.lock
+                                        li.nodejs-icon(data-jstree='{"type":"file"}')
+                                          | package.json
+                                        li.xml-icon(data-jstree='{"type":"file"}')
+                                          | phpunit.xml
+                                        li.m-readme-icon(data-jstree='{"type":"file"}')
+                                          | README-.md
+                                        li.readme-icon(data-jstree='{"type":"file"}')
+                                          | README.md
+                                        li.php-icon(data-jstree='{"type":"file"}')
+                                          | server.php
+                                        li.js-icon(data-jstree='{"type":"file"}')
+                                          | webpack.mix.js
+
+
+                                      
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

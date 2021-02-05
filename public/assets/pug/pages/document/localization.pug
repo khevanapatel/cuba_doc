@@ -1,0 +1,167 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-5
+                            .card
+                              .card-body
+                                h4.main-title Localization
+                                hr
+                                #section51
+                                  h5.mt-4 # Introduction
+                                  .code-box-copy.mb-4
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#phpcode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#phpcode.language-js
+                                        | /resources
+                                        |   /lang
+                                        |       /en
+                                        |           lang.php
+                                        |       /es
+                                        |           lang.php
+                                  p All language files return an array of keyed strings. For example:
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#phpcode1' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#phpcode1.language-html
+                                        | &lt;?php
+                                        |     return[
+                                        |         'welcome' =&gt; 'Welcome to our application',
+                                        |     ];
+                                        | ?>
+                            .card#section52
+                              .card-header
+                                h5.mb-0 # Configuring The Locale
+                              .card-body
+                                p The default language for your application is stored in the 
+                                  b config/app.php 
+                                  | configuration file. You may modify this value to suit the needs of your application. You may also change the active language at runtime using the setLocale method on the App facade:
+                                .code-box-copy.mb-4
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#phpcode2' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#phpcode2.language-js
+                                        | //Language Change
+                                        | Route::get('lang/{locale}', function ($locale) {
+                                        |     if (! in_array($locale, ['en', 'de', 'es','fr','pt', 'cn', 'ae'])) {
+                                        |         abort(400);
+                                        |     }   
+                                        |     Session()->put('locale', $locale);
+                                        |     Session::get('locale');
+                                        |     return redirect()->back();
+                                        | })->name('lang');
+                                p You may configure a "fallback language", which will be used when the active language does not contain a given translation string. Like the default language, the fallback language is also configured in the config/app.php configuration file: 
+                                  code 'fallback_locale' => 'en',
+                                p Next up, we are going to create a middleware for dynamically changing the language.
+                                p php artisan make:middleware Localization
+                                p
+                                  b App\Http\Middleware\Localization.php
+                                .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#phpcode3' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#phpcode3.language-js
+                                        | namespace App\Http\Middleware;
+                                        | 
+                                        | use Closure;
+                                        | use Session;
+                                        | 
+                                        | use Illuminate\Http\Request;
+                                        | use Illuminate\Foundation\Application;
+                                        | 
+                                        | class Localization
+                                        | {
+                                        |     public function __construct(Application $app, Request $request) {
+                                        |         $this->app = $app;
+                                        |         $this->request = $request;
+                                        |     }
+                                        | 
+                                        |     public function handle($request, Closure $next)
+                                        |     {
+                                        |         $this->app->setLocale(session()->get('locale') ?? 'en');
+                                        |         return $next($request);
+                                        |     }
+                                        | }
+                            .card#section53
+                              .card-header
+                                h5.mb-0 # Retrieving Translation Strings 
+                              .card-body
+                                p You may retrieve lines from language files using the __ helper function. The __ method accepts the file and key of the translation string as its first argument. For example, let's retrieve the welcome translation string from the 
+                                  b resources/lang/lang.php 
+                                  | language file:
+                                p welcome.blade.php
+                                .code-box-copy.mb-4
+                                  button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#phpcode4' title='Copy')
+                                    i.fa.fa-files-o
+                                  pre
+                                    code#phpcode4.language-js
+                                      | {{ __('lang.welcome') }}
+                                      | {{ __('I love programming.') }}
+                                p If you are using the Blade templating engine, you may use the {{ }} syntax to echo the translation string or use the @lang directive:
+                                .code-box-copy.mb-4
+                                  button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#phpcode5' title='Copy')
+                                    i.fa.fa-files-o
+                                  pre
+                                    code#phpcode5.language-js
+                                      | {{ __('lang.welcome') }}
+                                      | @lang('lang.welcome')
+                                      | {{ trans('lang.welcome') }}
+                                p If the specified translation string does not exist, the __ function will return the translation string key. So, using the example above, the __ function would return lang.welcome if the translation string does not exist.
+                                p Note: The @lang directive does not escape any output. You are fully responsible for escaping your own output when using this directive.
+                        .col-xxl-2.col-xl-3.right-column
+                          #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-5' data-original-title='' title='')
+                                    h5.mb-0 Localization
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section51' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Introduction
+                                    li.nav-item
+                                      a.nav-link(href='#section52' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Configuring
+                                    li.nav-item
+                                      a.nav-link(href='#section53' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Retrieving
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

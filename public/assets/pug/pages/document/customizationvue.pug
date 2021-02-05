@@ -1,0 +1,190 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card.gulp-section
+                              #section-1-1
+                                .card-header
+                                  h4.mb-0 Theme Customize
+                                .card-body
+                                  h6.text-primary Layouts
+                                  p.mb-1 We have provided a bunch of page layouts and menu layouts that can be implemented with just a options change to body!
+                                  p For creating your dream layout open customizer by click on setting icon
+                                  img.img-fluid.img-70(src="../assets/images/document/custom1.jpg" alt="")
+                                  p.mt-4 You can change your theme by clicking particular setting
+                                  img.img-fluid.img-70(src="../assets/images/document/custom2.jpg" alt="")
+                                  p.mt-4 Then you just need to click on configuration button
+                                  img.img-fluid.img-70(src="../assets/images/document/custom3.jpg" alt="")
+                                  p.mt-4 Configuration popup will be open then just click on copy json button which will copy configuration of theme which you want
+                                  img.img-fluid.img-70(src="../assets/images/document/custom4.jpg" alt="")
+                                  p.mt-4 Now go to our theme >> src >> data >> layout.json and then just replace with your configuration.
+                                  .code-box-copy.mb-4
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#themecode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#themecode.language-js
+                                        | {
+                                        |  "settings": { 
+                                        |     {
+                                        |     "layout_type": "ltr", 
+                                        |     "sidebar": { 
+                                        |        "type": "default", 
+                                        |        "body_type": "default" 
+                                        |     }, 
+                                        |     "sidebar_setting": "default-sidebar", 
+                                        |     },
+                                        |  }, 
+                                        |  "color": { 
+                                        |     "layout_version": "light", 
+                                        |     "color": "color-1", 
+                                        |     "primary_color": "#7366ff", 
+                                        |     "secondary_color": "#f73164", 
+                                        |     "mix_layout": "default", 
+                                        |  }
+                                        | }
+                                  p Please refer the below table for corresponding classes. it is just for your inforamation you do not need to bother about this it's dynamically take particular classes according to your needs.
+                                  .table-responsive
+                                    table.table
+                                      thead
+                                        tr
+                                          th Layout
+                                          th Options
+                                      tbody
+                                        tr
+                                          td Boxed Layout
+                                            
+                                          td Class: box-layout
+                                        tr
+                                          td RTL Layout
+                                            
+                                          td Class: rtl
+                                        tr
+                                          td Light Layout
+                                            
+                                          td Class: light
+                                        tr
+                                          td Dark Sidebar
+                                            
+                                          td Class: dark-sidebar
+                                        tr
+                                          td Dark Layout
+                                            
+                                          td Class: dark-only
+                                  h6.text-primary.pt-4 Theme options
+                                  p.mb-1 We have some inbuilt themes for sidebar that can be switched with just a class change
+                                  .table-responsive.mb-4
+                                    table.table
+                                      thead
+                                        tr
+                                          th Sidebar
+                                          th Options
+                                      tbody
+                                        tr
+                                          td Horizontal Sidebar type
+                                          td Class: "page-wrapper horizontal-wrapper" and "page-body-wrapper horizontal-menu"
+                                        tr
+                                          td Bordered Navigation
+                                          td Attribute: sidebar-layout="border-sidebar"  
+                                        tr
+                                          td Sidebar icons color
+                                          td Attribute: sidebar-layout="iconcolor-sidebar"
+                            .card.gulp-section 
+                              #section-1-2
+                                .card-header
+                                  h4.mb-0 HTML Structured  
+                                .card-body
+                                  h6.text-primary Header Structured
+                                  p.mb-2 General HTML structure is the same throughout the template. Here is the header structure.
+                                  .code-box-copy.mb-4
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#headercode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#headercode.language-html
+                                        | &lt;div class="page-header"&gt;
+                                        |     &lt;div class="header-wrapper row m-0"&gt;
+                                        |             ........
+                                        |     &lt;/div&gt;
+                                        | &lt;/div&gt;
+                                  h6.text-primary Content Structured
+                                  p.mb-2 Generate cuba content area using following structure.
+                                  .code-box-copy.mb-4
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#contentcode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#contentcode.language-html
+                                        | &lt;div class="page-body-wrapper"&gt;<br>
+                                        |   &lt;div class="container-fluid"&gt;<br>
+                                        |     ........<br>
+                                        |   &lt;/div&gt;<br>
+                                        |   &lt;!-- Container-fluid starts--&gt;<br>
+                                        |   &lt;div class="container-fluid"&gt;<br>
+                                        |     .......<br>
+                                        |   &lt;/div&gt;<br>
+                                        |   &lt;!-- Container-fluid Ends--><br>
+                                        | &lt;/div&gt;<br>
+                                  h6.text-primary Footer Structured
+                                  p.mb-2 Footer structure to complete cuba structure.
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#footercode' title='Copy')
+                                      i.fa.fa-files-o
+                                    pre
+                                      code#footercode.language-html
+                                        | &lt;footer class="footer"&gt;<br><br>
+                                        |   &lt;div class="container-fluid"&gt;<br>
+                                        |     .............<br>
+                                        |   &lt;/div&gt;<br><br>
+                                        | &lt;/footer&gt;<br>
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Customization
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Theme Customize
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-2' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | HTML Structured
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

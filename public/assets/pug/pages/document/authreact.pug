@@ -1,0 +1,113 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card.gulp-section
+                              #section-1-1
+                                  .card-header
+                                    h4.mb-0 Auth0
+                                  .card-body
+                                    h6.text-primary Basically Auth0 use for:
+                                    p Auth0 is a flexible, drop-in solution to add authentication and authorization services to your applications. Your team and organization can avoid the cost, time, and risk that comes with building your own solution to authenticate and authorize users.
+                                    p.mb-4 You can connect any application (written in any language or on any stack) to Auth0 and define the identity providers you want to use (how you want your users to log in). Based on your app's technology, choose one of our 
+                                      b SDKs (or call our API), 
+                                      | and hook it up to your app. Now each time a user tries to authenticate, Auth0 will verify their identity and send the required information back to your app.
+                                    h6.text-primary Prerequisites
+                                    p.mb-1 You must have the following prerequisites:
+                                    p.mb-1 Recent versions of Node.js and NPM. You can install them from their official website,  
+                                    p.mb-4 React Cli installed 
+                                      b (npm install -g create-react-app)
+                                    h6.text-primary.mb-3 Let's follow below step to secure your application
+                                    h6 Step 1:
+                                    ul.list-none
+                                      li 
+                                        p.mb-2 1. setup auth0 project in auth0 console.
+                                        img.img-fluid.img-border(src="../assets/images/document/auth0/1.png" alt="")
+                                        p.mt-2.mb-3 Click on Get Started
+                                      li 
+                                        p.mb-2 2. Now Go to second option Integrate Auth0 into your application and click on 
+                                          b Create Application
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/auth0/2.jpg" alt="")
+                                      li 
+                                        p.mb-2 3. 
+                                          b Choose an application type : 
+                                          | Select Single Page Web Application and click on Create Button
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/auth0/3.jpg" alt="")
+                                      li
+                                        p.mb-2 4. Select Technology
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/auth0/4.png" alt="")
+                                      li
+                                        p.mb-2 5. Now go to setting tabs and show basic information about your auth0 application name , domain , client id and Set your Callback , Logout and Web Origins Url
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/auth0/5.png" alt="")
+                                    h6 Step 2:
+                                    ul.list-none.mb-0
+                                      li 1. Installing Auth0 in React    
+                                        .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#authcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#authcode.language-html
+                                                | npm install ——save @auth0/auth0-react
+                                      p.mb-1.mt-4 config file for auth0 manage inside the folder 
+                                        b src >> data >> config.jsx
+                                      .code-box-copy.mb-3
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#authcode1' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#authcode1.language-js
+                                            | export const auth0 = ({
+                                            |     domain : "YOUR_DOMAIN",
+                                            |     clientId : "YOUR_CLIENT_ID",
+                                            |     redirectUri : "YOUR_REDIRECTURI(callback path)"
+                                            | })
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Login with auth
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Auth0
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

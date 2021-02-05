@@ -1,0 +1,241 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card.gulp-section
+                              #section-1-1
+                                  .card-header
+                                    h4.mb-0 Firebase
+                                  .card-body
+                                    h6.text-primary Basically Firebase use for:
+                                    p.mb-1 Email and password authentication with Firebase,
+                                    p.mb-1 Social authentication with Facebook and Google, Twitter etc..
+                                    p.mb-1 Manage Complete Database on Cloud
+                                    p.mb-1 Hosting
+                                    p.mb-1 Password recovery,
+                                    p.mb-1 Verification emails,
+                                    p.mb-1 Storing and accessing the authentication state using the browser's localStorage
+                                    p There are also many other use of firebase that you can find from reference which we have attach below.
+                                    h6.text-primary Prerequisites
+                                    p.mb-1 You must have the following prerequisites:
+                                    p.mb-1 Recent versions of Node.js and NPM. You can install them from their official website,
+                                    p Angular Cli installed 
+                                      b (npm install -g @angular/cli)
+                                    h6.text-primary.mb-2 Let's follow below step to secure your application
+                                    h6.mb-3 Step 1: 
+                                    ul.list-none
+                                      li 
+                                        p.mb-2 1. setup firebase project in firebase console.
+                                        img.img-fluid.img-border(src="../assets/images/document/firebase/1.png" alt="")
+                                        p.mt-2.mb-3 click on Get Started button
+                                      li 
+                                        p.mb-2 2. Add new project
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/2.png" alt="")
+                                        p.mt-2.mb-2 create new project
+                                        img.img-fluid.img-border.mb-2(src="../assets/images/document/firebase/3.png" alt="")
+                                        p.mb-3 Accept the controler-terms and click on Create Project
+                                      li 
+                                        p.mb-3 3. Go to Develop > Authentication
+                                      li
+                                        p.mb-3 4. Get config object for your web app
+                                        p.mb-2.ps-4 To get the config object for a Firebase Web App:
+                                        ul.list-none
+                                          li 
+                                            p.mb-2 >> Click the Settings icon, then select Project settings.
+                                            img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/24.png" alt="")
+                                          li 
+                                            p.mb-2 >> Go to the web app
+                                            img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/19.png" alt="")
+                                          li 
+                                            p.mb-2 >> In Your apps card, select the nickname of the app for which you need a config object.
+                                            img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/20.png" alt="")
+                                          li 
+                                            p.mb-2 >> Select Config from the Firebase SDK snippet pane.
+                                            img.img-fluid.img-border(src="../assets/images/document/firebase/21.png" alt="")
+                                            img.img-fluid.img-border.mb-3.mt-3(src="../assets/images/document/firebase/22.png" alt="")
+                                            img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/23.png" alt="")
+                                          li
+                                            p.mb-2 >> Copy the config object snippet, then add it to your app's HTML.
+                                            img.img-fluid.img-border(src="../assets/images/document/firebase/4.png" alt="")
+                                            p.mt-2 copy config add on config.txt
+                                      li
+                                        p.mb-2 5. Next, you'll need to enable Email authentication from the authentication > Sign-in method tab:
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/5.png" alt="")
+                                      li
+                                        p.mb-2 6. go to sign in method
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/6.png" alt="")
+                                        p.mb-2 Make disble toggle to enable, and save changes
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/7.png" alt="")
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/25.png" alt="")
+                                      li
+                                        p.mb-2 7. Go to the authentication > Users tab then click on the Add user button and genarate email and password:
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/8.png" alt="")
+                                        img.img-fluid.img-border.mb-3(src="../assets/images/document/firebase/11.png" alt="")
+                                    h6.mb-3 Step 2:
+                                    ul.list-none.mb-0
+                                      li 
+                                        p.mb-2 1. Installing Firebase in Angular   
+                                        .code-box-copy.mb-3
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#firebasecode' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#firebasecode.language-html
+                                                  | npm install ——save firebase
+                                      li 
+                                        p.mb-2 2. Go to main.js file and import firebase and in 
+                                          b config.json 
+                                          | file.
+                                          .mb-4
+                                            .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#firebasecode1' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#firebasecode1.language-js
+                                                  | import firebase from 'firebase/app';
+                                                  | &nbsp;
+                                                  | import config from './config.json'
+                                                  | &nbsp;
+                                                  | firebase.initializeApp(config.firebase);
+                                                  | &nbsp;
+                                                  | export const db = firebase.firestore();
+                                        p.mb-2 you can just paste your firebase credential in your config.json file which is in 
+                                          b src >> config.json.
+                                        .mb-4
+                                            .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#firebasecode2' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#firebasecode2.language-js
+                                                  | "firebase":{
+                                                  | "apiKey": "YOUR  API KEY",
+                                                  | "authDomain": "YOUR AUTH DOMAIN",
+                                                  | "databaseURL": "<a href="#">YOUR DATABASE URL</a>",
+                                                  | "projectId": "YOUR PROJECT ID",
+                                                  | "storageBucket": "YOUR STORAGE BUCKET",
+                                                  | "messagingSenderId": "YOUR MESSAGE SENDER ID"
+                                                  | }  
+                                      li 
+                                        p.mb-2 3. In Routing 
+                                          b index.js 
+                                          | place following code for restricated use to open a admin theme without login
+                                          .code-box-copy.mb-4
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#firebasecode3' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#firebasecode3.language-js
+                                                | router.beforeEach((to, from, next) =&gt; {
+                                                | firebase.auth().onAuthStateChanged(() =&gt; {
+                                                | if(to.meta.title)
+                                                | document.title = to.meta.title;
+                                                | const CurrentUser = firebase.auth().currentUser;
+                                                | const path = ['/auth/login','/auth/register'];
+                                                | if (path.includes(to.path) || to.path === "/callback" || CurrentUser || Userauth.isAuthenticatedUser()){
+                                                | return next();
+                                                | }
+                                                | next('/auth/login')
+                                                | });
+                                                | }); 
+                                      li
+                                        p 4. Generate components in auth folder called Login and Register and use firebase in Login and Register component according to your needs. 
+                                      li
+                                        a(href="https://firebase.google.com/" target="_blank").btn.btn-solid  Supplemental
+                            .card.gulp-section
+                              #section-1-2
+                                .card-header
+                                  h4.mb-0 How to remove the firebase from cuba theme ?
+                                .card-body
+                                  ul.list-none
+                                    li 
+                                      p.mb-2 1. Remove Import statement and configuration of firebase from your main.js also remove firebase json from config.json which is in 
+                                        b src >> config.json
+                                      .code-box-copy.mb-4
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#firebasecode4' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#firebasecode4.language-js
+                                            | import firebase from 'firebase/app';
+                                            | &nbsp;
+                                            | import config from './config.json'
+                                            | &nbsp;
+                                            | firebase.initializeApp(config.firebase);
+                                            | &nbsp;
+                                            | export const db = firebase.firestore();
+                                    li
+                                      p.mb-2 2. Remove code from 
+                                        b route >> index.js 
+                                        | which is for restricating user to directly use dashboard without login
+                                      .warning-block.mb-4
+                                        p If you don't want to remove auth0 then just remove firebase part
+                                      .code-box-copy.mb-4
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#firebasecode5' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#firebasecode5.language-js
+                                            | router.beforeEach((to, from, next) =&gt; {
+                                            | firebase.auth().onAuthStateChanged(() =&gt; {
+                                            | if(to.meta.title)
+                                            | document.title = to.meta.title;
+                                            | const CurrentUser = firebase.auth().currentUser;
+                                            | const path = ['/auth/login','/auth/register'];
+                                            | if (path.includes(to.path) || to.path === "/callback" || CurrentUser || Userauth.isAuthenticatedUser()){
+                                            | return next();
+                                            | }
+                                            | next('/auth/login')
+                                            | });
+                                            | });  
+                                    li
+                                      p.mb-0 3. Remove all methods called Google, Facebook and others which is created for that particular social media login and just use simple login page, and on click of login just redirect to dashboard.And if you don't want to use login also just remove complete auth folder  
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Email with Firebase
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Firebase
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-2' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Remove Firebase
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

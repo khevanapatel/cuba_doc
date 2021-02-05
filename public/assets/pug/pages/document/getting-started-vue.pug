@@ -1,0 +1,272 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                          .row
+                            .col-sm-12
+                              h4.main-title Getting Started
+                            .col-sm-12
+                                .card.getting-started-sec
+                                  .card-body.p-0
+                                    .alert-box.alert.alert-primary.mb-0
+                                            p.mt-0 Cuba Vue Admin Theme is pure Vue theme, Yes! you read correct, it's 
+                                              b No Jquery
+                                              |  Vue admin theme including all feature and functionality with ease of integration for your project.cuba theme document will help you to understand Vue from scratch to making perfect real time dream application.
+                                            hr
+                                            p Follow the documentation carefully for solving your issues in minutes, Apart from that if you don't find solution when you following the docs you can raise a support ticket for your issue from 
+                                              a(href="https://pixelstrap.freshdesk.com" target="_blank") 
+                                                b pixelstrap.freshdesk.com
+                                            p.mt-3
+                                              b Dependancies
+                                            ul.mb-0 
+                                              li Vue Cli 3 
+                                              li Bootstrap-4
+                                              li SASS
+                                .card.gulp-section
+                                  .card-header
+                                    h4.mb-0 How to start
+                                  .card-body.p-t-0
+                                    p Welcome to Vue! Vue helps you build modern applications for the web, mobile, or desktop.
+                                    p.mb-4 For getting started an Vue application you needs two things as Prerequisites.
+                                    h6.text-primary.mb-3 Prerequisites
+                                    ul
+                                      li 
+                                        p.mb-4 Before you begin, make sure your development environment includes 
+                                          b Node 
+                                          | and an 
+                                          b npm package manager.
+                                    h6.text-primary.mb-3 Node.js
+                                    ul
+                                      li 
+                                        p Download latest version of node.js from 
+                                          a(href="https://nodejs.org" target='_blank')
+                                            b nodejs.org.
+                                      li
+                                        p Install Node.js using downloaded file 
+                                      li 
+                                        p.mb-4 To check your node version, run 
+                                          b node -v 
+                                          | in a terminal/console window.
+                                    h6.text-primary.mb-3 Npm package manager
+                                    ul
+                                      li 
+                                        p Vue CLI, and Vue apps depend on features and functionality provided by libraries that are available as npm packages. To download and install npm packages, you must have an npm 
+                                          | package manager.
+                                      li
+                                        p This Quick Start uses the npm client command line interface, which is installed with Node.js by default. To check that you have the npm client installed, run 
+                                          b npm -v 
+                                          | in a terminal/console window.
+                                      li
+                                        p For better understanding Vue we suggest you to once go through official documentation of Vue from 
+                                          a(href="https://vuejs.org/v2/guide/" target='_blank') 
+                                            b Vuejs.org
+                                .card.gulp-section
+                                  .card-header
+                                    h4.mb-0 Vue setup
+                                  .card-body
+                                    .warning-block.mb-4
+                                      p If you want Cuba theme setup then directly follow next Cuba setup section
+                                    h6.text-primary.mb-3 Installing Vue CLI
+                                    ul.mb-4
+                                      li 
+                                        p You use the Vue CLI to create projects, generate application and library code, and perform a variety of ongoing development tasks as it is a progressive framework for building user interfaces.
+                                      li
+                                        p Install the Vue CLI globally.
+                                      li 
+                                        p To install the CLI using npm, open a terminal/console window and enter the following command:
+                                        .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode1' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#installcode1.language-html
+                                                  | npm install -g @vue/cli 
+                                    h6.text-primary.mb-3 Create Initial application 
+                                    ul.list-none 
+                                      li 1. Run the CLI command vue create and provide the name my-app, as shown here:
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#createcode1' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#createcode1.language-html
+                                                    | vue create my-app
+                                      li 2.  The vue create command prompts you for information about features to include in the initial app project. Accept the defaults by pressing the Enter or Return key.
+                                    h6.text-primary.mb-3 Serve Application
+                                    ul.list-none
+                                      li 1. Go to the workspace folder (my-app).
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#cdcode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#cdcode.language-html
+                                                    | cd my-app
+                                      li 2. Launch the server by using the CLI command npm start
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#npmcode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#npmcode.language-html
+                                                    | npm run serve
+                                    a(href="https://vuejs.org/v2/guide/" target='_blank').btn.btn-solid Supplemental
+                                    h6.text-primary.mb-3.mt-4 Build Application
+                                    ul.list-none
+                                      li 1. Build you application for host on server using below command:
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#buildcode1' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#buildcode1.language-html
+                                                    | npm run build
+                                      li 2. It will create one dist file in your theme folder. Make zip of dist folder. so here you are ready to upload your theme on server.
+                                        p If you’re using Apache HTTP Server, you need to create a .htaccess file in the public folder by pastng below code
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#buildcode2' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#buildcode2.language-html
+                                                    | Options -MultiViews
+                                                    | RewriteEngine On
+                                                    | RewriteCond %{REQUEST_FILENAME} !-f
+                                                    | RewriteRule ^ index.html [QSA,L]
+                                      li.mb-3 Now upload your dist folder on public folder
+                                    h6.text-primary.mb-3.mt-4 Making Sub-folder on Server
+                                    ul.list-none
+                                      li By default it host on your server root, If you wish to upload on sub-folder then:
+                                      li 1. Go to your theme and open vue.config.js and add your subfolder name here:
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#modulecode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#modulecode.language-html
+                                                    | module.exports = {
+                                                    |   baseUrl: "/cuba/",
+                                                    |   publicPath: "/cuba/"
+                                                    | };
+                                      li 2. open route >> index.js in object of router replace base attribute with
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#modulecode1' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#modulecode1.language-html
+                                                    | base: '/cuba/'
+                                      li Now again build theme using
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#modulecode2' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#modulecode2.language-html
+                                                    | npm run build  
+                                      li Now create a .htaccess file in your subfolder folder by pastng below code
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#modulecode3' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#modulecode3.language-html
+                                                    | Options -MultiViews
+                                                    | RewriteEngine On
+                                                    | RewriteBase /cuba/
+                                                    | RewriteCond %{REQUEST_FILENAME} !-f
+                                                    | RewriteRule ^ index.html [QSA,L]
+                                      li Now upload your dist folder in sub folder
+                                      li 
+                                        a(href="https://cli.vuejs.org/guide/deployment.html#general-guidelines" target='_blank').btn.btn-solid Supplemental
+                                .card.gulp-section
+                                  .card-header
+                                    h4.mb-0 Cuba setup
+                                  .card-body
+                                    p.mb-4 If you have already download and install node.js and Vue CLI then ignore prerequisites accordingly.
+                                    h6.text-primary.mb-3 Node.js
+                                    ul
+                                      li 
+                                        p Download latest version of node.js from 
+                                          a(href="https://nodejs.org" target='_blank')
+                                            b nodejs.org.
+                                      li
+                                        p Install Node.js using downloaded file 
+                                      li 
+                                        p.mb-4 To check your node version, run 
+                                          b node -v 
+                                          | in a terminal/console window.
+                                    h6.text-primary.mb-3 Vue CLI
+                                    ul
+                                      li Install Vue CLI Using:
+                                        .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode2' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#installcode2.language-html
+                                                  | npm install -g @vue/cli 
+                                    h6.text-primary.mb-3.pt-2 Setup Cuba theme by
+                                    ul.list-none
+                                      li 1) Download and extract an Cuba themes from themeforest
+                                      li 2) Extract it and then go in to theme folder.
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#cdcode2' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#cdcode2.language-html
+                                                    | cd theme
+                                      li 3)  Import all dependency by installing npm command
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#npmcode2' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#npmcode2.language-html
+                                                    | npm install
+                                      li 4)  Now you are in stage to successfully run Cuba using below command:
+                                        .py-2.ps-3
+                                          .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#npmcode3' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#npmcode3.language-html
+                                                    | npm run serve
+                                .card.new-arrival-sec
+                                  .card-header
+                                    h3 What's Next?
+                                  .card-body.p-t-0
+                                    .arrival-content-main
+                                      a(href="treevue.html")
+                                        .arrival-content
+                                              i.fa.fa-angle-double-right
+                                              h5 Tree
+
+                                    .arrival-content-main
+                                      a(href="componentvue.html")
+                                        .arrival-content
+                                              i.fa.fa-angle-double-right
+                                              h5 Components
+                                      
+                                    .arrival-content-main
+                                      a(href="appvue.html")
+                                        .arrival-content
+                                              i.fa.fa-angle-double-right
+                                              h5 Applications
+                                      
+    include ../../components/footer-files

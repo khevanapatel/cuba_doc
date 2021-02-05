@@ -1,0 +1,246 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                            .row
+                              .col-sm-12
+                                h4.main-title Getting Started
+                              .col-sm-12
+                                 .card.getting-started-sec
+                                  .card-body.p-0
+                                    .alert-box.alert.alert-primary
+                                            p.mt-0 Cuba Admin is a responsive HTML template that is based on the CSS framework Bootstrap 5 and it is built with Sass. Sass compiler makes it easier to code and customize. If you are unfamiliar with Bootstrap, visit their website and read through the documentation. All of Bootstrap components have been modified to fit the style of Cuba Admin and provide a consistent look throughout the template.
+                                            hr
+                                            p Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can be really helpful when you need to create something on the fly.
+                                 .card.gulp-section
+                                   .card-header
+                                     h4.mb-0 How to start
+                                   .card-body
+                                      h6.text-primary Laravel Version (8.0)
+                                      p
+                                        | Build your Laravel Project with cuba , perfect choice for your laravel project. Cuba laravel project is included with 2 version laravel starter kit and laravel full version. Cuba laravel is build in 
+                                        b Laravel 8.0 
+                                        | latest version with all features and assets. you can start project from scratch by laravel starter kit or rewamp your existing project with cuba laravel admin template
+                                      h6.text-primary.pt-2 Server Requirement
+                                      p The Laravel framework has a few system requirements. All of these requirements are satisfied by the Laravel Homestead virtual machine, so it's highly recommended that you use Homestead as your local Laravel development environment.
+                                      p However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
+                                      ul
+                                        li PHP >= 7.3
+                                        li BCMath PHP Extension
+                                        li Ctype PHP Extension
+                                        li Fileinfo PHP extension
+                                        li JSON PHP Extension
+                                        li Mbstring PHP Extension
+                                        li OpenSSL PHP Extension
+                                        li PDO PHP Extension
+                                        li Tokenizer PHP Extension
+                                        li XML PHP Extension
+                                 .card.gulp-section
+                                   .card-header
+                                     h4.mb-0 Laravel Installation
+                                   .card-body
+                                      h6.text-primary.mb-3 Installation Steps:
+                                      ul
+                                        li 
+                                          | Laravel utilizes Composer to manage its dependencies. So, before using Laravel, make sure you have Composer installed on your machine.
+                                          .py-2.ps-3
+                                            .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode1' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#installcode1.language-html
+                                                    | composer update
+                                        li 
+                                          | After successfully executing of composer update command check the Laravel version
+                                          .py-2.ps-3
+                                            .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode2' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#installcode2.language-html
+                                                    | php artisan --version
+                                        li 
+                                          | Now Need some Laravel Commands (old versions required)
+                                          .py-2.ps-3
+                                            .code-box-copy.mt-2
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode3' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#installcode3.language-html
+                                                    | php artisan key:generate
+                                      h6.text-primary.mb-3 Local Development Server
+                                      p If you have PHP installed locally and you would like to use PHP's built-in development server to serve your application, you may use the serve Artisan command. This command will start a development server at 
+                                        b http://localhost:8000:
+                                      ul
+                                        li
+                                          | command for serves your project
+                                          .py-2.ps-3
+                                            .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode4' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#installcode4.language-html
+                                                  | php artisan serve
+                                      p You need to know how laravel works in order to use this version. Check the Laravel 8 
+                                        a(href="https://laravel.com/docs/8.x/installation" target="_blank") official documentation
+                                 .card.gulp-section
+                                    .card-header
+                                      h4.mb-0 Upgrading To 8.0 From 7.x
+                                    .card-body
+                                        h6.text-primary PHP 7.3.0 Required
+                                        p The new minimum PHP version is now 7.3.0.
+                                        h6.text-primary.pt-2 Updating Dependencies
+                                        p Laravel latest version 
+                                          a(href="https://laravel.com/docs/8.x/upgrade" target="_blank") Upgrade Guide
+                                        b OR
+                                        p.mt-2 Update the following dependencies in your 
+                                          code  composer.json 
+                                          | file:
+                                        p.mb-1
+                                          code guzzlehttp/guzzle 
+                                          | to 
+                                          code  ^7.0.1
+                                        p.mb-1 
+                                          code facade/ignition 
+                                          | to 
+                                          code  ^2.3.6
+                                        p.mb-1 
+                                          code laravel/framework 
+                                          | to 
+                                          code  ^8.0
+                                        p.mb-1 
+                                          code laravel/ui 
+                                          | to 
+                                          code  ^3.0
+                                        p.mb-1 
+                                          code nunomaduro/collision 
+                                          | to 
+                                          code  ^5.0
+                                        p 
+                                          code phpunit/phpunit 
+                                          | to 
+                                          code  ^9.0
+                                        p.mb-1 Example:
+                                          .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode5' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#installcode5.language-js
+                                                  | "require": { 
+                                                  |     "php": "^7.3.0", 
+                                                  |     "fideloper/proxy": "^4.2", 
+                                                  |     "fruitcake/laravel-cors": "^2.0", 
+                                                  |     "guzzlehttp/guzzle": "^7.0.1",
+                                                  |     "laravel/framework": "^8.0", 
+                                                  |     "laravel/tinker": "^2.0" 
+                                                  | }, 
+                                                  | "require-dev": { 
+                                                  |     "facade/ignition": "^2.3.6", 
+                                                  |     "fzaninotto/faker": "^1.9.1", 
+                                                  |     "mockery/mockery": "^1.3.1", 
+                                                  |     "nunomaduro/collision": "^5.0", 
+                                                  |     "phpunit/phpunit": "^9.3" 
+                                                  | }, 
+                                        p.mb-1 Update php version & Check command
+                                          .code-box-copy
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode6' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#installcode6.language-js
+                                                  | php -v
+                                        p.mb-1 Example 
+                                          b php -v 
+                                          | command after:
+                                          code-box-copy
+                                              pre
+                                                code.language-js
+                                                  | PHP 7.4.9 (cli) (built: Aug  7 2020 14:29:36) ( NTS )
+                                                  | Copyright (c) The PHP Group
+                                                  | Zend Engine v3.4.0, Copyright (c) Zend Technologies
+                                                  |     with Zend OPcache v7.4.9, Copyright (c), by Zend Technologies
+                                          b OR
+                                          code-box-copy
+                                              pre
+                                                code.language-js
+                                                  | PHP 7.3.23-1+ubuntu18.04.1+deb.sury.org+1 (cli) (built: Oct  6 2020 11:36:27) ( NTS )
+                                                  | Copyright (c) 1997-2018 The PHP Group
+                                                  | Zend Engine v3.3.23, Copyright (c) 1998-2018 Zend Technologies
+                                                  |     with Zend OPcache v7.3.23-1+ubuntu18.04.1+deb.sury.org+1, Copyright (c) 1999-2018, by Zend Technologies
+                                        p.mb-1 Use Minimum PHP 7.3 and also available PHP 7.4
+                                          .d-block
+                                            code composer update 
+                                            | or  
+                                            code  composer install
+                                        p.mb-1 After successfully executing of composer update command check the Laravel version
+                                          .d-block
+                                            code php artisan --version
+                                        p.mb-1 Now Need some Laravel Commands (old versions required)
+                                          .d-block
+                                            code php artisan key:generate
+                                        h6.text-primary.mb-3.pt-2 Local Development Server
+                                        p If you have PHP installed locally and you would like to use PHP's built-in development server to serve your application, you may use the serve Artisan command. This command will start a development server at 
+                                          b http://localhost:8000:
+                                        ul.mb-0
+                                          li.mb-0 command for serves your project
+                                            .pt-2
+                                              .code-box-copy
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#installcode7' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#installcode7.language-js
+                                                    | php artisan serve
+                                 .card.new-arrival-sec
+                                   .card-header
+                                     h3 What's Next?
+                                   .card-body
+                                     .arrival-content-main
+                                       a(href="treelaravel.html")
+                                        .arrival-content
+                                             i.fa.fa-angle-double-right
+                                             h5 Tree
+                                       
+                                     .arrival-content-main
+                                       a(href="componentlaravel.html")
+                                        .arrival-content
+                                             i.fa.fa-angle-double-right
+                                             h5 Components
+                                       
+                                     .arrival-content-main
+                                       a(href="applaravel.html")
+                                        .arrival-content
+                                             i.fa.fa-angle-double-right
+                                             h5 Applications
+                                      
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

@@ -1,0 +1,1323 @@
+- var prism                 = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var popper                = true;
+- var tooltip               = true;
+- var component_js          = true;
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc(data-bs-spy="scroll" data-bs-target="#myScrollspy" data-bs-offset="0")
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-xxl-10.col-xl-9.content.component-col
+                          #section-1
+                            .card
+                             .card-body
+                                h4.main-title.mb-0 Component
+                                hr
+                                #section1-1
+                                  h5 Basic UI Elements
+                                  ul#myTab.nav.nav-tabs(role='tablist')
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#Button' role='tab' aria-selected='false' data-original-title='' title='') Button
+                                      li.nav-item
+                                        a.nav-link.active(data-bs-toggle='tab' href='#tag-pills' role='tab' aria-selected='true' data-original-title='' title='') Tag &amp; pills
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#progress-bar' role='tab' aria-selected='false' data-original-title='' title='') progress bar
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#alert' role='tab' aria-selected='false' data-original-title='' title='') Alert
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#popovers' role='tab' aria-selected='false' data-original-title='' title='') popover
+                                  #myTabContent.tab-content
+                                      #Button.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          button.btn.btn-primary.mb-2(type='button' data-original-title='' title='') Primary
+                                          button.btn.btn-secondary.mb-2(type='button' data-original-title='' title='') Secondary
+                                          button.btn.btn-success.mb-2(type='button' data-original-title='' title='') Success
+                                          button.btn.btn-info.mb-2(type='button' data-original-title='' title='') Info
+                                          button.btn.btn-warning.mb-2(type='button' data-original-title='' title='') Warning
+                                          button.btn.btn-danger.mb-2(type='button' data-original-title='' title='') Danger
+                                          .code-box-copy.mt-3
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#button' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code.language-html#button
+                                                 | &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Primary Button&lt;/button&gt;
+                                                 | &lt;button type=&quot;button&quot; class=&quot;btn btn-secondary&quot;&gt;Secondary Button&lt;/button&gt;
+                                                 | &lt;button type=&quot;button&quot; class=&quot;btn btn-success&quot;&gt;Success Button&lt;/button&gt;
+                                                 | &lt;button type=&quot;button&quot; class=&quot;btn btn-info&quot;&gt;Info Button&lt;/button&gt;
+                                                 | &lt;button type=&quot;button&quot; class=&quot;btn btn-warning&quot;&gt;Warning Button&lt;/button&gt;
+                                                 | &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot;&gt;Danger Button&lt;/button&gt;
+                                                 | &lt;button type=&quot;button&quot; class=&quot;btn btn-light&quot;&gt;Light Button&lt;/button&gt;
+                                        p.mb-2
+                                          | To use another types button you have to link the related css
+                                          | file according to types of buttons in a head tag
+                                      #tag-pills.tab-pane.fade.active.show(role='tabpanel')
+                                        .fluid-container.py-4
+                                          span.badge.badge-primary Primary
+                                          span.badge.badge-secondary Secondary
+                                          span.badge.badge-success Success
+                                          span.badge.badge-info Info
+                                          span.badge.badge-warning.text-dark Warning
+                                          span.badge.badge-danger Danger
+                                          span.badge.badge-light.text-dark Light
+                                          span.badge.badge-dark.tag-pills-sm-mb Dark
+                                          .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#badges' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code.language-html#badges
+                                                    | &lt;span class=&quot;badge badge-primary&quot;&gt;Primary&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-secondary&quot;&gt;Secondary&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-success&quot;&gt;Success&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-info&quot;&gt;Info&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-warning text-dark&quot;&gt;Warning&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-danger&quot;&gt;Danger&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-light text-dark&quot;&gt;Light&lt;/span&gt;
+                                                    | &lt;span class=&quot;badge badge-dark&quot;&gt;Dark&lt;/span&gt;  
+                                      #progress-bar.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          .progress.mb-2
+                                            .progress-bar(role='progressbar' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100')
+                                          .progress.mb-2
+                                            .progress-bar.bg-primary(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                          .progress.mb-2
+                                            .progress-bar.bg-secondary(role='progressbar' style='width: 50%' aria-valuenow='50' aria-valuemin='0' aria-valuemax='100')
+                                          .progress.mb-2
+                                            .progress-bar.bg-success(role='progressbar' style='width: 75%' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100')
+                                          .progress
+                                            .progress-bar.bg-info(role='progressbar' style='width: 100%' aria-valuenow='100' aria-valuemin='0' aria-valuemax='100')
+                                          .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#progressbars' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code.language-html#progressbars
+                                                    | &lt;div class="progress"&gt;
+                                                    |   &lt;b-progress :value="0" :max="100"&gt;&lt;/b-progress&gt;
+                                                    | &lt;/div&gt;<br>
+                                                    | &lt;div class="progress"&gt;
+                                                    |   &lt;b-progress :value="25" :max="100" variant="primary"&gt;&lt;/b-progress&gt;
+                                                    | &lt;/div&gt;<br>
+                                                    | &lt;div class="progress"&gt;
+                                                    |   &lt;b-progress :value="50" :max="100" variant="secondary"&gt;&lt;/b-progress&gt;
+                                                    | &lt;/div&gt;<br>
+                                                    | &lt;div class="progress"&gt;
+                                                    |   &lt;b-progress :value="75" :max="100" variant="success"&gt;&lt;/b-progress&gt;
+                                                    | &lt;/div&gt;<br>
+                                                    | &lt;div class="progress"&gt;
+                                                    |   &lt;b-progress :value="100" :max="100" variant="info"&gt;&lt;/b-progress&gt;
+                                                    | &lt;/div&gt;
+                                      #alert.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          .alert.alert-primary(role='alert') This is a info alert&mdash;check it out!
+                                          .alert.alert-secondary(role='alert') This is a light alert&mdash;check it out!
+                                          .alert.alert-success(role='alert') This is a success alert&mdash;check it out!
+                                          .alert.alert-info(role='alert') This is a danger alert&mdash;check it out!
+                                          .alert.alert-warning(role='alert') This is a secondary alert&mdash;check it out!
+                                          .alert.alert-danger(role='alert') This is a warning alert&mdash;check it out!
+                                          .alert.alert-light(role='alert') This is a dark alert&mdash;check it out!
+                                          .alert.alert-dark(role='alert') This is a dark alert&mdash;check it out!
+                                          .code-box-copy.mt-4
+                                              button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#alertcopy' title='Copy')
+                                                i.fa.fa-files-o
+                                              pre
+                                                code#alertcopy.language-html
+                                                  | &lt;b-alert show variant="primary" class="alert alert-primary"&gt;
+                                                  |   &lt;p&gt;This is a info alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;<br>
+                                                  | &lt;b-alert show variant="secondary" class="alert alert-secondary"&gt;
+                                                  |   &lt;p>This is a light alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;<br>
+                                                  | &lt;b-alert show variant="success" class="alert alert-success"&gt;
+                                                  |   &lt;p&gt;This is a success alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;<br>
+                                                  | &lt;b-alert show variant="info" class="alert alert-info"&gt;
+                                                  |   &lt;p&gt;This is a danger alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;<br>
+                                                  | &lt;b-alert show variant="warning" class="alert alert-warning"&gt;
+                                                  |   &lt;p&gt;This is a secondary alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;<br>
+                                                  | &lt;b-alert show variant="danger" class="alert alert-danger"&gt;
+                                                  |   &lt;p&gt;This is a warning alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;<br>
+                                                  | &lt;b-alert show variant="light" class="alert alert-light"&gt;
+                                                  |   &lt;p&gt;This is a light alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;<br>
+                                                  | &lt;b-alert show variant="dark" class="alert alert-dark"&gt;
+                                                  |   &lt;p&gt;This is a dark alert—check it out!&lt;/p&gt;
+                                                  | &lt;/b-alert&gt;
+                                      #popovers.tab-pane.fade(role='tabpanel')
+                                        .fluid-container.py-4
+                                          button.btn.btn-primary.example-popover.me-1.mb-2(type='button' data-bs-toggle='popover' title='' data-bs-content="And here's some amazing content. It's very engaging. Right?" data-original-title='Popover title') Click to toggle popover
+                                          button.example-popover.btn.btn-success.mb-2(type='button' data-bs-trigger='hover' data-container='body' data-bs-toggle='popover' data-bs-placement='bottom' title='' data-offset='-20px -20px' data-bs-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' data-original-title='Popover title') On Hover Tooltip
+                                          .code-box-copy.mt-3
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#popovercode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#popovercode.language-html
+                                                    | &lt;b-button v-b-tooltip.hover title="Popover title" variant="primary" &gt;Hover Me&lt;/b-button&gt;
+                                  ul#myTab2.nav.nav-tabs.m-t-25(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#tooltips' role='tab' aria-selected='false' data-original-title='' title='') Tooltip
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#dropdown' role='tab' aria-selected='true' data-original-title='' title='') Dropdown
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#tabs' role='tab' aria-selected='false' data-original-title='' title='') Tabs
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#according' role='tab' aria-selected='false' data-original-title='' title='') According
+                                  #myTabContent2.tab-content
+                                    #tooltips.tab-pane.fade.show.active(role='tabpanel')
+                                      .fluid-container.py-4
+                                        button.example-popover.btn.btn-primary(type='button' data-container='body' data-bs-toggle='tooltip' data-bs-placement='top' title='tooltip' data-original-title='Popover title') Hover Me
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tooltipcode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#tooltipcode.language-html
+                                                    | &lt;b-button v-b-tooltip.hover title="Hover title" variant="primary" &gt;Hover Me&lt;/b-button&gt;
+                                    #dropdown.tab-pane.fade(role='tabpanel')
+                                      .fluid-container.py-4
+                                        .dropdown-basic
+                                          .dropdown
+                                            button.dropbtn.btn-primary(type='button' data-original-title='' title='')
+                                              | Dropdown
+                                              | Button
+                                              span
+                                                i.icofont.icofont-arrow-down
+                                            .dropdown-content
+                                              a(href='#' data-original-title='' title='') Action
+                                              a(href='#' data-original-title='' title='') Another Action
+                                              a(href='#' data-original-title='' title='') Something Else Here
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dropdowncode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#dropdowncode.language-html
+                                                    | &lt;b-dropdown text="Dropdown Button" menu-class="dropdown-content" variant="primary" &gt;
+                                                    | &lt;b-dropdown-item&gt;Action&lt;/b-dropdown-item&gt;
+                                                    | &lt;b-dropdown-item&gt;Another Action&lt;/b-dropdown-item&gt;
+                                                    | &lt;b-dropdown-item&gt;Something Else Here&lt;/b-dropdown-item&gt;
+                                                    | &lt;/b-dropdown&gt;
+                                    #tabs.tab-pane.fade(role='tabpanel')
+                                      .fluid-container.py-4
+                                        ul#myTab3.nav.nav-tabs(role='tablist')
+                                          li.nav-item
+                                            a#home-tab.nav-link.active(data-bs-toggle='tab' href='#home' role='tab' aria-controls='home' aria-selected='true' data-original-title='' title='') Home                                      
+                                          li.nav-item.dropdown
+                                            a.nav-link.dropdown-toggle(data-bs-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false' data-original-title='' title='') Dropdown
+                                            .dropdown-menu
+                                              a#profile-tab.dropdown-item(data-bs-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false' data-original-title='' title='') Action
+                                              a.dropdown-item(href='#' data-original-title='' title='') Another action
+                                              a.dropdown-item(href='#' data-original-title='' title='') Something else here
+                                              .dropdown-divider
+                                              a.dropdown-item(href='#' data-original-title='' title='') Separated link
+                                          li.nav-item
+                                            a#profile-tabs.nav-link(data-bs-toggle='tab' href='#profile' role='tab' aria-controls='profile' aria-selected='false' data-original-title='' title='') Profile
+                                          li.nav-item
+                                            a#contact-tab.nav-link(data-bs-toggle='tab' href='#contact' role='tab' aria-controls='contact' aria-selected='false' data-original-title='' title='') Contact
+                                        #myTabContent3.tab-content
+                                          #home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='home-tab')
+                                            p.mb-0.mt-3
+                                              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                          #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
+                                            p.mb-0.mt-3
+                                              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                          #contact.tab-pane.fade(role='tabpanel' aria-labelledby='contact-tab')
+                                            p.mb-0.mt-3
+                                              | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tabcode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#tabcode.language-html
+                                                    | &lt;b-tabs&gt;
+                                                    | &lt;b-tab title="Home" active&gt;
+                                                    | &lt;p class="mb-0 m-t-30"&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum&lt;/p&gt;
+                                                    | &lt;/b-tab&gt;
+                                                    | &lt;b-tab title="Profile"&gt;
+                                                    | &lt;p class="mb-0 m-t-30"&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum&lt;/p&gt;
+                                                    | &lt;/b-tab&gt;
+                                                    | &lt;b-tab title="Contact"&gt;
+                                                    | &lt;p class="mb-0 m-t-30"&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum&lt;/p&gt;
+                                                    | &lt;/b-tab&gt;
+                                    #according.tab-pane.fade(role='tabpanel')
+                                      .fluid-container.py-4
+                                        #accordion.default-according
+                                          .card
+                                            #headingOne.card-header
+                                              h6.mb-0
+                                                button.btn.btn-link(data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne' data-original-title='' title='')
+                                                  | Collapsible Group Item #
+                                                  span.digits 1
+                                            #collapseOne.collapse.show(aria-labelledby='headingOne' data-bs-parent='#accordion')
+                                              .card-body
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                          .card
+                                            #headingTwo.card-header
+                                              h6.mb-0
+                                                button.btn.btn-link.collapsed(data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo' data-original-title='' title='')
+                                                  | Collapsible Group Item #
+                                                  span.digits 2
+                                            #collapseTwo.collapse(aria-labelledby='headingTwo' data-bs-parent='#accordion')
+                                              .card-body
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                          .card
+                                            #headingThree.card-header
+                                              h6.mb-0
+                                                button.btn.btn-link.collapsed(data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree' data-original-title='' title='')
+                                                  | Collapsible Group Item #
+                                                  span.digits 3
+                                            #collapseThree.collapse(aria-labelledby='headingThree' data-bs-parent='#accordion')
+                                              .card-body
+                                                | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                        .code-box-copy.mt-4
+                                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#accodioncode' title='Copy')
+                                                  i.fa.fa-files-o
+                                                pre
+                                                  code#accodioncode.language-html
+                                                    | &lt;b-card no-body class="mb-1"&gt;
+                                                    | &lt;b-card-header header-tag="div" class="bg-primary"&gt;
+                                                    | &lt;h5 class="mb-0"&gt;
+                                                    | &lt;b-button v-b-toggle.primary_icon_open_close_1 &gt;&lt;i class="fa fa-briefcase"&gt;&lt;/i&gt; Collapsible Group Item #&lt;span class="digits"&gt;1&lt;/span&gt;&lt;/b-button&gt;
+                                                    | &lt;/h5&gt;
+                                                    | &lt;/b-card-header&gt;
+                                                    | &lt;b-collapse id="primary_icon_open_close_1" visible accordion="my-accordion-icon-open-close" role="tabpanel"&gt;
+                                                    | &lt;b-card-body&gt;
+                                                    | &lt;b-card-text&gt;Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.&lt;/b-card-text&gt;
+                                                    | &lt;/b-card-body&gt;
+                                                    | &lt;/b-collapse&gt;
+                                                    | &lt;/b-card&gt;
+                                                    | <br />
+                                                    | &lt;b-card no-body class="mb-1"&gt;
+                                                    | &lt;b-card-header header-tag="div" class="bg-primary"&gt;
+                                                    | &lt;h5 class="mb-0"&gt;
+                                                    | &lt;b-button v-b-toggle.primary_icon_open_close_2 &gt;&lt;i class="fa fa-support"&gt;&lt;/i&gt; Collapsible Group Item #&lt;span class="digits"&gt;2&lt;/span&gt;&lt;/b-button&gt;
+                                                    | &lt;/h5&gt;
+                                                    | &lt;/b-card-header&gt;
+                                                    | &lt;b-collapse id="primary_icon_open_close_2" accordion="my-accordion-icon-open-close" role="tabpanel"&gt;
+                                                    | &lt;b-card-body&gt;
+                                                    | &lt;b-card-text&gt;Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.&lt;/b-card-text&gt;
+                                                    | &lt;/b-card-body&gt;
+                                                    | &lt;/b-collapse&gt;
+                                                    | &lt;/b-card&gt;
+                             #section-1-2
+                                .card-body
+                                  hr.hr
+                                  h5 Advance UI Elements
+                                  ul#myTab4.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#scrollable' role='tab' aria-selected='true' data-original-title='' title='') Scrollable
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#toaster' role='tab' aria-selected='false' data-original-title='' title='') toaster
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#tour' role='tab' aria-selected='false' data-original-title='' title='') Tour
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#rating' role='tab' aria-selected='false' data-original-title='' title='') Rating
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#pagination' role='tab' aria-selected='false' data-original-title='' title='') Pagination
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#sweet-alert' role='tab' aria-selected='true' data-original-title='' title='') Sweet-Alert
+                                  #myTabContent4.tab-content
+                                    #scrollable.tab-pane.fade.show.active(role='tabpanel')
+                                      p.pt-4.pb-2
+                                        | This is an Vue wrapper library for the Perfect Scrollbar. To use this library you should get familiar with the Perfect Scrollbar documentation as well since this documentation only explains details specific to this wrapper.
+                                      b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#scrollablecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#scrollablecode.language-html
+                                                | npm i vue-perfect-scrollbar
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#scrollablecode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#scrollablecode1.language-html
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |
+                                                |   &lt;VuePerfectScrollbar class="scroll-area" v-once :settings="settings"&gt;
+                                                | 
+                                                |
+                                                |   &nbsp; &nbsp; &lt;img src="../../assets/images/banner/3.jpg" alt="girl" width="800" height="600"
+                                                | 
+                                                | &lt;/VuePerfectScrollbar&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | export default {
+                                                | &nbsp; &nbsp; &nbsp;data() {
+                                                | &nbsp; &nbsp; return {
+                                                | &nbsp; &nbsp; &nbsp; settings: {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; maxScrollbarLength: 60
+                                                | &nbsp; &nbsp; &nbsp; },
+                                                | &nbsp; &nbsp; }
+                                                | &nbsp; },
+                                                | &nbsp; components: {
+                                                | &nbsp; &nbsp; VuePerfectScrollbar
+                                                | &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-perfect-scrollbar" target="_blank").btn.btn-solid  Supplemental 
+                                    #toaster.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#toastercode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#toastercode.language-html
+                                                | npm install vue-toasted --save 
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#toastercode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#toastercode1.language-html
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &lt;b-button @click="success" variant="success"&gt;Success&lt;/b-button&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | export default {
+                                                | &nbsp; methods:{
+                                                | &nbsp; &nbsp; &nbsp; success()
+                                                | &nbsp; &nbsp; &nbsp; {
+                                                |  &nbsp; &nbsp; &nbsp; &nbsp; this.$toasted.show(" New order has been placed ", {theme: 'outline',position: "top-right", type: 'success', duration: 2000});
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-toasted" target="_blank").btn.btn-solid  Supplemental 
+                                    #tour.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tourcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#tourcode.language-html
+                                                | npm i vue-tour
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#tourcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#tourcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &lt;v-tour name="myTour" :steps="steps" :options="tourOptions"&gt;&lt;/v-tour&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | export default {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;data () {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tourOptions: {
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; useKeyboardNavigation: true,
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; labels: {
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttonSkip: 'Skip',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttonPrevious: 'Back',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttonNext: 'Next',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; buttonStop: 'Done'
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; steps: [
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; target: '#profile-tour',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; content: 'This is Profile image'
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; target: '#update-profile-tour',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; content: 'Change Profile image here'
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; },
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; mounted: function () {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; this.$tours['myTour'].start()
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-tour" target="_blank").btn.btn-solid  Supplemental 
+                                    #rating.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#ratingcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#ratingcode.language-html
+                                                | npm i vue-rate-it
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#ratingcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#ratingcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &lt;image-rating :src="rectanglerating()" :item-size="12" :max-rating="10"&gt;&lt;/image-rating&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import {ImageRating} from 'vue-rate-it';
+                                                | &nbsp;
+                                                | export default {
+                                                | &nbsp; &nbsp; components: {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; ImageRating
+                                                | &nbsp; &nbsp; },
+                                                | &nbsp; &nbsp; &nbsp;methods:{
+                                                | &nbsp; &nbsp; &nbsp; vuelogo(){
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; var vuelogo = require('../../assets/images/vuelogo.png');
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; return vuelogo;
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; &nbsp;}
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-rate-it" target="_blank").btn.btn-solid  Supplemental 
+                                    #pagination.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#paginationcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#paginationcode.language-html
+                                                  | &lt;template&gt;
+                                                  | &lt;div&gt;
+                                                  | &nbsp; &nbsp; &lt;b-pagination-nav
+                                                  | &nbsp; &nbsp; &nbsp; &nbsp; :number-of-pages="3"
+                                                  | &nbsp; &nbsp; &nbsp; &nbsp; base-url="#"
+                                                  | &nbsp; &nbsp; &nbsp; &nbsp; first-text="First"
+                                                  | &nbsp; &nbsp; &nbsp; &nbsp; prev-text="Prev"
+                                                  | &nbsp; &nbsp; &nbsp; &nbsp; next-text="Next"
+                                                  | &nbsp; &nbsp; &nbsp; &nbsp; last-text="Last"
+                                                  | &nbsp; &nbsp; &nbsp; &nbsp; &gt;
+                                                  | &lt;/b-pagination-nav&gt;
+                                                  | &lt;/div&gt;
+                                                  | &lt;/template&gt;
+                                                  | &lt;script&gt;
+                                                  |  export default { }
+                                                  | &lt;/script&gt;
+                                          a(href="https://bootstrap-vue.org/docs/components/pagination-nav" target="_blank").btn.btn-solid  Supplemental 
+                                    #sweet-alert.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#sweetalertcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#sweetalertcode.language-html
+                                                | npm i vue-sweetalert2
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#sweetalertcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#sweetalertcode1.language-html
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &lt;b-button type="button" v-on:click="basic" variant="primary"&gt;Basic&lt;/b-button&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | export default {
+                                                | &nbsp; &nbsp; methods:{
+                                                | &nbsp; &nbsp; basic:function(){
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; this.$swal({
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; title:'Hello world!'
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; });
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; }
+                                                | &nbsp;}
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-sweetalert2" target="_blank").btn.btn-solid  Supplemental  
+                                  ul#myTab5.nav.nav-tabs.m-t-35(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#range-slider' role='tab' aria-selected='false' data-original-title='' title='') Range slider
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#image-cropper' role='tab' aria-selected='false' data-original-title='' title='') Image Cropper
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#dragdrop' role='tab' aria-selected='false' data-original-title='' title='') Drag and Drop
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#imageupload' role='tab' aria-selected='false' data-original-title='' title='') Image Upload
+                                  #myTabContent5.tab-content
+                                    #range-slider.tab-pane.fade.show.active(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#rangeslidercode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#rangeslidercode.language-html
+                                                | npm i vue-slide-bar
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#rangeslidercode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#rangeslidercode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &lt;VueSlideBar v-model="one.value" :min="1" :max="100" :range="one.range" &gt;&lt;/VueSlideBar&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import VueSlideBar from 'vue-slide-bar'
+                                                | &nbsp;
+                                                | export default {
+                                                | data () {
+                                                | return {
+                                                | one:{
+                                                | value:5,
+                                                | range:[
+                                                | {
+                                                | label: '10'
+                                                | },
+                                                | {
+                                                | label: '100'
+                                                | },
+                                                | ]
+                                                | }
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; }
+                                                | &nbsp;}
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-slide-bar" target="_blank").btn.btn-solid  Supplemental 
+                                    #image-cropper.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#imgcropcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#imgcropcode.language-html
+                                                | npm i vue-cropperjs
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#imgcropcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#imgcropcode1.language-html
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |  &nbsp; &lt;vue-cropper ref='cropper'&nbsp; :crop="cropImage"&gt; &lt;/vue-cropper&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import VueCropper from 'vue-cropperjs';
+                                                | import 'cropperjs/dist/cropper.css';
+                                                | &nbsp;
+                                                | export default {
+                                                | &nbsp; &nbsp; data () {
+                                                | return {
+                                                | one:{
+                                                | value:5,
+                                                | range:[
+                                                | {
+                                                | label: '10'
+                                                | },
+                                                | {
+                                                | label: '100'
+                                                | },
+                                                | ]
+                                                | }
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; }
+                                                | &nbsp;},
+                                                | components: {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; VueCropper,
+                                                | },
+                                                | mounted(){
+                                                | &nbsp; &nbsp; this.imageData = this.$refs.cropper.getData();
+                                                | },
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-cropperjs" target="_blank").btn.btn-solid  Supplemental 
+                                    #dragdrop.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dragdropcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#dragdropcode.language-html
+                                                | npm i vue2-dragula
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#dragdropcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#dragdropcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &lt;div class="pull-left " v-dragula="colOne" service="my-third" drake="a"&gt;
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &lt;div v-for="text in colOne" :key="text"&gt;{{text}}&lt;/div&gt;
+                                                | &nbsp; &lt;/div&gt;
+                                                |   &nbsp; &lt;div class="pull-right" v-dragula="colTwo" service="my-third" drake="a"&gt;
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &lt;div v-for="text in colTwo" :key="text"&gt;{{text}}&lt;/div&gt;
+                                                | &nbsp; &lt;/div&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import { Vue2Dragula } from 'vue2-dragula'
+                                                | export default {
+                                                | &nbsp; &nbsp; data () {
+                                                | return {
+                                                | &nbsp; &nbsp; &nbsp;one: [
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'Lorem ipsum dolor sit amet, consectetur',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sed do eiusmod tempor incididunt ut labore et dolore magna.',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'Ut enim ad minim veniam, quis nostrud exercitation',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ],
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; two: [
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'Duis aute irure dolor in reprehenderit in voluptate velit esse',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'cillum dolore eu fugiat nulla pariatur.',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'Excepteur sint occaecat cupidatat non proident,',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sunt in culpa qui officia deserunt mollit anim id est laborum.'
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ],
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; }
+                                                | &nbsp;},
+                                                | components: {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; Vue2Dragula
+                                                | },
+                                                | mounted(){
+                                                | &nbsp; &nbsp; this.imageData = this.$refs.cropper.getData();
+                                                | },
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue2-dragula" target="_blank").btn.btn-solid  Supplemental 
+                                    #imageupload.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                       b Installing and usage
+                                      .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#uploadcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#uploadcode.language-html
+                                                | npm i vue2-dropzone
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#uploadcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#uploadcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &nbsp;&lt;vue-dropzone id="singledropzone" :options="singledropzoneOptions" class="dropzone digits"&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                                                | &nbsp; &nbsp; &lt;/vue-dropzone&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import vue2Dropzone from 'vue2-dropzone'
+                                                | export default {
+                                                | &nbsp; &nbsp; data () {
+                                                | return {
+                                                | &nbsp; singledropzoneOptions:{
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; url:"<a href="http://localhost:8080" aria-invalid="true">http://localhost:8080</a>",
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; thumbnailWidth: 150,
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; maxFiles:1,
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; maxFilesize: 2,
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; addRemoveLinks: true,
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dictDefaultMessage:"&lt;i class='icon-cloud-up'&gt;&lt;/i&gt;&lt;h6&gt;Drop files here or click to upload.&lt;/h6&gt;&lt;span&gt;(This is just a demo dropzone. Selected files are &lt;strong&gt;not&lt;/strong&gt; actually uploaded.)&lt;/span&gt;"
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; }
+                                                | &nbsp;},
+                                                | components: {
+                                                | &nbsp; &nbsp; vueDropzone: vue2Dropzone
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue2-dropzone" target="_blank").btn.btn-solid  Supplemental 
+                             #section-1-5
+                                .card-body
+                                    hr.hr
+                                    h5.my-4 Forms
+                                    ul#myTab7.nav.nav-tabs(role='tablist')
+                                      li.nav-item
+                                        a.nav-link.active(data-bs-toggle='tab' href='#datepicker' role='tab' aria-selected='true' data-original-title='' title='') Date Picker
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#select2' role='tab' data-original-title='' title='') Select2
+                                      li.nav-item
+                                        a.nav-link(data-bs-toggle='tab' href='#typeahead' role='tab' data-original-title='' title='') Typeahead
+                                    #myTabContent7.tab-content
+                                      #datepicker.tab-pane.fade.show.active(role='tabpanel')
+                                        p.pt-4
+                                          b Installing and usage
+                                        .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#datepickercode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#datepickercode.language-html
+                                                | npm i vuejs-datepicker 
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#datepickercode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#datepickercode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &nbsp; &lt;datepicker input-class="datepicker-here form-control digits" :format="format" &gt;&lt;/datepicker&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import Datepicker from 'vuejs-datepicker';
+                                                | export default {
+                                                | data(){
+                                                | &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; format: "MM/dd/yyyy",
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; format2: "MMMM yyyy",
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; disabledDates:{
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; days: [6, 0],
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; },
+                                                | &nbsp; &nbsp; }
+                                                | },
+                                                | components: {
+                                                | &nbsp; &nbsp; Datepicker
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vuejs-datepicker" target="_blank").btn.btn-solid  Supplemental
+                                      #select2.tab-pane.fade(role='tabpanel')
+                                        p.pt-4
+                                          b Installing and usage
+                                        .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#select2code' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#select2code.language-html
+                                                | npm i vue-multiselect
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#select2code1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#select2code1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &lt;multiselect v-model="singleValue" :options="options" label="name" :searchable="false" :close-on-select="false" :show-labels="false" placeholder="Pick a value"&gt;&lt;/multiselect&gt;&lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import Multiselect from 'vue-multiselect'
+                                                | export default {
+                                                | data(){
+                                                | &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; singleValue:""
+                                                | &nbsp; &nbsp; }
+                                                | },
+                                                | components: {
+                                                | &nbsp; &nbsp; Multiselect
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-multiselect" target="_blank").btn.btn-solid  Supplemental  
+                                      #typeahead.tab-pane.fade(role='tabpanel')
+                                        p.pt-4
+                                          b Installing and usage
+                                        .mb-4
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#typeaheadcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#typeaheadcode.language-html
+                                                | npm i vue-bootstrap-typeahead
+                                          .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#typeaheadcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#typeaheadcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                | &nbsp;&lt;vue-bootstrap-typeahead
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; v-model="query"
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; inputClass="typeahead"
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :data="countries"
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; placeholder="State of USA"
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import VueBootstrapTypeahead from "vue-bootstrap-typeahead";
+                                                | export default {
+                                                | data(){
+                                                | &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; query: "",
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;countries: [
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "alabama", "alaska", "arizona", "arkansas", "california", "colorado", "connecticut", "delaware", "florida", "georgia", "hawaii", "idaho", "illinois", "indiana", "iowa", "kansas", "kentucky", "louisiana", "maine", "maryland", "massachusetts", "michigan", "minnesota", "mississippi", "missouri", "montana", "nebraska", "nevada", "new hampshire", "new jersey", "new mexico", "new york", "north carolina", "north dakota", "ohio", "oklahoma", "oregon", "pennsylvania", "rhode island", "south carolina", "south dakota", "tennessee", "texas", "utah", "vermont", "virginia", "washington", "west virginia", "wisconsin", "wyoming"
+                                                | &nbsp; &nbsp; &nbsp; ]
+                                                | &nbsp; &nbsp; }
+                                                | },
+                                                | components: {
+                                                | &nbsp; &nbsp; VueBootstrapTypeahead
+                                                | }
+                                                | &lt;/script&gt;
+                                          a(href="https://www.npmjs.com/package/vue-bootstrap-typeahead" target="_blank").btn.btn-solid  Supplemental  
+                             #section-1-6
+                               .card-body
+                                hr
+                                h5 Tables
+                                ul#myTab8.nav.nav-tabs(role='tablist')
+                                  li.nav-item
+                                    a.nav-link.active(data-bs-toggle='tab' href='#bootstrap-tables' role='tab' aria-selected='true' data-original-title='' title='') Bootstrap Table
+                                  li.nav-item
+                                    a.nav-link(data-bs-toggle='tab' href='#smart-tables' role='tab' aria-selected='true' data-original-title='' title='') Smart Table
+                                #myTabContent8.tab-content
+                                  #bootstrap-tables.tab-pane.fade.show.active(role='tabpanel')
+                                    p.pt-4
+                                      b Installing and usage
+                                    .mb-4
+                                      .code-box-copy.mb-3
+                                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#bootstraptablecode' title='Copy')
+                                            i.fa.fa-files-o
+                                          pre
+                                            code#bootstraptablecode.language-html
+                                              | npm i bootstrap-vue 
+                                      .code-box-copy.mb-3
+                                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#bootstraptablecode1' title='Copy')
+                                            i.fa.fa-files-o
+                                          pre
+                                            code#bootstraptablecode1.language-html
+                                              | &lt;template&gt;
+                                              | &lt;div&gt;
+                                              | &nbsp; &lt;b-table striped hover :items="items"&gt;&lt;/b-table&gt;
+                                              | &lt;/template&gt;
+                                              | &lt;script&gt;
+                                              | import BootstrapVue from 'bootstrap-vue' 
+                                              | export default {
+                                              | &nbsp;data(){
+                                              | &nbsp; return{
+                                              | &nbsp; &nbsp; &nbsp; &nbsp;items: [
+                                              |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { no:1, first_name:'Alexander', last_name:'Orton', username:'@mdorton', role:'Admin', country:'USA' },
+                                              |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { no:2, first_name:'John Deo', last_name:'Deo', username:'@johndeo', role:'User', country:'USA' },
+                                              |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { no:3, first_name:'Randy Orton', last_name:'the Bird', username:'@twitter', role:'admin', country:'UK' },
+                                              |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { no:4, first_name:'Randy Mark', last_name:'Ottandy', username:'@mdothe', role:'user', country:'AUS' },
+                                              |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; { no:5, first_name:'Ram Jacob', last_name:'Thornton', username:'@twitter', role:'admin', country:'IND' }
+                                              | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]
+                                              | &nbsp; &nbsp; }
+                                              | },
+                                              | components: {
+                                              | &nbsp; &nbsp; BootstrapVue
+                                              | }
+                                              | &lt;/script&gt;
+                                      a(href="https://www.npmjs.com/package/bootstrap-vue" target="_blank").btn.btn-solid  Supplemental  
+                                  #smart-tables.tab-pane.fade(role='tabpanel')
+                                    p.pt-4
+                                      b Installing and usage
+                                    .mb-4
+                                      .code-box-copy.mb-3
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#smartcode' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#smartcode.language-html
+                                            | npm i vuejs-smart-table
+                                      .code-box-copy.mb-3
+                                        button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#smartcode1' title='Copy')
+                                          i.fa.fa-files-o
+                                        pre
+                                          code#smartcode1.language-html
+                                            | &lt;template&gt;
+                                            | &lt;div&gt;
+                                            | &nbsp; &nbsp; Put your smart table code here
+                                            | &lt;/template&gt;
+                                            | &lt;script&gt;
+                                            | import SmartTable from 'vuejs-smart-table'
+                                            | data(){
+                                            | &nbsp; return{
+                                            | &nbsp; &nbsp; }
+                                            | },
+                                            | components: {
+                                            | &nbsp; &nbsp; SmartTable
+                                            | }
+                                            | &lt;/script&gt;
+                                      a(href="https://www.npmjs.com/package/vuejs-smart-table" target="_blank").btn.btn-solid  Supplemental
+                             #section-1-9
+                                .card-body
+                                  hr
+                                  h5 Charts
+                                  ul#myTab11.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#chart-google' role='tab' aria-selected='true' data-original-title='' title='') Google Charts
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-chartjs' role='tab' aria-selected='true' data-original-title='' title='') Chart.js
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#chart-chartist' role='tab' aria-selected='true' data-original-title='' title='') Chartist
+                                  #myTabContent11.tab-content
+                                    #chart-google.tab-pane.fade.show.active(role='tabpanel')
+                                      p.pt-4
+                                        b Installing and usage
+                                      .mb-4
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#googlecode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#googlecode.language-html
+                                                | npm i vue-google-charts 
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#googlecode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#googlecode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                | &nbsp; &nbsp;&lt;GChart
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; class="chart-overflow"&nbsp;
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; id="pie-chart1"
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; type="PieChart"
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; :data="pie_chart.chartData_1"/&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import { GChart } from 'vue-google-charts'
+                                                | data(){
+                                                | &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; chartsLib: null,&nbsp;
+                                                | &nbsp; &nbsp; &nbsp; pie_chart: {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; chartData_1: [
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ['Task', 'Hours per Day'],
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ['Work',&nbsp; &nbsp; &nbsp;5],
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ['Eat',&nbsp; &nbsp; &nbsp; 10],
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ['Commute',&nbsp; 15],
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ['Watch TV', 20],
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ['Sleep',&nbsp; &nbsp; 25]
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; ]
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; }
+                                                | },
+                                                | components: {
+                                                | &nbsp; &nbsp; GChart
+                                                | }
+                                                | &lt;/script&gt;
+                                        a(href="https://www.npmjs.com/package/vue-google-charts" target="_blank").btn.btn-solid  Supplemental
+                                    #chart-chartjs.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                        b Installing and usage
+                                      .mb-4
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#chartjscode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#chartjscode.language-html
+                                                | npm i vue-chartjs
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#chartjscode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#chartjscode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                | &nbsp; &nbsp; &lt;Bar class="chart-height"/&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | &nbsp; &nbsp; import { Bar } from 'vue-chartjs'
+                                                | export default {
+                                                | &nbsp; data(){
+                                                | &nbsp; &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; },
+                                                | &nbsp; components: {
+                                                | &nbsp; &nbsp; &nbsp; Bar
+                                                | &nbsp; },
+                                                | &nbsp;mounted () {
+                                                | &nbsp; &nbsp; this.renderChart({
+                                                |   &nbsp; &nbsp; &nbsp; labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                                                | &nbsp; &nbsp; &nbsp; datasets: [
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; label: 'GitHub Commits',
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; backgroundColor: '#f87979',
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data: [40, 20, 12, 39, 10, 40, 39, 80, 40, 20, 12, 11]
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; &nbsp; ]
+                                                | &nbsp; &nbsp; })
+                                                | &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                        a(href="https://www.npmjs.com/package/vue-chartjs" target="_blank").btn.btn-solid  Supplemental
+                                    #chart-chartist.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                        b Installing and usage
+                                      .mb-4
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#chartistcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#chartistcode.language-html
+                                                | npm i vue-chartist
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#chartistcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#chartistcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                | &nbsp; &nbsp; &lt;chartist
+                                                | &nbsp; &nbsp; &nbsp; class="ct-6 flot-chart-container"
+                                                | &nbsp; &nbsp; &nbsp; ratio="ct-major-second"
+                                                | &nbsp; &nbsp; &nbsp; type="Line"
+                                                | &nbsp; &nbsp; &nbsp; :data="chart1.data"
+                                                | &nbsp; &nbsp; &nbsp; :options="chart1.options"&gt;
+                                                | &nbsp; &nbsp; &lt;/chartist&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import * as Chartist from 'chartist';
+                                                | export default {
+                                                | data(){
+                                                | &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp;chart1 : {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; data: {
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; series: [
+                                                |    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [12, 9, 7, 8, 5, 4, 6, 2, 3, 3, 4, 6],
+                                                |    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [4,&nbsp; 5, 3, 7, 3, 5, 5, 3, 4, 4, 5, 5],
+                                                |    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [5,&nbsp; 3, 4, 5, 6, 3, 3, 4, 5, 6, 3, 4],
+                                                |    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [3,&nbsp; 4, 5, 6, 7, 6, 4, 5, 6, 7, 6, 3]
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ]
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; },
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; options: {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; low: 0,
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; showArea: false,
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fullWidth: true,
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; &nbsp; },
+                                                | }
+                                                | },
+                                                | components: {
+                                                | &nbsp; &nbsp; Chartist
+                                                | }
+                                                | }
+                                                | &lt;/script&gt;
+                                        a(href="https://www.npmjs.com/package/vue-chartist" target="_blank").btn.btn-solid  Supplemental
+                             #section-1-10
+                               .card-body
+                                  hr
+                                  h5 Maps
+                                  ul#myTab13.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#g-map' role='tab' aria-selected='true' data-original-title='' title='') Google Map
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#leaflet-map' role='tab' aria-selected='true' data-original-title='' title='') Leaflet
+                                  #myTabContent13.tab-content
+                                    #g-map.tab-pane.fade.show.active(role='tabpanel')
+                                      p.pt-4
+                                        b Installing and usage
+                                      .mb-4
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#mapcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#mapcode.language-html
+                                                | npm i vue2-google-maps 
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#mapcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#mapcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &nbsp;&lt;GmapMap :center="{lat:20.5937, lng:78.9629}" :zoom="12" style="width: auto; height: 500px"&gt;
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/GmapMap&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import * as VueGoogleMaps from 'vue2-google-maps'
+                                                | export default {
+                                                | &nbsp; data(){
+                                                | &nbsp; &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; },
+                                                | &nbsp; components: {
+                                                | &nbsp; &nbsp; &nbsp; VueGoogleMaps
+                                                | &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                        a(href="https://www.npmjs.com/package/vue2-google-maps" target="_blank").btn.btn-solid  Supplemental
+                                    #leaflet-map.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                        b Installing and usage
+                                      .mb-4
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#leafletcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#leafletcode.language-html
+                                                | npm i vue2-leaflet
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#leafletcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#leafletcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp; &lt;l-map :zoom="simple.zoom" :center="simple.center" style="height: 500px"&gt;
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;l-tile-layer :url="simple.url"&gt;&lt;/l-tile-layer&gt;
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/l-map&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import { LMap } from 'vue2-leaflet'
+                                                | export default {
+                                                | &nbsp; data(){
+                                                | &nbsp; &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;simple:{
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; zoom:5,
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; center: [49.439557, 234.558105],
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; url:'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; },
+                                                | &nbsp; components: {
+                                                | &nbsp; &nbsp; &nbsp; LMap
+                                                | &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                        a(href="https://www.npmjs.com/package/vue2-leaflet" target="_blank").btn.btn-solid  Supplemental
+                             #section-1-11
+                                .card-body
+                                  hr
+                                  h5 Editors
+                                  ul#myTab14.nav.nav-tabs(role='tablist')
+                                    li.nav-item
+                                      a.nav-link.active(data-bs-toggle='tab' href='#simpleeditor' role='tab' aria-selected='true' data-original-title='' title='') Simple Editor
+                                    li.nav-item
+                                      a.nav-link(data-bs-toggle='tab' href='#ckeditor' role='tab' aria-selected='true' data-original-title='' title='') CK Editor
+                                  #myTabContent14.tab-content
+                                    #simpleeditor.tab-pane.fade.show.active(role='tabpanel')
+                                      p.pt-4
+                                        b Installing and usage
+                                      .mb-4
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#editorcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#editorcode.language-html
+                                                | npm i vue2-editor
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#editorcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#editorcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                | &nbsp;&lt;vue-editor v-model="content"&gt;&lt;/vue-editor&gt;
+                                                | &nbsp;&lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import { VueEditor } from "vue2-editor";
+                                                | export default {
+                                                | &nbsp; data(){
+                                                | &nbsp; &nbsp; return{
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; content: "&lt;h1&gt;Some initial content&lt;/h1&gt;"
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; },
+                                                | &nbsp; components: {
+                                                | &nbsp; &nbsp; &nbsp; VueEditor
+                                                | &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                        a(href="https://npmjs.com/package/vue2-editor" target="_blank").btn.btn-solid  Supplemental
+                                    #ckeditor.tab-pane.fade(role='tabpanel')
+                                      p.pt-4
+                                        b Installing and usage
+                                      .mb-4
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#ckcode' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#ckcode.language-html
+                                                | npm i @ckeditor/ckeditor5-vue
+                                        .code-box-copy.mb-3
+                                            button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#ckcode1' title='Copy')
+                                              i.fa.fa-files-o
+                                            pre
+                                              code#ckcode1.language-js
+                                                | &lt;template&gt;
+                                                | &lt;div&gt;
+                                                |   &nbsp; &nbsp;&lt;ckeditor :editor="editor"&nbsp; v-model="editorData"&gt;&lt;/ckeditor&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;/template&gt;
+                                                | &lt;script&gt;
+                                                | import CKEditor from '@ckeditor/ckeditor5-vue';
+                                                | import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+                                                | &nbsp;
+                                                | export default {
+                                                | &nbsp; data(){
+                                                | &nbsp; &nbsp; return{
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; editor: ClassicEditor,
+                                                |   &nbsp; &nbsp; &nbsp; &nbsp; editorData: '&lt;p&gt;Lorem Ipsum is simply dummy text&lt;/p&gt;',
+                                                | &nbsp; &nbsp; &nbsp; }
+                                                | &nbsp; },
+                                                | &nbsp; components: {
+                                                | &nbsp; &nbsp; &nbsp; &nbsp; ckeditor: CKEditor.component
+                                                | &nbsp; }
+                                                | }
+                                                | &lt;/script&gt;
+                                        a(href="https://www.npmjs.com/package/@ckeditor/ckeditor5-vue" target="_blank").btn.btn-solid  Supplemental
+                        .col-xxl-2.col-xl-3.right-column
+                           #myScrollspy.page-sidebar.custom-scrollbar
+                            .page-right-sidebar
+                              ul.nav.flex-column.custom-scrollbar
+                                li.nav-item
+                                  a.nav-link.quick-links.active(href='#section-1' data-original-title='' title='')
+                                    h5.mb-0 Components
+                                  ul.nav.flex-column.p-l-10.m-t-5.set-padding
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-1' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Basic
+                                        |  UI Elements
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-2' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        | Advance
+                                        |                                                     UI Elements
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-5' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Forms
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-6' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |  Tables
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-9' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Charts
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-10' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 maps
+                                    li.nav-item
+                                      a.nav-link(href='#section-1-11' data-original-title='' title='')
+                                        i.fa.fa-angle-right
+                                        |                                 Editors
+                        
+                              
+
+
+
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

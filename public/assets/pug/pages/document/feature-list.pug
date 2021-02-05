@@ -1,0 +1,333 @@
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  #sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                          #feature-list.shortcode_text.doc-section.feature-list.mb-0
+                              .row
+                                .col-md-12
+                                  h4.main-title Templates Features
+                                  .row
+                                    .col-sm-12
+                                      ul#pills-tab.nav.nav-pills(role='tablist')
+                                        li.nav-item
+                                          a#pills-home-tab.nav-link.d-flex.active(data-bs-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') 
+                                            img(src="../assets/images/document/features/html/html.png" alt="")
+                                            .text-start
+                                              h5.mb-0 HTML
+                                              p.mb-0 Frameworks
+
+                                        li.nav-item
+                                          a#pills-profile-tab.d-flex.nav-link(data-bs-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') 
+                                            img(src="../assets/images/document/features/react/react1.png" alt="")
+                                            .text-start
+                                              h5.mb-0 React
+                                              p.mb-0 Frameworks
+
+                                        li.nav-item
+                                          a#pills-angular-tab.d-flex.nav-link(data-bs-toggle='pill', href='#pills-angular', role='tab', aria-controls='pills-angular', aria-selected='false') 
+                                            img(src="../assets/images/document/features/angular/angular.svg" alt="")
+                                            .text-start
+                                              h5.mb-0 Angular
+                                              p.mb-0 Frameworks
+
+                                        li.nav-item
+                                          a#pills-contact-tab.d-flex.nav-link(data-bs-toggle='pill', href='#pills-contact', role='tab', aria-controls='pills-contact', aria-selected='false') 
+                                            img(src="../assets/images/document/features/laravel/laravel.png" alt="")
+                                            .text-start
+                                              h5.mb-0 Laravel
+                                              p.mb-0 Frameworks
+                                        
+                                        li.nav-item
+                                          a#pills-profile-tab.d-flex.nav-link(data-bs-toggle='pill', href='#pills-vue', role='tab', aria-controls='pills-vue', aria-selected='false') 
+                                            img(src="../assets/images/document/features/vue/vue1.png" alt="")
+                                            .text-start
+                                              h5.mb-0 Vue
+                                              p.mb-0 Frameworks
+                                      #pills-tabContent.tab-content
+                                        #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
+                                          ul.framworks-list.ps-0
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/bootstrap.png" alt="")
+                                              h6.mb-0.mt-3 Booxstrap 5X
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/css.png" alt="")
+                                              h6.mb-0.mt-3 CSS
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/sass.png" alt="")
+                                              h6.mb-0.mt-3 Sass
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/pug.png" alt="")
+                                              h6.mb-0.mt-3 Pug
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/npm.png" alt="")
+                                              h6.mb-0.mt-3 NPM
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/gulp.png" alt="")
+                                              h6.mb-0.mt-3 Gulp
+                                            li.box                                   
+                                              div 
+                                                img(src="../assets/images/document/features/html/kit.png" alt="")
+                                              h6.mb-0.mt-3 Starter Kit
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/uikits.png" alt="")
+                                              h6.mb-0.mt-3 40+ UI Kits
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/layout.png" alt="")
+                                              h6.mb-0.mt-3 8+ Layout
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/builders.png" alt="")
+                                              h6.mb-0.mt-3 Builders
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/iconset.png" alt="")
+                                              h6.mb-0.mt-3 11 Icon Sets
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/forms.png" alt="")
+                                              h6.mb-0.mt-3 Forms
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/table.png" alt="")
+                                              h6.mb-0.mt-3 Tables
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/html/apps.png" alt="")
+                                              h6.mb-0.mt-3 17+ Apps
+
+
+                                        #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
+                                          ul.framworks-list.ps-0
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/hook.png" alt="")
+                                              h6.mb-0.mt-3 React Hook
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/reactstrap.png" alt="")
+                                              h6.mb-0.mt-3 React Strap
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/noquery.png" alt="")
+                                              h6.mb-0.mt-3 No Jquery
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/redux.png" alt="")
+                                              h6.mb-0.mt-3 Redux
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/firebase.png" alt="")
+                                              h6.mb-0.mt-3 Firebase Auth
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/crud.png" alt="")
+                                              h6.mb-0.mt-3 Firebase Crud
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/chat.png" alt="")
+                                              h6.mb-0.mt-3 Chat
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/animation.png" alt="")
+                                              h6.mb-0.mt-3 Router Animation
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/props_state.png" alt="")
+                                              h6.mb-0.mt-3 State & Props
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/reactrouter.png" alt="")
+                                              h6.mb-0.mt-3 Reactrouter
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/react/chart.png" alt="")
+                                              h6.mb-0.mt-3 Amazing Chart
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/react/map.png" alt="")
+                                              h6.mb-0.mt-3 Map
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/react/gallery.png" alt="")
+                                              h6.mb-0.mt-3 Gallery
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/react/application.png" alt="")
+                                              h6.mb-0.mt-3 9+ Apps
+
+
+
+                                        #pills-angular.tab-pane.fade(role='tabpanel', aria-labelledby='pills-angular-tab')
+                                          ul.framworks-list.ps-0
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/1.png" alt="")
+                                              h6.mb-0.mt-3 SCSS
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/2.png" alt="")
+                                              h6.mb-0.mt-3 Ng Bootstrap
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/3.png" alt="")
+                                              h6.mb-0.mt-3 RXjs
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/4.png" alt="")
+                                              h6.mb-0.mt-3 Router
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/5.png" alt="")
+                                              h6.mb-0.mt-3 Form
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/6.png" alt="")
+                                              h6.mb-0.mt-3 Apex chart
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/7.png" alt="")
+                                              h6.mb-0.mt-3 Chart.js
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/8.png" alt="")
+                                              h6.mb-0.mt-3 Chartist
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/9.png" alt="")
+                                              h6.mb-0.mt-3 Google Map
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/angular/10.png" alt="")
+                                              h6.mb-0.mt-3 Gallery
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/angular/11.png" alt="")
+                                              h6.mb-0.mt-3 Ecommerce
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/angular/12.png" alt="")
+                                              h6.mb-0.mt-3 Firebase Auth
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/angular/13.png" alt="")
+                                              h6.mb-0.mt-3 Firebase Crud
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/angular/14.png" alt="")
+                                              h6.mb-0.mt-3 Chat
+                                        #pills-contact.tab-pane.fade(role='tabpanel', aria-labelledby='pills-contact-tab')
+                                          ul.framworks-list.ps-0
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/laravel.png" alt="")
+                                              h6.mb-0.mt-3 Laravel 8
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/bootstrap.png" alt="")
+                                              h6.mb-0.mt-3 Bootstrap 5
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/sass.png" alt="")
+                                              h6.mb-0.mt-3 SASS
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/blade.png" alt="")
+                                              h6.mb-0.mt-3 Blade
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/layouts.png" alt="")
+                                              h6.mb-0.mt-3 Layouts
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/npm.png" alt="")
+                                              h6.mb-0.mt-3 NPM
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/mix.png" alt="")
+                                              h6.mb-0.mt-3 MIX
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/yarn.png" alt="")
+                                              h6.mb-0.mt-3 Yarn
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/laravel/sasswebpack.png" alt="")
+                                              h6.mb-0.mt-3 Sasswebpack
+                                        #pills-vue.tab-pane.fade(role='tabpanel', aria-labelledby='pills-vue-tab')
+                                          ul.framworks-list.ps-0
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/vue/vue1.png" alt="")
+                                              h6.mb-0.mt-3 Vue cli
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/bootstrap.png" alt="")
+                                              h6.mb-0.mt-3 Booxstrap 4X
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/noquery.png" alt="")
+                                              h6.mb-0.mt-3 No Jquery
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/html/sass.png" alt="")
+                                              h6.mb-0.mt-3 Sass
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/firebase.png" alt="")
+                                              h6.mb-0.mt-3 Firebase Auth
+                                            li.box
+                                              div 
+                                                img(src="../assets/images/document/features/react/chat.png" alt="")
+                                              h6.mb-0.mt-3 Chat
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/react/chart.png" alt="")
+                                              h6.mb-0.mt-3 Amazing Chart
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/react/map.png" alt="")
+                                              h6.mb-0.mt-3 Map
+                                            li.box                                    
+                                              div 
+                                                img(src="../assets/images/document/features/react/gallery.png" alt="")
+                                              h6.mb-0.mt-3 Gallery
+        
+    include ../../components/footer-files
+    
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       

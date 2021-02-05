@@ -1,0 +1,1901 @@
+- var tree_view             = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body.document.full-width-doc.sticky-nav-doc
+        include ../../components/taptop
+        // page-wrapper Start
+        .page-wrapper.compact-wrapper
+          include ../../components/document-header
+            // Page Body Start
+          .body-wrapper.sticky_menu
+                  section#sticky-page.document-area
+                    .overlay_bg
+                    .container-fluid.custom-container
+                      .row.doc-container
+                        .left-sidebar
+                          include ../../components/document-sidebar
+                        .col-lg-9.content
+                            .row
+                              .col-sm-12.col-xl-6
+                                .card
+                                  .card-header
+                                    h5.main-title Angular folder Structure
+                                  .card-body
+                                    #treeBasic
+                                      ul
+                                        li(data-jstree='{"opened":true}')
+                                          | Cuba
+                                          ul
+                                            li(data-jstree='{"opened":false}')
+                                              | e2e
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | src
+                                                  ul
+                                                    li.angular-icon(data-jstree='{"selected":false,"type":"file"}')
+                                                      | app.e2e-spec.ts
+                                                    li.angular-icon(data-jstree='{"type":"file"}')
+                                                      | app.po.ts
+                                                li.js-icon(data-jstree='{"type":"file"}') protractor.conf.js
+                                                li.nodejs-icon(data-jstree='{"type":"file"}') tsconfig.json
+                                            li(data-jstree='{"opened":false}')
+                                              | src
+                                              ul
+                                                li(data-jstree='{"opened":false}')
+                                                  | app
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | auth
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | Login
+                                                          ul
+                                                            li.html-icon(data-jstree='{"type":"file"}')
+                                                              | login.component.html
+                                                            li.scss-icon(data-jstree='{"type":"file"}')
+                                                              | login.component.scss
+                                                            li.angular-icon(data-jstree='{"type":"file"}')
+                                                              | login.component.ts
+                                                    li(data-jstree='{"opened":false}')
+                                                      | components
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | apps
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | blog
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | add-post
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') add-post.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') add-post.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') add-post.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | details
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') details.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') details.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') details.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | single
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') single.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') single.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') single.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') blog-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') blog.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | bookmarks
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | modal
+                                                                  ul
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | add-bookmark
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') add-bookmark.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') add-bookmark.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') add-bookmark.component.ts
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | create-tag
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') create-tag.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') create-tag.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') create-tag.component.ts
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | edit-bookmark
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') edit-bookmark.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') edit-bookmark.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') edit-bookmark.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') bookmarks-routing.module.ts
+                                                                li.css-icon(data-jstree='{"type":"file"}') bookmarks.component.css
+                                                                li.html-icon(data-jstree='{"type":"file"}') bookmarks.component.html
+                                                                li.angular-icon(data-jstree='{"type":"file"}') bookmarks.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') bookmarks.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | calender
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') calender-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') calender.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') calender.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') calender.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') calender.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chat
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | chat
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') chat.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') chat.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') chat.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') chat-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') chat.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | contacts
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | modal
+                                                                  ul
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | add-category
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') add-category.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') add-category.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') add-category.component.ts
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | add-contact
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') add-contact.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') add-contact.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') add-contact.component.ts
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | print-contact
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') print-contact.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') print-contact.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') print-contact.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') contacts-routing.module.ts
+                                                                li.css-icon(data-jstree='{"type":"file"}') contacts.component.css
+                                                                li.html-icon(data-jstree='{"type":"file"}') contacts.component.html
+                                                                li.angular-icon(data-jstree='{"type":"file"}') contacts.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') contacts.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | e-commerce
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | add-cart
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') add-cart.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') add-cart.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') add-cart.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | check-out
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') check-out.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') check-out.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') check-out.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | colection
+                                                                  ul
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | filter
+                                                                      ul
+                                                                        li(data-jstree='{"opened":false}')
+                                                                          | brand
+                                                                          ul
+                                                                            li.html-icon(data-jstree='{"type":"file"}') brand.component.html
+                                                                            li.scss-icon(data-jstree='{"type":"file"}') brand.component.scss
+                                                                            li.angular-icon(data-jstree='{"type":"file"}') brand.component.ts
+                                                                        li(data-jstree='{"opened":false}')
+                                                                          | color
+                                                                          ul
+                                                                            li.html-icon(data-jstree='{"type":"file"}') color.component.html
+                                                                            li.scss-icon(data-jstree='{"type":"file"}') color.component.scss
+                                                                            li.angular-icon(data-jstree='{"type":"file"}') color.component.ts
+                                                                        li(data-jstree='{"opened":false}')
+                                                                          | price
+                                                                          ul
+                                                                            li.html-icon(data-jstree='{"type":"file"}') price.component.html
+                                                                            li.scss-icon(data-jstree='{"type":"file"}') price.component.scss
+                                                                            li.angular-icon(data-jstree='{"type":"file"}') price.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | invoice
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') invoice.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') invoice.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') invoice.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | order-history
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') order-history.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') order-history.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') order-history.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | payment-detail
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') payment-detail.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') payment-detail.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') payment-detail.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | product-detail
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') product-detail.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') product-detail.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') product-detail.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | product-list
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') product-list.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') product-list.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') product-list.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | product
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') products.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') products.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') products.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | quick-view
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') quick-view.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') quick-view.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') quick-view.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | wish-list
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') wish-list.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') wish-list.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') wish-list.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') e-commerce-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') e-commerce.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | editors
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') editor-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') editor.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') editor.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') editor.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') editor.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | email
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') email-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') email.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') email.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') email.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') email.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | faq
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') faq-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') faq.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') faq.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') faq.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') faq.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | file-manager
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') file-manager-routing.module.ts
+                                                                li.css-icon(data-jstree='{"type":"file"}') file-manager.component.css
+                                                                li.html-icon(data-jstree='{"type":"file"}') file-manager.component.html
+                                                                li.angular-icon(data-jstree='{"type":"file"}') file-manager.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') file-manager.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | gallery
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | gallery-desc
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') gallery-desc.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') gallery-desc.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') gallery-desc.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | gallery-grid
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') gallery-grid.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') gallery-grid.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') gallery-grid.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | hover-effect
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') hover-effect.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') hover-effect.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') hover-effect.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | mesonry
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') mesonry.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') mesonry.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') mesonry.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') gallery-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') gallery.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | job-search
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | apply
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') apply.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') apply.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') apply.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | job-apply
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') job-apply.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') job-apply.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') job-apply.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | job-card
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') job-card.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') job-card.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') job-card.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | job-desc
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') job-desc.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') job-desc.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') job-desc.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | job-detail
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') job-detail.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') job-detail.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') job-detail.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | job-filter
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') job-filter.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') job-filter.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') job-filter.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | job-list
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') job-list.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') job-list.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') job-list.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') job-search-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') job-search.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | knowledge-base
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') knowledge-base-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') knowledge-base.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') knowledge-base.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') knowledge-base.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') knowledge-base.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | learning
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | detailed-course
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') detailed-course.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') detailed-course.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') detailed-course.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | list
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') list.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') list.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') list.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') learning-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') learning.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | map
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | google-map
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') google-map.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') google-map.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') google-map.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | leaflet-map
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') leaflet-map.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') leaflet-map.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') leaflet-map.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') map-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') map.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | project
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | create-project
+                                                                  ul
+                                                                    li.css-icon(data-jstree='{"type":"file"}') create-project.component.css
+                                                                    li.html-icon(data-jstree='{"type":"file"}') create-project.component.html
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') create-project.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | project-list
+                                                                  ul
+                                                                    li.css-icon(data-jstree='{"type":"file"}') project-list.component.css
+                                                                    li.html-icon(data-jstree='{"type":"file"}') project-list.component.html
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') project-list.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') project-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') project.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | social-app
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | image-gallery
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') image-gallery.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') image-gallery.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') image-gallery.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') social-app-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') social-app.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') social-app.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') social-app.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') social-app.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | support-ticket
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') support-ticket-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') support-ticket.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') support-ticket.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') support-ticket.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') support-ticket.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tasks
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | modal
+                                                                  ul
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | add-task
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') add-task.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') add-task.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') add-task.component.ts
+                                                                    li(data-jstree='{"opened":false}')
+                                                                      | create-tag
+                                                                      ul
+                                                                        li.css-icon(data-jstree='{"type":"file"}') create-tag.component.css
+                                                                        li.html-icon(data-jstree='{"type":"file"}') create-tag.component.html
+                                                                        li.angular-icon(data-jstree='{"type":"file"}') create-tag.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') tasks-routing.module.ts
+                                                                li.css-icon(data-jstree='{"type":"file"}') tasks.component.css
+                                                                li.html-icon(data-jstree='{"type":"file"}') tasks.component.html
+                                                                li.angular-icon(data-jstree='{"type":"file"}') tasks.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') tasks.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | to-do-firebase
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') to-do-firebase-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') to-do-firebase.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') to-do-firebase.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') to-do-firebase.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') to-do-firebase.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | todo
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') todo-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') todo.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') todo.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') todo.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') todo.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | users
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | edit-profile
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') edit-profile.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') edit-profile.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') edit-profile.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | profile
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') profile.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') profile.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') profile.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | team-details
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') team-details.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') team-details.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') team-details.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') users-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') users.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | Bonus-UI
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | advance
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | dropzone
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') dropzone.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') dropzone.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') dropzone.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | image-croper
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') image-croper.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') image-croper.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') image-croper.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | owl-carousel
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') owl-carousel.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') owl-carousel.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') owl-carousel.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | range-slider
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') range-slider.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') range-slider.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') range-slider.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | scrollable
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') scrollable.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') scrollable.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') scrollable.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | sticky
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') sticky.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') sticky.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') sticky.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | sweet-alert2
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') sweet-alert2.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') sweet-alert2.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') sweet-alert2.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | tour
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') tour.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') tour.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') tour.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | tree-view
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') tree-view.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') tree-view.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') tree-view.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') advance-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') advance.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | base
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | accordion
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') accordion.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') accordion.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') accordion.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | alert
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') alert.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') alert.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') alert.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | buttons
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') buttons.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') buttons.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') buttons.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | carousel
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') carousel.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') carousel.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') carousel.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | collapse
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') collapse.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') collapse.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') collapse.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | datepicker
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') datepicker.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') datepicker.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') datepicker.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | dropdown
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') dropdown.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') dropdown.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') dropdown.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | modal
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') modal.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') modal.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') modal.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | pagination
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') pagination.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') pagination.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') pagination.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | popover
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') popover.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') popover.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') popover.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | progressbar
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') progressbar.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') progressbar.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') progressbar.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | rating
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') rating.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') rating.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') rating.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | tabset
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') tabset.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') tabset.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') tabset.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | timepicker
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') timepicker.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') timepicker.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') timepicker.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | tooltip
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') tooltip.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') tooltip.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') tooltip.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | typeahead
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') typeahead.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') typeahead.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') typeahead.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') base-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') base.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | buttons
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | button-group
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') button-group.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') button-group.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') button-group.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | default
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') default.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') default.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') default.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | edge
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') edge.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') edge.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') edge.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | flat
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') flat.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') flat.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') flat.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | raised
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') raised.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') raised.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') raised.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') buttons-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') buttons.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | cards
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | basic
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') basic.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') basic.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') basic.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | creative
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') creative.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') creative.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') creative.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | draggable
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') draggable.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') draggable.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') draggable.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tabbed
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') tabbed.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') tabbed.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') tabbed.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') cards-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') cards.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | charts
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | apex-chart
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') apex-chart.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') apex-chart.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') apex-chart.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chartist
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') chartist.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') chartist.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') chartist.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chartjs
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') chartjs.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') chartjs.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') chartjs.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | google
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') google.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') google.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') google.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | knob-chart
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') knob-chart.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') knob-chart.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') knob-chart.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ngx-chart
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') ngx-chart.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') ngx-chart.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') ngx-chart.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') charts-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') charts.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | dashboard
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | default
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') default.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') default.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') default.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ecommerce
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') ecommerce.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') ecommerce.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') ecommerce.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') .dashboard-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') .dashboard.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | editors
+                                                          ul
+                                                            li.angular-icon(data-jstree='{"type":"file"}') editor-routing.module.ts
+                                                            li.html-icon(data-jstree='{"type":"file"}') editor.component.html
+                                                            li.scss-icon(data-jstree='{"type":"file"}') editor.component.scss
+                                                            li.angular-icon(data-jstree='{"type":"file"}') editor.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') editor.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | forms
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-controls
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | base-inputs
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') base-inputs.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') base-inputs.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') base-inputs.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | checkbox-radio
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') checkbox-radio.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') checkbox-radio.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') checkbox-radio.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | form-validation
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') form-validation.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') form-validation.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') form-validation.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | input-groups
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') input-groups.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') input-groups.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') input-groups.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | mega-options
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') mega-options.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') mega-options.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') mega-options.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-Layouts
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | default-form
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') default-form.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') default-form.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') default-form.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | form-wizard
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') form-wizard.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') form-wizard.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') form-wizard.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | form-wizard-four
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') form-wizard-four.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') form-wizard-four.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') form-wizard-four.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | form-wizard-three
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') form-wizard-three.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') form-wizard-three.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') form-wizard-three.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | form-wizard-two
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') form-wizard-two.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') form-wizard-two.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') form-wizard-two.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | form-widgets
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | clipboard
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') clipboard.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') clipboard.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') clipboard.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | date-time-picker
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') date-time-picker.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') date-time-picker.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') date-time-picker.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | ngselect
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') select2.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') select2.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') select2.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | switch
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') switch.component.html
+                                                                    li.gscss-icon(data-jstree='{"type":"file"}') switch.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') switch.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | touchspin
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') touchspin.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') touchspin.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') touchspin.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') forms-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') forms.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | icons
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | feather-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') feather-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') feather-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') feather-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | flag-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') flag-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') flag-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') flag-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | font-awesome-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') font-awesome-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') font-awesome-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') font-awesome-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ico-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') ico-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') ico-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') ico-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ionic-icons
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') ionic-icons.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') ionic-icons.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') ionic-icons.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | material-design-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') material-design-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') material-design-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') material-design-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | pe7-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') pe7-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') pe7-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') pe7-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | simple-line-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') simple-line-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') simple-line-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') simple-line-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | themify-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') themify-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') themify-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') themify-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | typicons-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') typicons-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') typicons-icon.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') typicons-icon.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | weather-icon
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') weather-icon.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') weather-icon.component.scssl
+                                                                li.angular-icon(data-jstree='{"type":"file"}') weather-icon.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') icons-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') icons.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | others
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | authentication
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | forgotpwd
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') forgotpwd.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') forgotpwd.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') forgotpwd.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | login
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') login.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') login.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') login.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | login-with-image
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') login-with-image.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') login-with-image.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') login-with-image.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | login-with-video
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') login-with-video.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') login-with-video.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') login-with-video.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | register-with-image
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') register-with-image.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') register-with-image.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') register-with-image.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | register-with-video
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') register-with-video.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') register-with-video.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') register-with-video.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | registration
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') registration.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') registration.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') registration.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | resetpwd
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') resetpwd.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') resetpwd.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') resetpwd.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | unlockuser
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') unlockuser.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') unlockuser.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') unlockuser.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') authentication-routing.module.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') authentication.module.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | search-result
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | image-gallery
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') image-gallery.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') image-gallery.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') image-gallery.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') search-result-routing.module.ts
+                                                                li.html-icon(data-jstree='{"type":"file"}') search-result.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') search-result.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') search-result.component.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') search-result.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | table
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | bootstrap-tables
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | basic
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') basic.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') basic.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') basic.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | border
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') border.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') border.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') border.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | sizing
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') sizing.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') sizing.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') sizing.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | styling
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') styling.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') styling.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') styling.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | table-components
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') table-components.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') table-components.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') table-components.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | data-tables
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | basic-data-table
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') basic-data-table.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') basic-data-table.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') basic-data-table.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | column-filter
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') column-filter.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') column-filter.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') column-filter.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | fullscreen
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') fullscreen.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') fullscreen.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') fullscreen.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | inline-edit
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') inline-edit.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') inline-edit.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') inline-edit.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | paging
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') paging.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') paging.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') paging.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | selection
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') selection.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') selection.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') selection.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | sort
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') sort.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') sort.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') sort.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') table-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') table.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ui-kits
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | avatars
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') avatars.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') avatars.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') avatars.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | breadcrumb
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') breadcrumb.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') breadcrumb.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') breadcrumb.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | grid
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') grid.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') grid.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') grid.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | helper-classes
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') helper-classes.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') helper-classes.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') helper-classes.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | list
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') list.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') list.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') list.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ribbions
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') ribbions.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') ribbions.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') ribbions.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | shadow
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') shadow.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') shadow.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') shadow.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | spinners
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') spinners.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') spinners.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') spinners.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | state-color
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') state-color.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') state-color.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') state-color.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | steps
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') steps.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') steps.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') steps.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tag-n-pills
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') tag-n-pills.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') tag-n-pills.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') tag-n-pills.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | typography
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') typography.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') typography.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') typography.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') ui-kits-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') ui-kits.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | widgets
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chart
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') chart.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') chart.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') chart.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | general
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') general.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') general.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') general.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') widgets-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') widgets.module.ts
+                                                    li(data-jstree='{"opened":false}')
+                                                      | pages
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | coming-soon
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | page-with-image
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') page-with-image.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') page-with-image.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') page-with-image.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | page-with-video
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') page-with-video.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') page-with-video.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') page-with-video.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | simple
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') simple.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') simple.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') simple.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') coming-soon-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') coming-soon.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | error
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | error400
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') error400.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') error400.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') error400.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | error401
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') error401.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') error401.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') error401.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | error403
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') error403.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') error403.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') error403.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | error404
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') error404.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') error404.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') error404.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | error500
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') error500.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') error500.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') error500.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | error503
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') error503.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') error503.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') error503.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') error-routing.module.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') error.module.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | maintenance
+                                                          ul
+                                                            li.angular-icon(data-jstree='{"type":"file"}') maintenance-routing.module.ts
+                                                            li.html-icon(data-jstree='{"type":"file"}') maintenance.component.html
+                                                            li.scss-icon(data-jstree='{"type":"file"}') maintenance.component.scss
+                                                            li.angular-icon(data-jstree='{"type":"file"}') maintenance.component.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') maintenance.module.ts
+                                                    li(data-jstree='{"opened":false}')
+                                                      | shared
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | components
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | bookmark
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') bookmark.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') bookmark.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') bookmark.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | breadcrumb
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') breadcrumb.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') breadcrumb.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') breadcrumb.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | customizer
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') customizer.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') customizer.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') customizer.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | feather-icons
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') feather-icons.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') feather-icons.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') feather-icons.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | footer
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') footer.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') footer.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') footer.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | header
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') header.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') header.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') header.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | layout
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | content
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') content.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') content.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') content.component.ts
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | full
+                                                                  ul
+                                                                    li.html-icon(data-jstree='{"type":"file"}') full.component.html
+                                                                    li.scss-icon(data-jstree='{"type":"file"}') full.component.scss
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') full.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | loader
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') loader.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') loader.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') loader.component.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | sidebar
+                                                              ul
+                                                                li.html-icon(data-jstree='{"type":"file"}') sidebar.component.html
+                                                                li.scss-icon(data-jstree='{"type":"file"}') sidebar.component.scss
+                                                                li.angular-icon(data-jstree='{"type":"file"}') sidebar.component.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | data
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | bookmarks
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') bookmarks.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chart
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') apex.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') chartist.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') chartjs.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') config.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') google-chart.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') knob.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') ngx-chart.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | chat
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') chat.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | dashboard
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') default.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') ecommerce.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | ecommerce
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') products.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | email
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') email.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | faq
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') accordion.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | job-search
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') job-search.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | knowledge-base
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') knowledge-base.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | router-animation
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') router-animation.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | sticky
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') sticky.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tables
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') company.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') employee.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') product-list.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') server.ts
+                                                                li.ts-icon(data-jstree='{"type":"file"}') support-ticket.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | tasks
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') task.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | todo
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') todo.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | widget
+                                                              ul
+                                                                li.ts-icon(data-jstree='{"type":"file"}') chart.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | directives
+                                                          ul
+                                                            li.angular-icon(data-jstree='{"type":"file"}') disable-key-press.directive.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') only-alphabets.directive.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') only-numbers.directive.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') show-options.directive.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | guard
+                                                          ul
+                                                            li.angular-icon(data-jstree='{"type":"file"}') admin.guard.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') SecureInnerPagesGuard.guard.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | model
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | model
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') cart.model.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') content.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') invoice.model.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') product.model.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') chat.model.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') email.model.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | routes
+                                                          ul
+                                                            li.angular-icon(data-jstree='{"type":"file"}') full.routes.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') routes.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | services
+                                                          ul
+                                                            li(data-jstree='{"opened":false}')
+                                                              | advance
+                                                              ul
+                                                                li(data-jstree='{"opened":false}')
+                                                                  | tree-view
+                                                                  ul
+                                                                    li.angular-icon(data-jstree='{"type":"file"}') tree-view.service.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | e-commerce
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') cart.service.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') invoice.service.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') model.service.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') order-by.pipe.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') products.service.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') wish-list.service.ts
+                                                            li(data-jstree='{"opened":false}')
+                                                              | firebase
+                                                              ul
+                                                                li.angular-icon(data-jstree='{"type":"file"}') auth.service.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') contact.service.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') edit-user.resolver.ts
+                                                                li.angular-icon(data-jstree='{"type":"file"}') todo.service.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') bookmarks.service.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') chat.service.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') layout.service.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') nav.service.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') tasks.service.ts
+                                                        li(data-jstree='{"opened":false}')
+                                                          | validators
+                                                          ul
+                                                            li.angular-icon(data-jstree='{"type":"file"}') ageValidator.ts
+                                                            li.angular-icon(data-jstree='{"type":"file"}') passwordMatch.ts
+                                                        li.angular-icon(data-jstree='{"type":"file"}') shared.module.ts
+                                                    li.angular-icon(data-jstree='{"type":"file"}') app-routing.module.ts
+                                                    li.html-icon(data-jstree='{"type":"file"}') app.component.html
+                                                    li.scss-icon(data-jstree='{"type":"file"}') app.component.scss
+                                                    li.angular-icon(data-jstree='{"type":"file"}') app.component.ts
+                                                    li.angular-icon(data-jstree='{"type":"file"}') app.module.ts
+                                                li(data-jstree='{"opened":false}')
+                                                  | assets
+                                                  ul
+                                                    li(data-jstree='{"opened":false}')
+                                                      | audio
+                                                      ul
+                                                        li.music-icon(data-jstree='{"type":"file"}') horse.ogg
+                                                    li(data-jstree='{"opened":false}')
+                                                      | data
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | company
+                                                          ul
+                                                            li.json-icon(data-jstree='{"type":"file"}') company.json
+                                                        li(data-jstree='{"opened":false}')
+                                                          | ecommerce
+                                                          ul
+                                                            li.json-icon(data-jstree='{"type":"file"}') products.json
+                                                        li(data-jstree='{"opened":false}')
+                                                          | map
+                                                          ul
+                                                            li.json-icon(data-jstree='{"type":"file"}') polygon.json
+                                                    li(data-jstree='{"opened":false}')
+                                                      | fonts
+                                                      ul
+                                                        li(data-jstree='{"opened":false}') calendar
+                                                        li(data-jstree='{"opened":false}') feather
+                                                        li(data-jstree='{"opened":false}') flag-icon
+                                                        li(data-jstree='{"opened":false}') font-awesome
+                                                        li(data-jstree='{"opened":false}') ico
+                                                        li(data-jstree='{"opened":false}') ionic-icon
+                                                        li(data-jstree='{"opened":false}') material-design-icon
+                                                        li(data-jstree='{"opened":false}') pe7-icon
+                                                        li(data-jstree='{"opened":false}') simple-line-icon
+                                                        li(data-jstree='{"opened":false}') summernote
+                                                        li(data-jstree='{"opened":false}') themify
+                                                        li(data-jstree='{"opened":false}') typicon-icon
+                                                    li(data-jstree='{"opened":false}') i18n
+                                                    li(data-jstree='{"opened":false}')
+                                                      | images
+                                                      ul
+                                                        li(data-jstree='{"opened":false}') appointment
+                                                        li(data-jstree='{"opened":false}') avtar
+                                                        li(data-jstree='{"opened":false}') banner
+                                                        li(data-jstree='{"opened":false}') big-lightgallry
+                                                        li(data-jstree='{"opened":false}') blog
+                                                        li(data-jstree='{"opened":false}') checkout
+                                                        li(data-jstree='{"opened":false}') dashboard
+                                                        li(data-jstree='{"opened":false}') dashboard-2
+                                                        li(data-jstree='{"opened":false}') ecommerce
+                                                        li(data-jstree='{"opened":false}') email
+                                                        li(data-jstree='{"opened":false}') faq
+                                                        li(data-jstree='{"opened":false}') job-search
+                                                        li(data-jstree='{"opened":false}') lightgallry
+                                                        li(data-jstree='{"opened":false}') logo
+                                                        li(data-jstree='{"opened":false}') masonrys
+                                                        li(data-jstree='{"opened":false}') notification
+                                                        li(data-jstree='{"opened":false}') other-images
+                                                        li(data-jstree='{"opened":false}') product
+                                                        li(data-jstree='{"opened":false}') sidebar-image
+                                                        li(data-jstree='{"opened":false}') social-app
+                                                        li(data-jstree='{"opened":false}') user
+                                                        li(data-jstree='{"opened":false}') user-card
+                                                        li(data-jstree='{"opened":false}') welcome
+                                                        li(data-jstree='{"opened":false}') sidebar-patterns
+                                                        li.img-icon(data-jstree='{"type":"file"}') c1.jpg
+                                                        li.img-icon(data-jstree='{"type":"file"}') c2.jpg
+                                                        li.img-icon(data-jstree='{"type":"file"}') c3.jpg
+                                                        li.img-icon(data-jstree='{"type":"file"}') color-picker.png
+                                                        li.img-icon(data-jstree='{"type":"file"}') favicon.png
+                                                        li.svg-icon(data-jstree='{"type":"file"}') hour.svg
+                                                        li.img-icon(data-jstree='{"type":"file"}') icon-empty-cart.png
+                                                        li.img-icon(data-jstree='{"type":"file"}') marker-icon.png
+                                                        li.img-icon(data-jstree='{"type":"file"}') marker-shadow.png
+                                                        li.svg-icon(data-jstree='{"type":"file"}') min.svg
+                                                        li.img-icon(data-jstree='{"type":"file"}') search-not-found.png
+                                                        li.svg-icon(data-jstree='{"type":"file"}') sec.svg
+                                                        li.img-icon(data-jstree='{"type":"file"}') settings.png
+                                                        li.img-icon(data-jstree='{"type":"file"}') smiley.png
+                                                        li.img-icon(data-jstree='{"type":"file"}') start-conversion.jpg
+                                                        li.img-icon(data-jstree='{"type":"file"}') User.jpg
+                                                    li(data-jstree='{"opened":false}')
+                                                      | scss
+                                                      ul
+                                                        li(data-jstree='{"opened":false}')
+                                                          | base
+                                                          ul
+                                                            li.scss-icon _reset.scss
+                                                            li.scss-icon _typography.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | components
+                                                          ul
+                                                            li.scss-icon _according.scss
+                                                            li.scss-icon _alert.scss
+                                                            li.scss-icon _avatars.scss
+                                                            li.scss-icon _badge.scss
+                                                            li.scss-icon _bookmark.scss
+                                                            li.scss-icon _breadcrumb.scss
+                                                            li.scss-icon _builders.scss
+                                                            li.scss-icon _buttons.scss
+                                                            li.scss-icon _card.scss
+                                                            li.scss-icon _color.scss
+                                                            li.scss-icon _datatable.scss
+                                                            li.scss-icon _datepicker.scss
+                                                            li.scss-icon _dropdown.scss
+                                                            li.scss-icon _dropzone.scss
+                                                            li.scss-icon _form-builder.scss
+                                                            li.scss-icon _form-input.scss
+                                                            li.scss-icon _form-wizard.scss
+                                                            li.scss-icon _forms.scss
+                                                            li.scss-icon _form_builder-2.scss
+                                                            li.scss-icon _general.scss
+                                                            li.scss-icon _icons.scss
+                                                            li.scss-icon _list.scss
+                                                            li.scss-icon _loader.scss
+                                                            li.scss-icon _popover.scss
+                                                            li.scss-icon _print.scss
+                                                            li.scss-icon _radio.scss
+                                                            li.scss-icon _ribbon.scss
+                                                            li.scss-icon _switch.scss
+                                                            li.scss-icon _tab.scss
+                                                            li.scss-icon _table.scss
+                                                            li.scss-icon _touchspin.scss
+                                                            li.scss-icon _tour.scss
+                                                            li.scss-icon _tree.scss
+                                                            li.scss-icon _typeahead-search.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | layout
+                                                          ul 
+                                                            li.scss-icon _box-layout.scss
+                                                            li.scss-icon _footer.scss
+                                                            li.scss-icon _grid.scss
+                                                            li.scss-icon _header.scss
+                                                            li.scss-icon _navs.scss
+                                                            li.scss-icon _rtl.scss
+                                                            li.scss-icon _search.scss
+                                                            li.scss-icon _select2.scss
+                                                            li.scss-icon _sidebar.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | pages
+                                                          ul
+                                                            li.scss-icon _blog.scss
+                                                            li.scss-icon _bookmark-app.scss
+                                                            li.scss-icon _cart.scss
+                                                            li.scss-icon _chart.scss
+                                                            li.scss-icon _chat.scss
+                                                            li.scss-icon _checkout.scss
+                                                            li.scss-icon _comingsoon.scss
+                                                            li.scss-icon _contacts.scss
+                                                            li.scss-icon _dashboard_2.scss
+                                                            li.scss-icon _dashboard_default.scss
+                                                            li.scss-icon _ecommerce.scss
+                                                            li.scss-icon _email-application.scss
+                                                            li.scss-icon _errorpage.scss
+                                                            li.scss-icon _faq.scss
+                                                            li.scss-icon _file.scss
+                                                            li.scss-icon _gallery.scss
+                                                            li.scss-icon _internationalization.scss
+                                                            li.scss-icon _job-search.scss
+                                                            li.scss-icon _jsgrid.scss
+                                                            li.scss-icon _kanban.scss
+                                                            li.scss-icon _knowledgebase.scss
+                                                            li.scss-icon _landing.scss
+                                                            li.scss-icon _language.scss
+                                                            li.scss-icon _learning.scss
+                                                            li.scss-icon _login.scss
+                                                            li.scss-icon _megaoption.scss
+                                                            li.scss-icon _order-history.scss
+                                                            li.scss-icon _page.scss
+                                                            li.scss-icon _pricing.scss
+                                                            li.scss-icon _progress.scss
+                                                            li.scss-icon _projectlist.scss
+                                                            li.scss-icon _social-app.scss
+                                                            li.scss-icon _task.scss
+                                                            li.scss-icon _timeline-v.scss
+                                                            li.scss-icon _timeliny.scss
+                                                            li.scss-icon _user-profile.scss
+                                                            li.scss-icon _wishlist.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | themes
+                                                          ul
+                                                            li.scss-icon _dark-sidebar.scss
+                                                            li.scss-icon _dark.scss
+                                                            li.scss-icon _document.scss
+                                                            li.scss-icon _responsive.scss
+                                                            li.scss-icon _theme-customizer.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | utils
+                                                          ul
+                                                            li.scss-icon  _variables.scss
+                                                        li(data-jstree='{"opened":false}')
+                                                          | vendors
+                                                          ul 
+                                                            li.scss-icon
+                                                              | chartist.scss
+                                                            li.scss-icon
+                                                              | feather-icon.scss
+                                                            li.scss-icon
+                                                              | flag-icon.css
+                                                            li.scss-icon
+                                                              | icofont.scss
+                                                            li.scss-icon
+                                                              | image-cropper.scss
+                                                            li.scss-icon
+                                                              | ionic-icon.scss
+                                                            li.scss-icon
+                                                              | page-builder.scss
+                                                            li.scss-icon
+                                                              | scrollable.scss
+                                                            li.scss-icon
+                                                              | select2.scss
+                                                            li.scss-icon
+                                                              | simple-line-icon.scss
+                                                            li.scss-icon
+                                                              | simple-mde.scss
+                                                            li.scss-icon
+                                                              | sticky.scss
+                                                            li.scss-icon
+                                                              | summernote.scss
+                                                            li.scss-icon
+                                                              | svg-icon.scss
+                                                            li.scss-icon
+                                                              | sweetalert2.scss
+                                                            li.scss-icon
+                                                              | themify.scss
+                                                            li.scss-icon
+                                                              | timepicker.scss
+                                                            li.scss-icon
+                                                              | todo.scss
+                                                            li.scss-icon
+                                                              | tour.scss
+                                                            li.scss-icon
+                                                              | tree.scss
+                                                            li.scss-icon
+                                                              | typicon-icon.scss
+                                                            li.scss-icon
+                                                              | vector-map.scss
+                                                            li.scss-icon
+                                                              | whether-icon.scss
+                                                            li(data-jstree='{"opened":false}') chartist
+                                                              ul
+                                                                li.scss-icon  _chartist-settings.scss
+                                                                li.scss-icon  _chartist.scss
+                                                            li(data-jstree='{"opened":false}') feather-icon
+                                                              ul
+                                                                li.scss-icon  _feather-icon.scss
+                                                            li(data-jstree='{"opened":false}') flag-icon
+                                                              ul
+                                                                li.scss-icon _flag-icon-base.scss
+                                                                li.scss-icon  _flag-icon-list.scss
+                                                                li.scss-icon _flag-icon-more.scss
+                                                            li(data-jstree='{"opened":false}') font-awesome
+                                                              ul
+                                                                li.scss-icon _animated.scss
+                                                                li.scss-icon _bordered-pulled.scss
+                                                                li.scss-icon _core.scss
+                                                                li.scss-icon _fixed-width.scss
+                                                                li.scss-icon _icons.scss
+                                                                li.scss-icon _larger.scss
+                                                                li.scss-icon _list.scss
+                                                                li.scss-icon _mixins.scss
+                                                                li.scss-icon _path.scss
+                                                                li.scss-icon _rotated-flipped.scss
+                                                                li.scss-icon _screen-reader.scss
+                                                                li.scss-icon _stacked.scss
+                                                                li.scss-icon _variables.scss
+                                                            li(data-jstree='{"opened":false}') icoicon
+                                                              ul
+                                                                li.scss-icon  _icons.scss
+                                                            li(data-jstree='{"opened":false}') image-cropper
+                                                              ul
+                                                                li.scss-icon  _cropper-custom.scss
+                                                                li.scss-icon  _cropper-main.scss
+                                                            li(data-jstree='{"opened":false}') ionic-icon
+                                                              ul
+                                                                li.scss-icon  _ionicons-font.scss
+                                                                li.scss-icon  _ionicons-icons.scss
+                                                                li.scss-icon  _ionicons-variables.scss
+                                                            li(data-jstree='{"opened":false}') page-builder
+                                                              ul
+                                                                li.scss-icon  _page-builder.scss
+                                                            li(data-jstree='{"opened":false}') scrollable
+                                                              ul
+                                                                li.scss-icon  _scrollable.scss
+                                                            li select2
+                                                            li(data-jstree='{"opened":false}') simple-line-icon
+                                                              ul
+                                                                li.scss-icon  _simple-line-icons.scss
+                                                            li(data-jstree='{"opened":false}') simple-mde
+                                                              ul
+                                                                li.scss-icon   _elements.scss
+                                                                li.scss-icon   _simplemde.scss
+                                                            li(data-jstree='{"opened":false}') sticky
+                                                              ul
+                                                                li.scss-icon   _sticky.scss
+                                                            li(data-jstree='{"opened":false}') summernote
+                                                              ul
+                                                                li.scss-icon   _elements.scss
+                                                                li.scss-icon   _fonts.scss
+                                                                li.scss-icon   _summernote-bs4.scss
+                                                            li(data-jstree='{"opened":false}') svg-icon
+                                                              ul
+                                                                li.scss-icon   _svg-icon.scss
+                                                            li(data-jstree='{"opened":false}') sweetalert2-master
+                                                              ul
+                                                                li.scss-icon   _animations.scss
+                                                                li.scss-icon   _mixins.scss
+                                                                li.scss-icon   _toasts.scss
+                                                                li.scss-icon   _variables.scss
+                                                            li(data-jstree='{"opened":false}') themify
+                                                              ul
+                                                                li.scss-icon   _core.scss
+                                                                li.scss-icon   _extras.scss
+                                                                li.scss-icon   _icons.scss
+                                                                li.scss-icon   _mixins.scss
+                                                                li.scss-icon   _path.scss
+                                                                li.scss-icon   _themify-icons.scss
+                                                                li.scss-icon   _variables.scss
+                                                            li(data-jstree='{"opened":false}') time-picker
+                                                              ul
+                                                                li.scss-icon   _timepicker.scss
+                                                            li(data-jstree='{"opened":false}') todo
+                                                              ul
+                                                                li.scss-icon   _todo.scss
+                                                            li(data-jstree='{"opened":false}') tour
+                                                              ul
+                                                                li.scss-icon  _tour.scss
+                                                            li(data-jstree='{"opened":false}') tree
+                                                              ul
+                                                                li.scss-icon  _tree-default.scss
+                                                                li.scss-icon  _tree.scss
+                                                            li(data-jstree='{"opened":false}') typicon-icon
+                                                              ul
+                                                                li.scss-icon  _typicon-icon.scss
+                                                            li(data-jstree='{"opened":false}') vector-map
+                                                              ul
+                                                                li.scss-icon  _vector-map.scss
+                                                            li(data-jstree='{"opened":false}') whether-icon
+                                                              ul
+                                                                li.scss-icon  _whether-icon.scss
+                                                    li(data-jstree='{"opened":false}')
+                                                      | video
+                                                      ul
+                                                        li.video-icon(data-jstree='{"type":"file"}') auth-bg.mp4
+                                                li(data-jstree='{"opened":false}')
+                                                  | environments
+                                                  ul
+                                                    li.angular-icon(data-jstree='{"type":"file"}') environment.prod.ts
+                                                    li.angular-icon(data-jstree='{"type":"file"}') environment.ts
+                                                li.angular-icon(data-jstree='{"type":"file"}') favicon.ico
+                                                li.html-icon(data-jstree='{"type":"file"}') index.html
+                                                li.angular-icon(data-jstree='{"type":"file"}') main.ts
+                                                li.scss-icon(data-jstree='{"type":"file"}') styles.scss
+                                                li.angular-icon(data-jstree='{"type":"file"}') test.ts
+                                            li.angular-icon(data-jstree='{"type":"file"}') .browserslistrc
+                                            li.editorconfig-icon(data-jstree='{"type":"file"}') .editorconfig
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') .gitignore
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') angular.json
+                                            li.js-icon(data-jstree='{"type":"file"}') karma.conf.js
+                                            li.js-icon(data-jstree='{"type":"file"}') ngcc.config.js
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') package.json
+                                            li.readme-icon(data-jstree='{"type":"file"}') README.md
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') tsconfig.app.json
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') tsconfig.base.json
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') tsconfig.json
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') tsconfig.spec.json
+                                            li.nodejs-icon(data-jstree='{"type":"file"}') tslint.json
+
+    include ../../components/footer-files
+
+                                     
+
+
+
+                               
+          
+
+
+
+                
+                        
+                      
+
+
+       
