@@ -1,30 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Head from 'next/head';
 import Top from '../components/common/top';
 
 import Header from '../components/common/header';
 import Sidebar from '../components/common/sidebar';
-// import { HeaderContext } from '../helpers/HeaderContext';
+import { HeaderContext } from '../helpers/HeaderContext';
 
 export default function Home() {
-  const [fontSize, setFontSize] = useState('increase'); 
+  const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
 
-  // const headerContext = useContext(HeaderContext);
-  // const fontSize = headerContext.fontSize;
-  const headerCall = (size) => {
-    if(size != '')
-    setFontSize('font-'+size);
-    else
-    setFontSize('');
-  }
+  const headerContext = useContext(HeaderContext);
+  const HeaderContextVar = headerContext.HeaderContext;
+
+  useEffect(()=>{
+    setFontSizeLocal('font-'+HeaderContextVar.fontSize);
+  },[HeaderContextVar])
+
    return (
-    <div > 
+    <body className={HeaderContextVar.layoutMode}> 
       <Top />
-      <Header parentCall={headerCall} />
+      <Header />
       <div className="container-fluid custom-container">
         <div className="row document-main">
           <Sidebar />
-          <div className={`content ${fontSize}`}>
+          <div className={`content ${fontSizeLocal}`}>
             <div className="row">
               <div className="col-md-12">
                 <h4 className="main-title">Themes</h4>
@@ -230,6 +229,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </body>
   )
 }

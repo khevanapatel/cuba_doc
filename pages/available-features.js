@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 
+import { HeaderContext } from '../helpers/HeaderContext';
 import Header from '../components/common/header';
 import Sidebar from '../components/common/sidebar';
 import Top from '../components/common/top';
@@ -7,18 +8,24 @@ import FeaturesBlock from '../components/features/block';
 import FeaturesTab from '../components/features/tab';
 
 const AvailableFeatures = () => {
-    const [fontSize, setFontSize] = useState('increase'); 
-    const headerCall = (size) => {
-	    if(size != '')
-	    setFontSize('font-'+size);
-	    else
-	    setFontSize('');
-  	}
+    const [fontSizeLocal, setFontSizeLocal] = useState(''); 
+    const [tabstatus, setTabstatus] = useState('HTML'); 
+
+    const headerContext = useContext(HeaderContext);
+    const HeaderContextObj = headerContext.HeaderContext;
+
+    useEffect(()=>{
+       setFontSizeLocal('font-'+HeaderContextObj.fontSize);
+    },[HeaderContextObj])
+
+    const setStatus = (val) => {
+    	setTabstatus(val)
+    }
 	return(
 		<div className="document full-width-doc sticky-nav-doc">
 			<Top />
 			<div className="page-wrapper compact-wrapper">
-				<Header parentCall={headerCall} />
+				<Header/>
 			</div>
 			<div className="body-wrapper sticky_menu">
 		        <div className="document-area" id="sticky-page">
@@ -26,7 +33,7 @@ const AvailableFeatures = () => {
 		          <div className="container-fluid custom-container">
 		            <div className="row doc-container">
 		            	<Sidebar />
-		            	<div className={`col-lg-9 content ${fontSize}`}>
+		            	<div className={`col-lg-9 content ${fontSizeLocal}`}>
 			                <div className="shortcode_text doc-section feature-list mb-0" id="feature-list">
 			                  <div className="row">
 			                    <div className="col-md-12">
@@ -39,8 +46,10 @@ const AvailableFeatures = () => {
 			                            	subtitle="Frameworks" 
 			                            	id="pills-home-tab"
 			                            	url="#pills-home"
-			                            	selected="active"
+			                            	selected="false"
 			                            	image="../assets/images/document/features/html/html.png" 
+			                            	tabstatus={tabstatus}
+			                            	onClick={()=>setStatus('HTML')}
 			                            />
 			                            <FeaturesTab 
 			                            	title="React" 
@@ -49,6 +58,8 @@ const AvailableFeatures = () => {
 			                            	url="#pills-profile"
 			                            	selected="false"
 			                            	image="../assets/images/document/features/react/react1.png" 
+			                            	tabstatus={tabstatus}
+			                            	onClick={()=>setStatus('React')}
 			                            />
 			                            <FeaturesTab 
 			                            	title="Angular" 
@@ -57,6 +68,8 @@ const AvailableFeatures = () => {
 			                            	url="#pills-angular"
 			                            	selected="false"
 			                            	image="../assets/images/document/features/angular/angular.svg" 
+			                            	tabstatus={tabstatus}
+			                            	onClick={()=>setStatus('Angular')}
 			                            />
 			                            <FeaturesTab 
 			                            	title="Laravel" 
@@ -65,6 +78,8 @@ const AvailableFeatures = () => {
 			                            	url="#pills-contact"
 			                            	selected="false"
 			                            	image="../assets/images/document/features/laravel/laravel.png" 
+			                            	tabstatus={tabstatus}
+			                            	onClick={()=>setStatus('Laravel')}
 			                            />
 			                            <FeaturesTab 
 			                            	title="Vue" 
@@ -73,10 +88,12 @@ const AvailableFeatures = () => {
 			                            	url="#pills-vue"
 			                            	selected="false"
 			                            	image="../assets/images/document/features/vue/vue1.png" 
+			                            	tabstatus={tabstatus}
+			                            	onClick={()=>setStatus('Vue')}
 			                            />
 			                          </ul>
 			                          <div className="tab-content" id="pills-tabContent">
-			                            <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+			                            <div className={`tab-pane fade ${(tabstatus=='HTML') ? 'show active' : '' }`} id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 			                              <ul className="framworks-list ps-0">
 			                                <FeaturesBlock title="Booxstrap 5X" image="../assets/images/document/features/html/bootstrap.png" />
 			                                <FeaturesBlock title="CSS" image="../assets/images/document/features/html/css.png" />
@@ -94,7 +111,7 @@ const AvailableFeatures = () => {
 			                                <FeaturesBlock title="17+ Apps" image="../assets/images/document/features/html/apps.png" />
 			                              </ul>
 			                            </div>
-			                            <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+			                            <div className={`tab-pane fade ${(tabstatus=='React') ? 'show active' : '' }`}  id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 			                              <ul className="framworks-list ps-0">
 			                                <FeaturesBlock title="React Hook" image="../assets/images/document/features/react/hook.png" />
 			                                <FeaturesBlock title="React Strap" image="../assets/images/document/features/react/reactstrap.png" />
@@ -112,7 +129,7 @@ const AvailableFeatures = () => {
 			                                <FeaturesBlock title="9+ Apps" image="../assets/images/document/features/react/hook.png" />
 			                              </ul>
 			                            </div>
-			                            <div className="tab-pane fade" id="pills-angular" role="tabpanel" aria-labelledby="pills-angular-tab">
+			                            <div className={`tab-pane fade ${(tabstatus=='Angular') ? 'show active' : '' }`}  id="pills-angular" role="tabpanel" aria-labelledby="pills-angular-tab">
 			                              <ul className="framworks-list ps-0">
 			                                <FeaturesBlock title="SCSS" image="../assets/images/document/features/angular/1.png" />
 			                                <FeaturesBlock title="Ng Bootstrap" image="../assets/images/document/features/angular/2.png" />
@@ -130,7 +147,7 @@ const AvailableFeatures = () => {
 			                                <FeaturesBlock title="Chat" image="../assets/images/document/features/angular/14.png" />
 			                              </ul>
 			                            </div>
-			                            <div className="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+			                            <div className={`tab-pane fade ${(tabstatus=='Laravel') ? 'show active' : '' }`}  id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
 			                              <ul className="framworks-list ps-0">
 			                                <FeaturesBlock title="Laravel 8" image="../assets/images/document/features/laravel/laravel.png" />
 			                                <FeaturesBlock title="Bootstrap 5" image="../assets/images/document/features/laravel/bootstrap.png" />
@@ -143,7 +160,7 @@ const AvailableFeatures = () => {
 			                                <FeaturesBlock title="Sasswebpack" image="../assets/images/document/features/laravel/sasswebpack.png" />
 			                              </ul>
 			                            </div>
-			                            <div className="tab-pane fade" id="pills-vue" role="tabpanel" aria-labelledby="pills-vue-tab">
+			                            <div className={`tab-pane fade ${(tabstatus=='Vue') ? 'show active' : '' }`}  id="pills-vue" role="tabpanel" aria-labelledby="pills-vue-tab">
 			                              <ul className="framworks-list ps-0">
 			                                <FeaturesBlock title="Vue cli" image="../assets/images/document/features/vue/vue1.png" />
 			                                <FeaturesBlock title="Booxstrap 4X" image="../assets/images/document/features/html/bootstrap.png" />

@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 
+import { HeaderContext } from '../helpers/HeaderContext';
 import Header from '../components/common/header';
 import Sidebar from '../components/common/sidebar';
 import Top from '../components/common/top';
 
 const CustomerReview = () => {
-	const [fontSize, setFontSize] = useState('increase'); 
-    const headerCall = (size) => {
-	    if(size != '')
-	    setFontSize('font-'+size);
-	    else
-	    setFontSize('');
-  	}
+	const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
+
+    const headerContext = useContext(HeaderContext);
+    const HeaderContextObj = headerContext.HeaderContext;
+
+    useEffect(()=>{
+       setFontSizeLocal('font-'+HeaderContextObj.fontSize);
+    },[HeaderContextObj])
 	return(
 		<div className="document full-width-doc sticky-nav-doc">
 			<Top />
 			<div className="page-wrapper compact-wrapper">
-				<Header parentCall={headerCall} />
+				<Header/>
 			</div>
 			<div className="body-wrapper sticky_menu">
 		        <div className="document-area" id="sticky-page">
@@ -24,7 +26,7 @@ const CustomerReview = () => {
 		          <div className="container-fluid custom-container">
 		            <div className="row doc-container">
 		            	<Sidebar />
-		            	<div className="col-lg-9 content">
+		            	<div className={`col-lg-9 content ${fontSizeLocal}`}>
 			                <div className="shortcode_text doc-section mb-0" id="review">
 			                  <div className="row">
 			                    <div className="col-md-12">

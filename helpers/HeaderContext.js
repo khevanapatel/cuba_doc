@@ -5,17 +5,22 @@ export const Context = createContext({});
 
 export const Provider = props => {
 
-  const [fontSize, setFontSize] = useState('increase'); 
+  const [fontSize, setFontSize] = useState(''); 
+  const [layoutMode, setLayoutMode] = useState(''); 
 
   const HeaderContext = {
-    fontSize
+    fontSize,
+    setFontSize,
+    layoutMode,
+    setLayoutMode
   };
 
   const {value} = props
 
   return (
       <Context.Provider value={{
-          fontSize:fontSize
+          fontSize:fontSize,
+          HeaderContext:HeaderContext
         }}>
         {props.children}
       </Context.Provider>

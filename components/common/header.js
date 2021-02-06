@@ -1,8 +1,20 @@
-import Head from 'next/head';
+import React, { useContext, useState } from 'react';
 
-const Header = (props) => {
+import { HeaderContext } from '../../helpers/HeaderContext';
+
+const Header = () => {
+	const [mode, setMode] = useState('');
+	const headerContext = useContext(HeaderContext);
+  	const HeaderContextVar = headerContext.HeaderContext;
 	const setSize = (size) => {
-		props.parentCall(size);
+		HeaderContextVar.setFontSize(size)
+	}
+
+	const setLayoutMode = () => {
+		if(mode=='') var mode_val = 'dark-only';
+		else mode_val = ''
+		HeaderContextVar.setLayoutMode(mode)
+		setMode(mode_val);
 	}
 	return(
 		<>
@@ -29,27 +41,18 @@ const Header = (props) => {
 		                </li>
 		                <li>
 		                  <div className="btn-group">
-			                  <a className="decrease btn btn-doc" href="#" title="Decrease font size" onClick={() => setSize('decrease')}>A-</a>
-			                  <a className="reset btn btn-doc" href="#" title="Default font size" onClick={() => setSize('')}>A</a>
-			                  <a className="increase btn btn-doc" href="#" title="Increase font size" onClick={() => setSize('increase')}>A+</a>
+			                  <a className="decrease btn btn-doc" href="#" title="Decrease font size" onClick={()=>HeaderContextVar.setFontSize('decrease')}>A-</a>
+			                  <a className="reset btn btn-doc" href="#" title="Default font size" onClick={() => HeaderContextVar.setFontSize('')}>A</a>
+			                  <a className="increase btn btn-doc" href="#" title="Increase font size" onClick={() => HeaderContextVar.setFontSize('increase')}>A+</a>
 		                  </div>
 		                </li>
-		                <li><a className="btn btn-dark mode" href="#" title="Dark"><i className="fa fa-moon-o"></i><span>Dark</span></a></li>
+		                <li><a className="btn btn-dark mode" href="#" title="Dark" onClick={()=>setLayoutMode()}><i className={`${(mode=='')? 'fa fa-moon-o' : 'fa fa-lightbulb-o'}`}></i><span>Dark</span></a></li>
 		              </ul>
 		            </div>
 		          </div>
 		        </div>
 		      </nav>
 		    </div>
-		    <Head>
-				<script type="text/javascript" src="../../assets/js/jquery-3.5.1.min.js"></script>
-			    {/* Bootstrap js*/}
-			    <script type="text/javascript" src="../../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
-			    {/* feather icon js*/}
-			    <script type="text/javascript" src="../../assets/js/icons/feather-icon/feather.min.js"></script>
-			    <script type="text/javascript" src="../../assets/js/icons/feather-icon/feather-icon.js"></script>
-			    <script type="text/javascript" src="../../assets/js/document/main.js"></script>
-	      	</Head>
 	    </>
 	)
 }
