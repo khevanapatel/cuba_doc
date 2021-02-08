@@ -1,6 +1,7 @@
 const Top = () => {
+	var showScroll = true;
 	return(
-		<div className="tap-top"><i data-feather="chevrons-up"></i>
+		<div className="tap-top" style={{height: 40, display: showScroll ? 'flex' : 'none'}}><i data-feather="chevrons-up"></i>
 	      <p>Top</p>
 	    </div>
 	)

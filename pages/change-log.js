@@ -1,7 +1,7 @@
 import Layout from '../components/common/layout';
 import Log from '../components/logs/log';
 
-const ChangeLogReact = () => {
+const ChangeLog = () => {
 	return(
 		<Layout>
     	<Log />
@@ -9,4 +9,4 @@ const ChangeLogReact = () => {
 	)
 }
 
-export default ChangeLogReact;
+export default ChangeLog;

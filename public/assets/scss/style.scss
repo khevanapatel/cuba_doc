@@ -10,25 +10,26 @@
  */
 
 
+@import "vendors/bootstrap";
+@import "vendors/prism";
+@import "vendors/feather-icon";
+// @import "~font-awesome-sass/assets/stylesheets/_font-awesome.scss";
 @import "theme/variables";
 
 
-@import "components/buttons.scss";
+@import "components/buttons";
 @import "components/alert";
 
-@import "components/card.scss";
-@import "components/color.scss";
-@import "components/dropdown.scss";
-@import "components/popover.scss";
-@import "components/tab.scss";
-@import "components/table.scss";
+@import "components/card";
+@import "components/color";
+@import "components/dropdown";
+@import "components/popover";
+@import "components/tab";
+@import "components/table";
 @import "components/tree";
 @import "components/according";
 
 
-@import "theme/document.scss";
+@import "theme/document";
 @import "theme/responsive";
-@import "theme/dark.scss";
-
-@import "vendors/bootstrap.scss";
-@import "vendors/feather-icon.scss";
+@import "theme/dark";

@@ -1,18 +1,25 @@
 import React, { useContext, useState } from 'react';
-
 import { HeaderContext } from '../../helpers/HeaderContext';
 
 const Header = () => {
 	const [mode, setMode] = useState('');
 	const headerContext = useContext(HeaderContext);
   	const HeaderContextVar = headerContext.HeaderContext;
+	
 	const setSize = (size) => {
 		HeaderContextVar.setFontSize(size)
 	}
 
 	const setLayoutMode = () => {
-		if(mode=='') var mode_val = 'dark-only';
-		else mode_val = ''
+		window.scrollTo(0, 0)
+		if(mode=='') {
+			var mode_val = 'dark-only';
+			document.body.classList.add('dark-only');
+		}
+		else {
+			mode_val = ''
+			document.body.classList.remove('dark-only');
+		}
 		HeaderContextVar.setLayoutMode(mode)
 		setMode(mode_val);
 	}
@@ -46,7 +53,7 @@ const Header = () => {
 			                  <a className="increase btn btn-doc" href="#" title="Increase font size" onClick={() => HeaderContextVar.setFontSize('increase')}>A+</a>
 		                  </div>
 		                </li>
-		                <li><a className="btn btn-dark mode" href="#" title="Dark" onClick={()=>setLayoutMode()}><i className={`${(mode=='')? 'fa fa-moon-o' : 'fa fa-lightbulb-o'}`}></i><span>Dark</span></a></li>
+		                <li><a className="btn btn-dark mode" title="Dark" onClick={()=>setLayoutMode()}>{(mode=='')? <><i className='fa fa-moon-o'></i><span>Dark</span></>: <> <i className='fa fa-lightbulb-o'></i><span>Light</span></> }</a></li>
 		              </ul>
 		            </div>
 		          </div>

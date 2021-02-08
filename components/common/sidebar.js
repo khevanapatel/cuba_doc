@@ -2,19 +2,20 @@ import { useState } from 'react';
 
 const Sidebar = () => {
   const [isActive, setIsActive] = useState('');
+  const [isSelected, setIsSelected] = useState('');
 
 	return(
 		<div className="left-sidebar">
           <aside>
             <ul className="list-unstyled nav-sidebar doc-nav">
-              <li className="nav-item direct"><a className="nav-link" href="/"><img src="../assets/images/document/list.png" alt="" />Themes List</a></li>
+              <li className="nav-item direct" ><a className={`nav-link ${(isSelected=='theme_list') ? 'active' : ''}`} href="/"><img src="../assets/images/document/list.png" alt="" />Themes List</a></li>
               <li className="nav-item direct"><a className="nav-link" href="/available-features"><img src="../assets/images/document/features.png" alt="" />Available Features</a></li>
               <li className="nav-item direct"><a className="nav-link" href="/customer-review"><img src="../assets/images/document/review.png" alt="" />Customer Reviews</a></li>
               <li className="parent-title"><span>Detail Document</span></li>
               <li className="nav-item">
                 <div className={`title ${(isActive == 'React') ? 'active' : ''}`} onClick={()=>(isActive=='React') ? setIsActive('') : setIsActive('React')  }><img src="../assets/images/document/react.png" alt="briefcase" />React<span className="icon"><i className="fa fa-plus"></i><i className="fa fa-minus"></i></span></div>
                 <ul className={`dropdown-nav ${(isActive=='React') ? 'show' : 'd-none'}`}>
-                  <li className="nav-item"><a className="nav-link" href="getting-started-react.html">Getting Started</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/document/react/getting-started">Getting Started</a></li>
                   <li className="nav-item"><a className="nav-link" href="treereact.html">Folder Structure</a></li>
                   <li className="nav-item"><a className="nav-link" href="componentreact.html">Components</a></li>
                   <li className="nav-item"><a className="nav-link" href="appreact.html">App</a></li>

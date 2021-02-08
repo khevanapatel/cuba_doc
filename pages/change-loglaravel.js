@@ -1,12 +1,13 @@
 import Layout from '../components/common/layout';
 import Log from '../components/logs/log';
 
-const ChangeLogReact = () => {
+const ChangeLogLaravel = () => {
 	return(
 		<Layout>
-    	<Log />
-    </Layout>
+        	<Log />
+        </Layout>
+		         
 	)
 }
 
-export default ChangeLogReact;
+export default ChangeLogLaravel;

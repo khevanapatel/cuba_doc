@@ -17,7 +17,7 @@ export default function Home() {
   },[HeaderContextVar])
 
    return (
-    <body className={HeaderContextVar.layoutMode}> 
+    <div> 
       <Top />
       <Header />
       <div className="container-fluid custom-container">
@@ -229,6 +229,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </body>
+    </div>
   )
 }
