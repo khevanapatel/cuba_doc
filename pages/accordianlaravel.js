@@ -6,8 +6,8 @@ import Toggle from '../components/faq/toggle';
 import Accordian from '../components/faq/accordian';
 
 const AccordianLaravel = () => {
-	const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
-	const [cardStatus, setCardStatus] = useState(''); 
+  	const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
+  	const [cardStatus, setCardStatus] = useState(''); 
 
     const headerContext = useContext(HeaderContext);
     const HeaderContextObj = headerContext.HeaderContext;

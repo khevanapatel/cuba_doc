@@ -15,15 +15,15 @@ const Sidebar = () => {
               <li className="nav-item">
                 <div className={`title ${(isActive == 'React') ? 'active' : ''}`} onClick={()=>(isActive=='React') ? setIsActive('') : setIsActive('React')  }><img src="../assets/images/document/react.png" alt="briefcase" />React<span className="icon"><i className="fa fa-plus"></i><i className="fa fa-minus"></i></span></div>
                 <ul className={`dropdown-nav ${(isActive=='React') ? 'show' : 'd-none'}`}>
-                  <li className="nav-item"><a className="nav-link" href="/document/react/getting-started">Getting Started</a></li>
-                  <li className="nav-item"><a className="nav-link" href="treereact.html">Folder Structure</a></li>
-                  <li className="nav-item"><a className="nav-link" href="componentreact.html">Components</a></li>
-                  <li className="nav-item"><a className="nav-link" href="appreact.html">App</a></li>
-                  <li className="nav-item"><a className="nav-link" href="customization.html">Customization</a></li>
-                  <li className="nav-item"><a className="nav-link" href="authreact.html">Auth0</a></li>
-                  <li className="nav-item"><a className="nav-link" href="jwtreact.html">JWT</a></li>
-                  <li className="nav-item"><a className="nav-link" href="firebasereact.html">Firebase</a></li>
-                  <li className="nav-item"><a className="nav-link" href="creditreact.html">Credits</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/getting-started">Getting Started</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/folder-structure">Folder Structure</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/react-component">Components</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/appreact">App</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/customization">Customization</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/authreact">Auth0</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/jwtreact">JWT</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/firebasereact">Firebase</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/creditreact">Credits</a></li>
                 </ul>
               </li>
               <li className="nav-item">
