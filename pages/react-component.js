@@ -4,6 +4,10 @@ import { HeaderContext } from '../helpers/HeaderContext';
 import Layout from '../components/common/layout';
 import ComponentContent from '../components/detail/react/component-content';
 import BasicUiElement from '../components/detail/react/component/basic-ui-element';
+import AdvanceUiElement from '../components/detail/react/component/advance-ui-element';
+import Form from '../components/detail/react/component/form';
+import Table from '../components/detail/react/component/table';
+import Chart from '../components/detail/react/component/chart';
 
 const ReactComponent = () => {
 	const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
@@ -24,9 +28,20 @@ const ReactComponent = () => {
               <hr/>
                 <div id="section1-1">
                   <BasicUiElement/>
-                  //basic ui element 
                 </div>
               </div>
+            </div>
+            <div id="section-1-2">
+              <AdvanceUiElement />
+            </div>
+            <div id="section-1-5">
+              <Form />
+            </div>
+            <div id="section-1-6">
+              <Table />
+            </div>
+            <div id="section-1-9">
+              <Chart />
             </div>
           </div>
         </div>
