@@ -18,24 +18,24 @@ const Sidebar = () => {
                   <li className="nav-item"><a className="nav-link" href="/getting-started">Getting Started</a></li>
                   <li className="nav-item"><a className="nav-link" href="/folder-structure">Folder Structure</a></li>
                   <li className="nav-item"><a className="nav-link" href="/react-component">Components</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/appreact">App</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/customization">Customization</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/authreact">Auth0</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/jwtreact">JWT</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/firebasereact">Firebase</a></li>
-                  <li className="nav-item"><a className="nav-link" href="/creditreact">Credits</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/react-app">App</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/react-customization">Customization</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/react-auth">Auth0</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/react-jwt">JWT</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/react-firebase">Firebase</a></li>
+                  <li className="nav-item"><a className="nav-link" href="/react-credit">Credits</a></li>
                 </ul>
               </li>
               <li className="nav-item">
                 <div className={`title ${(isActive == 'Angular') ? 'active' : ''}`} onClick={()=>(isActive=='Angular') ? setIsActive('') : setIsActive('Angular')  }><img src="../assets/images/document/angular.png" alt="" />Angular<span className="icon"><i className="fa fa-plus"></i><i className="fa fa-minus"></i></span></div>
                 <ul className={`dropdown-nav ${(isActive=='Angular') ? 'show' : 'd-none'}`}>
-                  <li className="nav-item"><a className="nav-link" href="getting-started-angular.html">Getting Started</a></li>
-                  <li className="nav-item"><a className="nav-link" href="treeangular.html">Folder Structure</a></li>
-                  <li className="nav-item"><a className="nav-link" href="componentangular.html">Components</a></li>
-                  <li className="nav-item"><a className="nav-link" href="appangular.html">App</a></li>
-                  <li className="nav-item"><a className="nav-link" href="customizationangular.html">Customization</a></li>
-                  <li className="nav-item"><a className="nav-link" href="firebaseangular.html">Firebase</a></li>
-                  <li className="nav-item"><a className="nav-link" href="creditangular.html">Credits</a></li>
+                  <li className="nav-item"><a className="nav-link" href="angular-getting-started">Getting Started</a></li>
+                  <li className="nav-item"><a className="nav-link" href="angular-tree">Folder Structure</a></li>
+                  <li className="nav-item"><a className="nav-link" href="angular-component">Components</a></li>
+                  <li className="nav-item"><a className="nav-link" href="angular-app">App</a></li>
+                  <li className="nav-item"><a className="nav-link" href="angular-customization">Customization</a></li>
+                  <li className="nav-item"><a className="nav-link" href="angular-firebase">Firebase</a></li>
+                  <li className="nav-item"><a className="nav-link" href="angular-credit">Credits</a></li>
                 </ul>
               </li>
               <li className="nav-item">

@@ -11,8 +11,9 @@
 
 
 @import "vendors/bootstrap";
+
 @import "vendors/prism";
-@import "vendors/feather-icon";
+
 // @import "~font-awesome-sass/assets/stylesheets/_font-awesome.scss";
 @import "theme/variables";
 
@@ -29,8 +30,10 @@
 @import "components/table";
 
 @import "components/according";
+@import "components/progressbar";
 
 
 @import "theme/document";
 @import "theme/responsive";
 @import "theme/dark";
+@import "vendors/feather-icon";
