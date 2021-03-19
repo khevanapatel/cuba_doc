@@ -119,9 +119,9 @@ const AdvanceUiElement = () => {
               </div>
             </div>
             <ul class="nav nav-tabs m-t-35" id="myTab5" role="tablist">
-              <li class="nav-item"><a class={`nav-link ${(activeAE == 'range-slider' ) ? 'active' : ''}`} data-bs-toggle="tab" href="#range-slider" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('range-slider')}>Range slider</a></li>
-              <li class="nav-item"><a class={`nav-link ${(activeAE == 'image-cropper' ) ? 'active' : ''}`} data-bs-toggle="tab" href="#image-cropper" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('image-cropper')}>Image Cropper</a></li>
-              <li class="nav-item"><a class={`nav-link ${(activeAE == 'imageupload' ) ? 'active' : ''}`} data-bs-toggle="tab" href="#imageupload" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('imageupload')}>Image Upload</a></li>
+              <li class="nav-item"><a class={`nav-link ${(activeAE == 'range-slider' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#range-slider" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('range-slider')}>Range slider</a></li>
+              <li class="nav-item"><a class={`nav-link ${(activeAE == 'image-cropper' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#image-cropper" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('image-cropper')}>Image Cropper</a></li>
+              <li class="nav-item"><a class={`nav-link ${(activeAE == 'imageupload' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#imageupload" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('imageupload')}>Image Upload</a></li>
             </ul>
             <div class="tab-content" id="myTabContent5">
               <div class={`tab-pane fade ${(activeAE == 'range-slider') ? 'show active' : ''}`} id="range-slider" role="tabpanel">

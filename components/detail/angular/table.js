@@ -2,16 +2,18 @@ import {useState} from 'react';
 import CopyToClipboard from '../../common/copy-to-clipboard';
 
 const Table = () => {
+  const [active, setActive] = useState('bootstrap-tables');
+
 	return(
 		<div className="card-body">
             <hr/>
             <h5>Tables</h5>
             <ul className="nav nav-tabs" id="myTab8" role="tablist">
-              <li className="nav-item"><a className="nav-link active" data-bs-toggle="tab" href="#bootstrap-tables" role="tab" aria-selected="true" data-original-title="" title="">Bootstrap Table</a></li>
-              <li className="nav-item"><a className="nav-link" data-bs-toggle="tab" href="#ngx-tables" role="tab" aria-selected="true" data-original-title="" title="">Ngx-Datatable</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active=='bootstrap-tables')? 'active' : ''}`} data-bs-toggle="tab" url="#bootstrap-tables" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('bootstrap-tables')}>Bootstrap Table</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active=='ngx-tables')? 'active' : ''}`} data-bs-toggle="tab" url="#ngx-tables" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('ngx-tables')}>Ngx-Datatable</a></li>
             </ul>
             <div className="tab-content" id="myTabContent8">
-              <div className="tab-pane fade show active" id="bootstrap-tables" role="tabpanel">
+              <div className={`tab-pane fade ${(active=='bootstrap-tables')? 'show active' : ''}`} id="bootstrap-tables" role="tabpanel">
                 <p className="pt-4"><b>Installing and usage</b></p>
                 <div className="mb-4">
                   <CopyToClipboard
@@ -29,7 +31,7 @@ const Table = () => {
                   <a className="btn btn-solid" href="https://ng-bootstrap.github.io/#/components/table/examples" target="_blank"> Supplemental  </a>
                 </div>
               </div>
-              <div className="tab-pane fade" id="ngx-tables" role="tabpanel">
+              <div className={`tab-pane fade ${(active=='ngx-tables')? 'show active' : ''}`} id="ngx-tables" role="tabpanel">
                 <p className="pt-4"><b>Installing and usage</b></p>
                 <div className="mb-4">
                   <CopyToClipboard

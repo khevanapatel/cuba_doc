@@ -8,7 +8,6 @@ import ToolTip from './component/tooltip';
 import DropDown from './component/dropdown';
 import Tabs from './component/tabs';
 import Accordion from './component/accordion';
-import CopyToClipboard from '../../common/copy-to-clipboard';
 
 const BasicUiElement = () => {
 	const [active, setActive] = useState('Button');
