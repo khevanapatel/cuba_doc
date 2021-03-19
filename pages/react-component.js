@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 
 import { HeaderContext } from '../helpers/HeaderContext';
 import Layout from '../components/common/layout';
-import ComponentContent from '../components/detail/react/component-content';
 import BasicUiElement from '../components/detail/react/component/basic-ui-element';
 import AdvanceUiElement from '../components/detail/react/component/advance-ui-element';
 import Form from '../components/detail/react/component/form';

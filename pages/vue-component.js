@@ -1,15 +1,15 @@
 import Layout from '../components/common/layout';
-import BasicUiElement from '../components/detail/angular/basic-ui-element';
-import AdvanceUiElement from '../components/detail/angular/advance-ui-element';
-import Form from '../components/detail/angular/form';
-import Table from '../components/detail/angular/table';
-import Chart from '../components/detail/angular/chart';
-import Maps from '../components/detail/angular/maps';
-import Editors from '../components/detail/angular/editors';
+import BasicUiElement from '../components/detail/vue/basic-ui-element';
+import AdvanceUiElement from '../components/detail/vue/advance-ui-element';
+import Form from '../components/detail/vue/form';
+import Table from '../components/detail/vue/table';
+import Chart from '../components/detail/vue/chart';
+import Maps from '../components/detail/vue/maps';
+import Editors from '../components/detail/vue/editors';
 
-const AngularComponent = () => {
+const VueComponent = () => {
 	return(
-	  <Layout>
+		<Layout>
 		<div className="col-xxl-10 col-xl-9 content component-col">
 			<div id="section-1">
 	          <div className="card">
@@ -65,6 +65,7 @@ const AngularComponent = () => {
             </div>
         </div>
 	  </Layout>
-	)	
+	)
 }
-export default AngularComponent;
+
+export default VueComponent;

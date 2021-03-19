@@ -41,12 +41,12 @@ const Sidebar = () => {
               <li className="nav-item">
                 <div className={`title ${(isActive == 'Vue') ? 'active' : ''}`} onClick={()=>(isActive=='Vue') ? setIsActive('') : setIsActive('Vue')  }><img src="../assets/images/document/vue.png" alt="" />Vue<span className="icon" ><i className="fa fa-plus"></i><i className="fa fa-minus"></i></span></div>
                 <ul className={`dropdown-nav ${(isActive=='Vue') ? 'show' : 'd-none'}`}>
-                  <li className="nav-item"><a className="nav-link" href="getting-started-vue.html">Getting Started</a></li>
-                  <li className="nav-item"><a className="nav-link" href="treevue.html">Folder Structure</a></li>
-                  <li className="nav-item"><a className="nav-link" href="componentvue.html">Components</a></li>
-                  <li className="nav-item"><a className="nav-link" href="appvue.html">App</a></li>
-                  <li className="nav-item"><a className="nav-link" href="customizationvue.html">Customization</a></li>
-                  <li className="nav-item"><a className="nav-link" href="firebasevue.html">Firebase</a></li>
+                  <li className="nav-item"><a className="nav-link" href="vue-getting-started">Getting Started</a></li>
+                  <li className="nav-item"><a className="nav-link" href="vue-tree">Folder Structure</a></li>
+                  <li className="nav-item"><a className="nav-link" href="vue-component">Components</a></li>
+                  <li className="nav-item"><a className="nav-link" href="vue-app">App</a></li>
+                  <li className="nav-item"><a className="nav-link" href="vue-customization">Customization</a></li>
+                  <li className="nav-item"><a className="nav-link" href="vue-firebase">Firebase</a></li>
                 </ul>
               </li>
               <li className="nav-item">

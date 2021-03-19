@@ -1,6 +1,6 @@
 import Layout from '../components/common/layout';
 import CopyToClipboard from '../components/common/copy-to-clipboard';
-import AppContent from '../components/detail/react/app-content';
+import AppContent from '../components/common/app-content';
 
 const ReactApp = () => {
 	return(
