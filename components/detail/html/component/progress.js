@@ -20,7 +20,7 @@ const Progress = () => {
       </div>
       <CopyToClipboard
         id="progressbars"
-        text={`\n <div class="progress">\n   <b-progress :value="0" :max="100"></b-progress>\n </div><br>\n <div class="progress">\n   <b-progress :value="25" :max="100" variant="primary"></b-progress>\n </div><br>\n <div class="progress">\n   <b-progress :value="50" :max="100" variant="secondary"></b-progress>\n </div><br>\n <div class="progress">\n   <b-progress :value="75" :max="100" variant="success"></b-progress>\n </div><br>\n <div class="progress">\n   <b-progress :value="100" :max="100" variant="info"></b-progress>\n </div>`}
+        text={`\n <div class="progress mb-2">\n   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">\n </div>\n <div class="progress mb-2">\n   <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">\n </div>\n <div class="progress mb-2">\n   <div class="progress-bar bg-secondary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">\n </div>\n <div class="progress mb-2">\n   <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">\n </div>\n <div class="progress mb-2">\n   <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">\n </div>`}
         />
     </div>
 	)

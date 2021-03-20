@@ -6,7 +6,7 @@ const Badge = () => {
 	      <span className="badge badge-primary">Primary</span><span className="badge badge-secondary">Secondary</span><span className="badge badge-success">Success</span><span className="badge badge-info">Info</span><span className="badge badge-warning text-dark">Warning</span><span className="badge badge-danger">Danger</span><span className="badge badge-light text-dark">Light</span><span className="badge badge-dark tag-pills-sm-mb">Dark</span>
 	      <CopyToClipboard 
 	      	id="badges"
-	      	text={`\n <span class="badge badge-primary">Primary</span>\n <span class="badge badge-secondary">Secondary</span>\n <span class="badge badge-success">Success</span>\n <span class="badge badge-info">Info</span>\n <span class="badge badge-warning text-dark">Warning</span>\n <span class="badge badge-danger">Danger</span>\n <span class="badge badge-light text-dark">Light</span>\n <span class="badge badge-dark">Dark</span> `}
+	      	text={`\n <span class="badge badge-primary">Primary</span>\n <span class="badge badge-secondary">Secondary</span>\n <span class="badge badge-success">Success</span>\n <span class="badge badge-info">Info</span>\n <span class="badge badge-warning text-dark">Warning</span>\n <span class="badge badge-danger">Danger</span>\n <span class="badge badge-light text-dark">Light</span>\n <span class="badge badge-dark tag-pills-sm-mb">Dark</span>`}
 	      />
 	    </div>
 	)

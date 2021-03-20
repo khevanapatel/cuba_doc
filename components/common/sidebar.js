@@ -52,22 +52,22 @@ const Sidebar = () => {
               <li className="nav-item">
                 <div className={`title ${(isActive == 'Html') ? 'active' : ''}`} onClick={()=>(isActive=='Html') ? setIsActive('') : setIsActive('Html')  }><img src="../assets/images/document/html.png" alt=""/>Html<span className="icon" ><i className="fa fa-plus"></i><i className="fa fa-minus"></i></span></div>
                 <ul className={`dropdown-nav ${(isActive=='Html') ? 'show' : 'd-none'}`}>
-                  <li className="nav-item"><a className="nav-link" href="getting-started.html">Getting Started</a></li>
-                  <li className="nav-item"><a className="nav-link" href="tree.html">Tree</a></li>
-                  <li className="nav-item"><a className="nav-link" href="options.html">Options</a></li>
-                  <li className="nav-item"><a className="nav-link" href="component.html">Component</a></li>
-                  <li className="nav-item"><a className="nav-link" href="app.html">App</a></li>
+                  <li className="nav-item"><a className="nav-link" href="html-getting-started">Getting Started</a></li>
+                  <li className="nav-item"><a className="nav-link" href="html-tree">Tree</a></li>
+                  <li className="nav-item"><a className="nav-link" href="html-options">Options</a></li>
+                  <li className="nav-item"><a className="nav-link" href="html-component">Component</a></li>
+                  <li className="nav-item"><a className="nav-link" href="html-app">App</a></li>
                 </ul>
               </li>
               <li className="nav-item">
                 <div className={`title ${(isActive == 'Laravel') ? 'active' : ''}`} onClick={()=>(isActive=='Laravel') ? setIsActive('') : setIsActive('Laravel')  }><img src="../assets/images/document/laravel.png" alt=""/>Laravel<span className="icon" ><i className="fa fa-plus"></i><i className="fa fa-minus"></i></span></div>
                 <ul className={`dropdown-nav ${(isActive=='Laravel') ? 'show' : 'd-none'}`}>
-                  <li className="nav-item"><a className="nav-link" href="getting-started-laravel.html">Getting Started</a></li>
-                  <li className="nav-item"><a className="nav-link" href="treelaravel.html">Folder Structure</a></li>
-                  <li className="nav-item"><a className="nav-link" href="componentlaravel.html">Components</a></li>
-                  <li className="nav-item"><a className="nav-link" href="applaravel.html">App  </a></li>
-                  <li className="nav-item"><a className="nav-link" href="localization.html">Localization</a></li>
-                  <li className="nav-item"><a className="nav-link" href="creditlaravel.html">Credits</a></li>
+                  <li className="nav-item"><a className="nav-link" href="laravel-getting-started">Getting Started</a></li>
+                  <li className="nav-item"><a className="nav-link" href="laravel-tree">Folder Structure</a></li>
+                  <li className="nav-item"><a className="nav-link" href="laravel-component">Components</a></li>
+                  <li className="nav-item"><a className="nav-link" href="laravel-app">App  </a></li>
+                  <li className="nav-item"><a className="nav-link" href="laravel-localization">Localization</a></li>
+                  <li className="nav-item"><a className="nav-link" href="laravel-credit">Credits</a></li>
                 </ul>
               </li>
               <li className="parent-title"><span>faq</span></li>

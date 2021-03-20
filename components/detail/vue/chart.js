@@ -14,7 +14,7 @@ const Chart = () => {
               <li className="nav-item"><a className={`nav-link ${(active == 'chart-chartist') ? 'active' : ''}`} data-bs-toggle="tab" url="#chart-chartist" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('chart-chartist')}>Chartist</a></li>
             </ul>
             <div className="tab-content" id="myTabContent11">
-              <div className="tab-pane fade show active" id="chart-google" role="tabpanel">
+              <div className={`tab-pane fade ${(active=='chart-google')? 'show active': ''}`} id="chart-google" role="tabpanel">
                 <p className="pt-4"><b>Installing and usage</b></p>
                 <div className="mb-4">
                   <CopyToClipboard
@@ -28,7 +28,7 @@ const Chart = () => {
                   <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-google-charts" target="_blank"> Supplemental</a>
                 </div>
               </div>
-              <div className="tab-pane fade" id="chart-chartjs" role="tabpanel">
+              <div className={`tab-pane fade ${(active=='chart-chartjs')? 'show active': ''}`} id="chart-chartjs" role="tabpanel">
                 <p className="pt-4"><b>Installing and usage</b></p>
                 <div className="mb-4">
                   <CopyToClipboard
@@ -42,7 +42,7 @@ const Chart = () => {
                   <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-chartjs" target="_blank"> Supplemental</a>
                 </div>
               </div>
-              <div className="tab-pane fade" id="chart-chartist" role="tabpanel">
+              <div className={`tab-pane fade ${(active=='chart-chartist')? 'show active': ''}`} id="chart-chartist" role="tabpanel">
                 <p className="pt-4"><b>Installing and usage</b></p>
                 <div className="mb-4">
                   <CopyToClipboard

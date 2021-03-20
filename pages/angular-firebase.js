@@ -87,7 +87,7 @@ const AngularFirebase = () => {
 	                      <div className="mb-4">
 	                        <CopyToClipboard
 	                        	id="firebasecode1"
-	                        	text={`\n import firebase from 'firebase/app';\n &nbsp;\n import config from './config.json'\n &nbsp;\n firebase.initializeApp(config.firebase);\n &nbsp;\n export const db = firebase.firestore();`}
+	                        	text={`\n import firebase from 'firebase/app';\n  \n import config from './config.json'\n  \n firebase.initializeApp(config.firebase);\n  \n export const db = firebase.firestore();`}
 	                        />
 	                      </div>
 	                    </p>
@@ -126,7 +126,7 @@ const AngularFirebase = () => {
 	                    <p className="mb-2">1. Remove Import statement and configuration of firebase from your main.js also remove firebase json from config.json which is in <b>src >> config.json</b></p>
 	                    <CopyToClipboard
 	                    	id="firebasecode4"
-	                    	text={`\n import firebase from 'firebase/app';\n &nbsp;\n import config from './config.json'\n &nbsp;\n firebase.initializeApp(config.firebase);\n &nbsp;\n export const db = firebase.firestore();`}
+	                    	text={`\n import firebase from 'firebase/app';\n  \n import config from './config.json'\n  \n firebase.initializeApp(config.firebase);\n  \n export const db = firebase.firestore();`}
 	                    />
 	                  </li>
 	                  <li>

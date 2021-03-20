@@ -14,7 +14,7 @@ const DropDown = () => {
       </div>
       <CopyToClipboard
         id="dropdowncode"
-        text={`\n <b-dropdown text="Dropdown Button" menu-class="dropdown-content" variant="primary" >\n   <b-dropdown-item>Action</b-dropdown-item>\n   <b-dropdown-item>Another Action</b-dropdown-item>\n   <b-dropdown-item>Something Else Here</b-dropdown-item>\n </b-dropdown>`}
+        text={` \n <div class="dropdown-basic">\n   <div class="dropdown">\n     <button type="button" class="dropbtn btn-primary">Dropdown Button <span><i class="icofont icofont-arrow-down"></i></span></button>\n     <div class="dropdown-content">\n       <a href="#">Action</a>\n       <a href="#">Another Action</a>\n       <a href="#">Something Else Here</a>\n     </div>\n   </div>\n </div>`}
       />
     </div>
 	)

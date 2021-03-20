@@ -9,9 +9,9 @@ const Editors = () => {
             <hr/>
             <h5>Editors</h5>
             <ul className="nav nav-tabs" id="myTab14" role="tablist">
-              <li className="nav-item"><a className={`nav-link ${(active == 'simpleeditor') ? 'active' : ''}`} data-bs-toggle="tab" href="#simpleeditor" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('simpleeditor')}>Simple Editor</a></li>
-              <li className="nav-item"><a className={`nav-link ${(active == 'simple-ck') ? 'active' : ''}`} data-bs-toggle="tab" href="#simple-ck" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('simple-ck')}>CK Editor</a></li>
-              <li className="nav-item"><a className={`nav-link ${(active == 'ace-code') ? 'active' : ''}`} data-bs-toggle="tab" href="#ace-code" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('ace-code')}>ACE Code</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active == 'simpleeditor') ? 'active' : ''}`} data-bs-toggle="tab" url="#simpleeditor" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('simpleeditor')}>Simple Editor</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active == 'simple-ck') ? 'active' : ''}`} data-bs-toggle="tab" url="#simple-ck" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('simple-ck')}>CK Editor</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active == 'ace-code') ? 'active' : ''}`} data-bs-toggle="tab" url="#ace-code" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('ace-code')}>ACE Code</a></li>
             </ul>
             <div className="tab-content" id="myTabContent14">
               <div className={`tab-pane fade ${(active=='simpleeditor')? 'show active' : ''}`} id="simpleeditor" role="tabpanel">

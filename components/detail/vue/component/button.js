@@ -12,7 +12,7 @@ const Button = () => {
         <button className="btn btn-danger mb-2" type="button" data-original-title="" title="">Danger</button>
         <CopyToClipboard
           id="button"
-          text={`\n <button type="button" className="btn btn-primary">Primary Button</button>\n <button type="button" className="btn btn-secondary">Secondary Button</button>\n <button type="button" className="btn btn-success">Success Button</button>\n <button type="button" className="btn btn-info">Info Button</button>\n <button type="button" className="btn btn-warning">Warning Button</button>\n <button type="button" className="btn btn-danger">Danger Button</button>\n <button type="button" className="btn btn-light">Light Button</button>`}
+          text={`\n <button type="button" class="btn btn-primary">Primary Button</button>\n <button type="button" class="btn btn-secondary">Secondary Button</button>\n <button type="button" class="btn btn-success">Success Button</button>\n <button type="button" class="btn btn-info">Info Button</button>\n <button type="button" class="btn btn-warning">Warning Button</button>\n <button type="button" class="btn btn-danger">Danger Button</button>\n <button type="button" class="btn btn-light">Light Button</button>`}
         />
       </div>
       <p className="mb-2">

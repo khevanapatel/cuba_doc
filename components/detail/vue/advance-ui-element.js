@@ -5,179 +5,159 @@ const AdvanceUiElement = () => {
   const [active, setActive] = useState('scrollable');
   const [activeAE, setActiveAE] = useState('range-slider');
 	return(
-		<div class="card-body">
-            <hr class="hr" />
+		<div className="card-body">
+            <hr className="hr" />
             <h5>Advance UI Elements</h5>
-            <ul class="nav nav-tabs" id="myTab4" role="tablist">
-              <li class="nav-item"><a class={`nav-link ${(active=='scrollable') ? 'active' : ''}`} data-bs-toggle="tab" url="#scrollable" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('scrollable')}>Scrollable</a></li>
-              <li class="nav-item"><a class={`nav-link ${(active=='treeview') ? 'active' : ''}`} data-bs-toggle="tab" url="#treeview" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('treeview')}>Treeview</a></li>
-              <li class="nav-item"><a class={`nav-link ${(active=='owlcomponent') ? 'active' : ''}`} data-bs-toggle="tab" url="#owlcomponent" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('owlcomponent')}>Owl Carousel</a></li>
-              <li class="nav-item"><a class={`nav-link ${(active=='tour') ? 'active' : ''}`} data-bs-toggle="tab" url="#tour" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('tour')}>Tour</a></li>
-              <li class="nav-item"><a class={`nav-link ${(active=='rating') ? 'active' : ''}`} data-bs-toggle="tab" url="#rating" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('rating')}>Rating</a></li>
-              <li class="nav-item"><a class={`nav-link ${(active=='sweetalert') ? 'active' : ''}`} data-bs-toggle="tab" url="#sweetalert" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('sweetalert')}>Sweet-Alert</a></li>
+            <ul className="nav nav-tabs" id="myTab4" role="tablist">
+              <li className="nav-item"><a className={`nav-link ${(active=='scrollable') ? 'active' : ''}`} data-bs-toggle="tab" url="#scrollable" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('scrollable')}>Scrollable</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active=='toaster') ? 'active' : ''}`} data-bs-toggle="tab" url="#toaster" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('toaster')}>Toaster</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active=='tour') ? 'active' : ''}`} data-bs-toggle="tab" url="#tour" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('tour')}>Tour</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active=='rating') ? 'active' : ''}`} data-bs-toggle="tab" url="#rating" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('rating')}>Rating</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active=='pagination') ? 'active' : ''}`} data-bs-toggle="tab" url="#pagination" role="tab" aria-selected="false" data-original-title="" title="" onClick={()=>setActive('pagination')}>Pagination</a></li>
+              <li className="nav-item"><a className={`nav-link ${(active=='sweetalert') ? 'active' : ''}`} data-bs-toggle="tab" url="#sweetalert" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('sweetalert')}>Sweet-Alert</a></li>
             </ul>
-            <div class="tab-content" id="myTabContent4">
-              <div class={`tab-pane fade ${(active=='scrollable') ? 'show active' : ''}`} id="scrollable" role="tabpanel">
-                <p class="pt-4 pb-2">This is an Angular wrapper library for the Perfect Scrollbar. To use this library you should get familiar with the Perfect Scrollbar documentation as well since this documentation only explains details specific to this wrapper.</p><b>Installing and usage</b>
-                <div class="mb-4">
+            <div className="tab-content" id="myTabContent4">
+              <div className={`tab-pane fade ${(active=='scrollable') ? 'show active' : ''}`} id="scrollable" role="tabpanel">
+                <p className="pt-4 pb-2">This is an Vue wrapper library for the Perfect Scrollbar. To use this library you should get familiar with the Perfect Scrollbar documentation as well since this documentation only explains details specific to this wrapper.</p><b>Installing and usage</b>
+                <div className="mb-4">
                   <CopyToClipboard
                   	id="scrollablecode"
-                  	text="npm install ngx-perfect-scrollbar --save"
+                  	text="npm i vue-perfect-scrollbar"
                   /> 
-
                   <CopyToClipboard
                   	id="scrollablecode1"
-                  	text={`<perfect-scrollbar style="max-width: 600px; max-height: 400px;" [config]="config"> Scrollable content </perfect-scrollbar>`}
+                  	text={`\n <template>\n   <div>\n     <VuePerfectScrollbar className="scroll-area" v-once :settings="settings">\n         <img src="../../assets/images/banner/3.jpg" alt="girl" width="800" height="600"\n     </VuePerfectScrollbar>\n   </div>\n </template>\n <script>\n   export default {\n        data() {\n       return {\n         settings: {\n           maxScrollbarLength: 60\n         },\n       }\n     },\n     components: {\n       VuePerfectScrollbar\n     }\n   }\n </script>`}
                   />
-
-                  <CopyToClipboard
-                    id="scrollablecode2"
-                    text={`\n import { PerfectScrollbarConfigInterface} from 'ngx-perfect-scrollbar';\n export class ScrollableComponent implements OnInit\n {\n constructor() { }\n\n ngOnInit() { }\n \n public config: PerfectScrollbarConfigInterface =\n {\n suppressScrollX: false,\n wheelPropagation: false,\n useBothWheelAxes : true\n };\n }`}
-                  />
-                 <a class="btn btn-solid" href="https://www.npmjs.com/package/ngx-perfect-scrollbar" target="_blank"> Supplemental </a>
+                 <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-perfect-scrollbar" target="_blank"> Supplemental </a>
                 </div>
               </div>
-              <div class={`tab-pane fade ${(active=='treeview') ? 'show active' : ''}`} id="treeview" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
-                <div class="mb-4">
+              <div className={`tab-pane fade ${(active=='toaster') ? 'show active' : ''}`} id="toaster" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
                   <CopyToClipboard
-                    id="treecode"
-                    text={`npm i ngx-treeview`}
+                    id="toastercode"
+                    text={`npm install vue-toasted --save`}
                   />
                   <CopyToClipboard
-                    id="treecode1"
-                    text={`<ngx-treeview [config]="config" [items]="items" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)"> </ngx-treeview>`}
+                    id="toastercode1"
+                    text={`\n <template>\n   <div>\n       <b-button @click="success" variant="success">Success</b-button>\n   </div>\n </template>\n <script>\n   export default {\n    methods:{\n      success()\n      {\n        this.$toasted.show(" New order has been placed ", {theme: 'outline',position: "top-right", type: 'success', duration: 2000});\n      }\n    }\n   }\n </script>`}
                   />
-                  <CopyToClipboard
-                    id="treecode2"
-                    text={`\n import { Component, OnInit } from '@angular/core';\n import { TreeviewConfig, TreeviewItem } from 'ngx-treeview';\n import { TreeViewService } from 'src/app/shared/services/advance/tree-view/tree-view.service';\n                     \n @Component({\n selector: 'app-tree-view',\n templateUrl: './tree-view.component.html',\n styleUrls: ['./tree-view.component.scss']\n })\n export class TreeViewComponent implements OnInit {\n public config =TreeviewConfig.create(\n {\n hasAllCheckBox: false,\n hasFilter: false,\n hasCollapseExpand: false,\n decoupleChildFromParent: false,\n maxHeight: 500\n })\n public items: TreeviewItem[];\n constructor( private service: TreeViewService) { }\n \n ngOnInit(): void {\n this.items = this.service.getItems();\n }\n \n }`}
-                  />
-                  <a class="btn btn-solid" href="https://www.npmjs.com/package/ngx-treeview" target="_blank"> Supplemental </a>
+               
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-toasted" target="_blank"> Supplemental </a>
                 </div>
               </div>
-              <div class={`tab-pane fade ${(active=='owlcomponent') ? 'show active' : ''}`} id="owlcomponent" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
-                <div class="mb-4">
-                  <CopyToClipboard
-                    id="owlcode"
-                    text={`npm i ngx-owl-carousel-o`}
-                  />  
-                  <CopyToClipboard
-                    id="owlcode1"
-                    text={`\n <div>Some tags before</div>\n\n <owl-carousel-o [options]="customOptions">\n\n <ng-template carouselSlide>Slide 1</ng-template>\n\n <ng-template carouselSlide>Slide 2</ng-template>\n\n <ng-template carouselSlide>Slide 3</ng-template>\n\n </owl-carousel-o>`}
-                  />
-                  <CopyToClipboard
-                    id="owlcode2"
-                    text={`\n @Component({\n\n selector: '....',\n\n templateUrl: 'carousel-holder.component.html'\n\n })\n\n export class CarouselHolderComponent {\n\n customOptions: any = {\n\n loop: true,\n\n mouseDrag: false,\n\n touchDrag: false,\n\n pullDrag: false,\n\n dots: false,\n\n navSpeed: 700,\n\n navText: ['', ''],\n\n responsive: {\n\n 0: {\n\n items: 1\n\n },\n\n 400: {\n\n items: 2\n\n },\n\n 740: {\n\n items: 3\n\n },\n\n 940: {\n\n items: 4\n\n }\n\n },\n\n nav: true\n\n }\n\n }\n`}
-                  /> 
-                  <a class="btn btn-solid" href="https://www.npmjs.com/package/ngx-owl-carousel-o" target="_blank"> Supplemental </a>
-                </div>
-              </div>
-              <div class={`tab-pane fade ${(active=='tour') ? 'show active' : ''}`} id="tour" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
-                <div class="mb-4">
+              <div className={`tab-pane fade ${(active=='tour') ? 'show active' : ''}`} id="tour" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
                   <CopyToClipboard
                     id="tourcode"
-                    text={`npm i angular-custom-tour`}
+                    text={`npm i vue-tour`}
                   />  
                   <CopyToClipboard
                     id="tourcode1"
-                    text={`\n <!-- Bluring element insert on top of the page-->\n\n <tour-overlay></tour-overlay>\n\n \n\n <!-- start TOUR -->\n\n <button name="button" (click)="startTour()"> START!</button>\n\n \n\n <!-- Each step could be placed at ANYWHERE -->\n\n <div class="i-want-highlight-this" id="highlight-me"> WOW!</div>\n\n \n\n <tour-step selector="highlight-me" order="3" position="right" title="title string">\n\n <!-- ANY HTML HERE\n NOTE: ONLY selector attribute is required! others is up to you\n -->\n\n \n\n </tour-step>`}
+                    text={`\n <template>\n   <div>\n     <v-tour name="myTour" :steps="steps" :options="tourOptions"></v-tour>\n   </div>\n </template>\n <script>\n   export default {\n       data () {\n         return {\n           tourOptions: {\n              useKeyboardNavigation: true,\n              labels: {\n               buttonSkip: 'Skip',\n               buttonPrevious: 'Back',\n               buttonNext: 'Next',\n               buttonStop: 'Done'\n            }\n           },\n           steps: [\n            {\n               target: '#profile-tour',\n               content: 'This is Profile image'\n            },\n            {\n               target: '#update-profile-tour',\n               content: 'Change Profile image here'\n            }\n           ]\n         }\n       },\n       mounted: function () {\n         this.$tours['myTour'].start()\n       }\n   }\n </script>`}
                   />  
-                  <a class="btn btn-solid" href="https://www.npmjs.com/package/angular-custom-tour" target="_blank"> Supplemental </a>
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-tour" target="_blank"> Supplemental </a>
                 </div>
               </div>
-              <div class={`tab-pane fade ${(active=='rating') ? 'show active' : ''}`} id="rating" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
+              <div className={`tab-pane fade ${(active=='rating') ? 'show active' : ''}`} id="rating" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
                  <CopyToClipboard
                     id="ratingcode"
-                    text={`npm install @ng-bootstrap/ng-bootstrap`}
+                    text={`npm i vue-rate-it`}
                   /> 
                   <CopyToClipboard
                     id="ratingcode1"
-                    text={`<ngb-rating [(rate)]="currentRate"></ngb-rating>`}
+                    text={`\n <template>\n   <div>\n       <image-rating :src="rectanglerating()" :item-size="12" :max-rating="10"></image-rating>\n   </div>\n </template>\n <script>\n   import {ImageRating} from 'vue-rate-it';\n   \n   export default {\n     components: {\n       ImageRating\n     },\n     methods:{\n      vuelogo(){\n         var vuelogo = require('../../assets/images/vuelogo.png');\n       return vuelogo;\n      }\n     }\n   }\n </script>`}
                   /> 
-                  <a class="btn btn-solid" href="https://ng-bootstrap.github.io/#/components/rating/api" target="_blank"> Supplemental </a>
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-rate-it" target="_blank"> Supplemental </a>
               </div>
-              <div class={`tab-pane fade ${(active=='sweetalert') ? 'show active' : ''}`} id="sweetalert" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
-                <div class="mb-4">
+              <div className={`tab-pane fade ${(active=='pagination') ? 'show active' : ''}`} id="pagination" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
+                  <CopyToClipboard
+                    id="paginationcode"
+                    text={`\n <template>\n   <div>\n       <b-pagination-nav\n           :number-of-pages="3"\n           base-url="#"\n           first-text="First"\n           prev-text="Prev"\n           next-text="Next"\n           last-text="Last"\n           >\n       </b-pagination-nav>\n   </div>\n </template>\n <script>\n    export default { }\n </script>`}
+                  />  
+                  <a className="btn btn-solid" href="https://bootstrap-vue.org/docs/components/pagination-nav" target="_blank"> Supplemental </a>
+                </div>
+              </div>
+              <div className={`tab-pane fade ${(active=='sweetalert') ? 'show active' : ''}`} id="sweetalert" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
                   <CopyToClipboard
                     id="sweetalertcode"
-                    text={`npm install --save sweetalert2`}
+                    text={`npm i vue-sweetalert2`}
                   /> 
                   <CopyToClipboard
                     id="sweetalertcode1"
-                    text={` \n <div class="card-body btn-showcase">\n\n   <button type="button" class="btn btn-primary" (click)="basicAlert()">Basic</button>\n\n </div>`}
+                    text={` \n <template>\n   <div>\n     <b-button type="button" v-on:click="basic" variant="primary">Basic</b-button>\n   </div>\n </template>\n <script>\n   export default {\n       methods:{\n       basic:function(){\n           this.$swal({\n               title:'Hello world!'\n           });\n         }\n       }\n    }\n </script>`}
                   /> 
-                  <CopyToClipboard
-                    id="sweetalertcode2"
-                    text={`\n /* ES6 Modules or TypeScript */ \n\n import Swal from 'sweetalert2'\n\n \n\n /* CommonJS*/ \n\n const Swal = require('sweetalert2')\n\n ...\n\n /*method call */ \n\n basicAlert()\n {\n\n Swal.fire('Any fool can use a computer')\n\n }`}
-                  /> 
-                  <a class="btn btn-solid" href="https://www.npmjs.com/package/angular-sweetalert-2" target="_blank"> Supplemental </a>
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-sweetalert2" target="_blank"> Supplemental  </a>
                 </div>
               </div>
             </div>
-            <ul class="nav nav-tabs m-t-35" id="myTab5" role="tablist">
-              <li class="nav-item"><a class={`nav-link ${(activeAE == 'range-slider' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#range-slider" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('range-slider')}>Range slider</a></li>
-              <li class="nav-item"><a class={`nav-link ${(activeAE == 'image-cropper' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#image-cropper" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('image-cropper')}>Image Cropper</a></li>
-              <li class="nav-item"><a class={`nav-link ${(activeAE == 'imageupload' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#imageupload" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('imageupload')}>Image Upload</a></li>
+            <ul className="nav nav-tabs m-t-35" id="myTab5" role="tablist">
+              <li className="nav-item"><a className={`nav-link ${(activeAE == 'range-slider' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#range-slider" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('range-slider')}>Range slider</a></li>
+              <li className="nav-item"><a className={`nav-link ${(activeAE == 'image-cropper' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#image-cropper" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('image-cropper')}>Image Cropper</a></li>
+              <li className="nav-item"><a className={`nav-link ${(activeAE == 'dragdrop' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#dragdrop" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('dragdrop')}>Drag and Drop</a></li>
+              <li className="nav-item"><a className={`nav-link ${(activeAE == 'imageupload' ) ? 'active' : ''}`} data-bs-toggle="tab" url="#imageupload" role="tab" aria-selected="false" data-original-title="" title="" onClick={() => setActiveAE('imageupload')}>Image Upload</a></li>
             </ul>
-            <div class="tab-content" id="myTabContent5">
-              <div class={`tab-pane fade ${(activeAE == 'range-slider') ? 'show active' : ''}`} id="range-slider" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
-                <div class="mb-4">
+            <div className="tab-content" id="myTabContent5">
+              <div className={`tab-pane fade ${(activeAE == 'range-slider') ? 'show active' : ''}`} id="range-slider" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
                   <CopyToClipboard
                     id="rangeslidercode"
-                    text={`npm i ng5-slider`}
+                    text={`npm i vue-slide-bar`}
                   /> 
                   <CopyToClipboard
                     id="rangeslidercode1"
-                    text={`<ng5-slider [(value)]="value" [options]="options"></ng5-slider>`}
+                    text={`\n <template>\n   <div>\n     <VueSlideBar v-model="one.value" :min="1" :max="100" :range="one.range" ></VueSlideBar>\n   </div>\n </template>\n <script>\n   import VueSlideBar from 'vue-slide-bar'\n                                    export default {\n   data () {\n   return {\n         one:{\n           value:5,\n           range:[\n             {\n               label: '10'\n             },\n             {\n               label: '100'\n             },\n           ]\n         }\n       }\n     }\n   }\n </script>`}
                   /> 
-                  <CopyToClipboard
-                    id="rangeslidercode2"
-                    text={`\n import { Options } from 'ng5-slider';\n\n     ...\n\n @Component({...})\n\n     export class AppComponent {\n\n     value: number = 100;\n\n       options: Options = {\n\n       loor: 0,\n\n       floor: 0,\n\n       ceil: 200\n\n       };\n\n     }`}
-                  /> 
-                  <a class="btn btn-solid" href="https://www.npmjs.com/package/ng5-slider" target="_blank"> Supplemental </a>
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-slide-bar" target="_blank"> Supplemental </a>
                 </div>
               </div>
-              <div class={`tab-pane fade ${(activeAE == 'image-cropper') ? 'show active' : ''}`} id="image-cropper" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
-                <div class="mb-4">
+              <div className={`tab-pane fade ${(activeAE == 'image-cropper') ? 'show active' : ''}`} id="image-cropper" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
                   <CopyToClipboard
                     id="imgcroppercode"
-                    text={`npm i ngx-image-cropper`}
+                    text={`npm i vue-cropperjs`}
                   /> 
                   <CopyToClipboard
                     id="imgcroppercode1"
-                    text={` <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [containWithinAspectRatio]="containWithinAspectRatio" [aspectRatio]="4 / 3" [resizeToWidth]="256" [cropperMinWidth]="128" [onlyScaleDown]="true" [roundCropper]="false" [canvasRotation]="canvasRotation" [transform]="transform" [alignImage]="'left'" [style.display]="showCropper ? null : 'none'" format="png"  (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (cropperReady)="cropperReady($event)" (loadImageFailed)="loadImageFailed()" >`}
+                    text={`\n <template>\n   <div>\n      <vue-cropper ref='cropper'  :crop="cropImage"> </vue-cropper>\n   </div>\n </template>\n <script>\n   import VueCropper from 'vue-cropperjs';\n   import 'cropperjs/dist/cropper.css';\n    \n   export default {\n     data () {\n       return {\n         one:{\n           value:5,\n           range:[\n             {\n               label: '10'\n             },\n             {\n              label: '100'\n             },\n           ]\n         }\n       }\n     }\n   },\n   components: {\n     VueCropper,\n   },\n   mounted(){\n     this.imageData = this.$refs.cropper.getData();\n   },\n </script>`}
                   /> 
-                  <CopyToClipboard
-                    id="imgcroppercode2"
-                    text={`\n  import { Component, OnInit } from '@angular/core';\n   import { ImageTransform, ImageCroppedEvent, base64ToFile, Dimensions } from 'ngx-image-cropper';\n  \n  @Component({\n  selector: 'app-image-croper',\n  templateUrl: './image-croper.component.html',\n  styleUrls: ['./image-croper.component.scss']\n  })\n  export class ImageCroperComponent {\n  imageChangedEvent: any = '';\n  croppedImage: any = '';\n  canvasRotation = 0;\n  rotation = 0;\n  scale = 1;\n  showCropper = false;\n  containWithinAspectRatio = false;\n  transform: ImageTransform = {};\n\n  fileChangeEvent(event: any): void {\n  this.imageChangedEvent = event;\n  }\n\n  imageCropped(event: ImageCroppedEvent) {\n  this.croppedImage = event.base64;\n  console.log(event, base64ToFile(event.base64));\n  }\n\n  imageLoaded() {\n  this.showCropper = true;\n  console.log('Image loaded');\n  }\n\n  cropperReady(sourceImageDimensions: Dimensions) {\n  console.log('Cropper ready', sourceImageDimensions);\n  }\n\n  loadImageFailed() {\n  console.log('Load failed');\n  }\n\n  rotateLeft() {\n  this.canvasRotation--;\n  this.flipAfterRotate();\n  }\n\n  rotateRight() {\n  this.canvasRotation++;\n  this.flipAfterRotate();\n  }\n\n   private flipAfterRotate() {\n  const flippedH = this.transform.flipH;\n  const flippedV = this.transform.flipV;\n this.transform = {\n ...this.transform,\n flipH: flippedV,\n flipV: flippedH\n };\n }\n\n\n flipHorizontal() {\n this.transform = {\n ...this.transform,\n flipH: !this.transform.flipH\n };\n }\n\n flipVertical() {\n this.transform = {\n ...this.transform,\n flipV: !this.transform.flipV\n };\n }\n\n resetImage() {\n this.scale = 1;\n this.rotation = 0;\n this.canvasRotation = 0;\n this.transform = {};\n }\n\n zoomOut() {\n this.scale -= .1;\n this.transform = {\n ...this.transform,\n scale: this.scale\n };\n }\n\n zoomIn() {\n this.scale += .1;\n this.transform = {\n ...this.transform,\n scale: this.scale\n };\n }\n\n toggleContainWithinAspectRatio() {\n this.containWithinAspectRatio = !this.containWithinAspectRatio;\n }\n\n updateRotation() {\n this.transform = {\n ..this.transform,\n rotate: this.rotation\n };\n }\n }`}
-                  /> 
-                  <a class="btn btn-solid" href="https://www.npmjs.com/package/ngx-image-cropper" target="_blank"> Supplemental </a>
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue-cropperjs" target="_blank"> Supplemental </a>
                 </div>
               </div>
-              <div class={`tab-pane fade ${(activeAE == 'imageupload') ? 'show active' : ''}`} id="imageupload" role="tabpanel">
-                <p class="pt-4"><b>Installing and usage</b></p>
-                <div class="mb-4">
+              <div className={`tab-pane fade ${(activeAE == 'dragdrop') ? 'show active' : ''}`} id="dragdrop" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
+                  <CopyToClipboard
+                    id="dragdropcode"
+                    text={`npm i vue2-dragula`}
+                  /> 
+                  <CopyToClipboard
+                    id="dragdropcode"
+                    text={`\n <template>\n   <div>\n     <div className="pull-left " v-dragula="colOne" service="my-third" drake="a">\n       <div v-for="text in colOne" :key="text">{{text}}</div>\n     </div>\n     <div className="pull-right" v-dragula="colTwo" service="my-third" drake="a">\n       <div v-for="text in colTwo" :key="text">{{text}}</div>\n     </div>\n   </div>\n </template>\n <script>\n   import { Vue2Dragula } from 'vue2-dragula'\n   export default {\n     data () {\n       return {\n        one: [\n             'Lorem ipsum dolor sit amet, consectetur',\n             'sed do eiusmod tempor incididunt ut labore et dolore magna.',\n             'Ut enim ad minim veniam, quis nostrud exercitation',\n             'ullamco laboris nisi ut aliquip ex ea commodo consequat.'\n         ],\n         two: [\n             'Duis aute irure dolor in reprehenderit in voluptate velit esse',\n             'cillum dolore eu fugiat nulla pariatur.',\n             'Excepteur sint occaecat cupidatat non proident,',\n             'sunt in culpa qui officia deserunt mollit anim id est laborum.'\n         ],\n       }\n     }\n   },\n   components: {\n           Vue2Dragula\n   },\n   mounted(){\n       this.imageData = this.$refs.cropper.getData();\n   },\n </script>`}
+                  /> 
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue2-dragula" target="_blank"> Supplemental </a>
+                </div>
+              </div>
+              <div className={`tab-pane fade ${(activeAE == 'imageupload') ? 'show active' : ''}`} id="imageupload" role="tabpanel">
+                <p className="pt-4"><b>Installing and usage</b></p>
+                <div className="mb-4">
                   <CopyToClipboard
                     id="uploadcode"
-                    text={`npm i ngx-dropzone-wrapper`}
+                    text={`npm i vue2-dropzone`}
                   /> 
-                  
                   <CopyToClipboard
                     id="uploadcode1"
-                    text={`\n <div class="card-body">\n\n <div class="dropzone dropzone-primary" [dropzone]="config1" (error)="onUploadError($event)" (success)="onUploadSuccess($event)">\n\n <div class="dz-message needsclick">\n\n ............\n\n </div>\n\n </div>\n\n </div>\n`}
+                    text={`\n <template>\n   <div>\n     <vue-dropzone id="singledropzone" :options="singledropzoneOptions" className="dropzone digits">                                \n     </vue-dropzone>\n   </div>\n </template>\n <script>\n   import vue2Dropzone from 'vue2-dropzone'\n   export default {\n     data () {\n       return {\n         singledropzoneOptions:{\n           url:"<a href="http://localhost:8080" aria-invalid="true">http://localhost:8080</a>",\n           thumbnailWidth: 150,\n           maxFiles:1,\n           maxFilesize: 2,\n           addRemoveLinks: true,\n           dictDefaultMessage:"<i className='icon-cloud-up'></i><h6>Drop files here or click to upload.</h6><span>(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>"\n         },\n       }\n     }\n   },\n   components: {\n       vueDropzone: vue2Dropzone\n   }\n </script>`}
                   /> 
-                  
-                  <CopyToClipboard
-                    id="uploadcode2"
-                    text={`\n import { DropzoneConfigInterface } from 'ngx-dropzone-wrapper';\n\n public config1: DropzoneConfigInterface = {\n\n clickable: true,\n\n maxFiles: 1,\n\n autoReset: null,\n\n errorReset: null,\n\n cancelReset: null\n\n }`}
-                  /> 
-                  <a class="btn btn-solid" href="https://www.npmjs.com/package/ngx-dropzone-wrapper" target="_blank"> Supplemental </a>
+                  <a className="btn btn-solid" href="https://www.npmjs.com/package/vue2-dropzone" target="_blank"> Supplemental </a>
                 </div>
               </div>
             </div>

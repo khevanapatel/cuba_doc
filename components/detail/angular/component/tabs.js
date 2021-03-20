@@ -3,7 +3,7 @@ import {useState} from 'react';
 import CopyToClipboard from '../../../common/copy-to-clipboard';
 
 const Tabs = () => { 
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState('home-tab');
 	return(
 		<div className="fluid-container py-4">
       <ul className="nav nav-tabs" id="myTab3" role="tablist">
