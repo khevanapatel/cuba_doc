@@ -1,9 +1,20 @@
+import React, { useState, useEffect, useContext } from 'react';
+
+import { HeaderContext } from '../helpers/HeaderContext';
 import Layout from '../components/common/layout';
 
 const HtmlOptions = () => {
+  const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
+
+  const headerContext = useContext(HeaderContext);
+  const HeaderContextObj = headerContext.HeaderContext;
+
+  useEffect(()=>{
+     setFontSizeLocal('font-'+HeaderContextObj.fontSize);
+  },[HeaderContextObj])
 	return(
 		<Layout>
-		  <div className="col-lg-9 option-main-sec content">
+		  <div className={`col-lg-9 option-main-sec content ${fontSizeLocal}`}>
             <div className="card">
               <div className="card-body">
                 <h4 className="main-title mb-0">Options</h4>

@@ -5,9 +5,9 @@ const Cards = () => {
 	return(
 		<div className="card-body">
 	        <hr/>
-	        <h5>Tables</h5>
+	        <h5>Cards</h5>
 	        <ul className="nav nav-tabs" id="myTab8" role="tablist">
-	          <li className="nav-item"><a className={`nav-link ${(active=='basic-card')? 'active' : ''}`} data-bs-toggle="tab" url="#basic-card" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('basic-card')}>Bootstrap Table</a></li>
+	          <li className="nav-item"><a className={`nav-link ${(active=='basic-card')? 'active' : ''}`} data-bs-toggle="tab" url="#basic-card" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('basic-card')}>Basic Card</a></li>
 	          <li className="nav-item"><a className={`nav-link ${(active=='draggable-cards')? 'active' : ''}`} data-bs-toggle="tab" url="#draggable-cards" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('draggable-cards')}>Draggable Cards</a></li>
 	          <li className="nav-item"><a className={`nav-link ${(active=='theme-cards')? 'active' : ''}`} data-bs-toggle="tab" url="#theme-cards" role="tab" aria-selected="true" data-original-title="" title="" onClick={()=>setActive('theme-cards')}>Theme Cards</a></li>
 	        </ul>

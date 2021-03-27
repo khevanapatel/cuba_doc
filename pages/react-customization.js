@@ -1,12 +1,23 @@
+import React, { useState, useEffect, useContext } from 'react';
+
+import { HeaderContext } from '../helpers/HeaderContext';
 import Layout from '../components/common/layout';
 import CopyToClipboard from '../components/common/copy-to-clipboard';
 
 const ReactCustomization = () => {
+	const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
+
+    const headerContext = useContext(HeaderContext);
+    const HeaderContextObj = headerContext.HeaderContext;
+
+    useEffect(()=>{
+      setFontSizeLocal('font-'+HeaderContextObj.fontSize);
+    },[HeaderContextObj])
 	const show = '';
 	const PUBLIC_URL = 'process.env.PUBLIC_URL';
 	return(
 		<Layout>
-			<div className="col-xxl-10 col-xl-9 content component-col">
+			<div className={`col-xxl-10 col-xl-9 content component-col ${fontSizeLocal}`}>
 	            <div id="section-1">
 	              <div className="card">
 	                <div id="section-1-1">

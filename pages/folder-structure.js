@@ -1,9 +1,79 @@
-import Layout from '../components/common/layout';
+import React, { useState, useEffect, useContext } from 'react';
 
+import { HeaderContext } from '../helpers/HeaderContext';
+import Layout from '../components/common/layout';
+import TreeView from './react-treeview';
+import react from '../components/json/react';
 const FolderStructure = () => {
+	const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
+
+    const headerContext = useContext(HeaderContext);
+    const HeaderContextObj = headerContext.HeaderContext;
+
+    useEffect(()=>{
+       setFontSizeLocal('font-'+HeaderContextObj.fontSize);
+    },[HeaderContextObj])
+
+    const dataSource = [
+	    {
+	      name: 'cuba',
+	      collapsed: false,
+	      data: [
+	        {
+	          name: 'document', 
+	          collapsed: false,
+	          data:[
+	            {
+	              name: 'index.html', 
+	              collapsed: false,
+	            }
+	          ]
+	        },
+	        {
+	          name: 'starterkit',
+	          collapsed: false
+	        },
+	        {
+	          name: 'theme',
+	          collapsed: false
+	        },
+	      ],
+	    }
+	];	
+
+	const getTree = (data) => {
+		 const treeObj = data.map((value, index) => {
+	    	const label2 = <span className="node">{value.name}</span>;
+            return (
+              <span key={index}>
+              {value.data ?
+	            <TreeView nodeLabel={label2} key={value.name} defaultCollapsed={false}>
+	                {value.data ? getTree(value.data) : ''}
+	            </TreeView>
+	            : 
+	            <div>{value.name}</div>
+	        }
+              </span>
+            );
+	    })
+	    return treeObj;
+	}
+
 	return(
 		<Layout>
-			<div className="col-lg-9 content">
+			<div className={`col-lg-9 content ${fontSizeLocal}`}>
+				  <div>
+			        {react.map((node, i) => {
+			          const name = node.name;
+			          const label = <span className="node">{name}</span>;
+			          return (
+			            <TreeView key={name + '|' + i} nodeLabel={label} defaultCollapsed={false}>
+			              {node.data ? getTree(node.data) : ''}
+			              
+			            </TreeView>
+			          );
+			        })}
+			      </div>
 	            <div className="row">
 	              <div className="col-sm-12 col-xl-6">
 	                <div className="card">

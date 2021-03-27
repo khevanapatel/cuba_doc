@@ -1,3 +1,6 @@
+import React, { useState, useEffect, useContext } from 'react';
+
+import { HeaderContext } from '../helpers/HeaderContext';
 import Layout from '../components/common/layout';
 import BasicUiElement from '../components/detail/vue/basic-ui-element';
 import AdvanceUiElement from '../components/detail/vue/advance-ui-element';
@@ -8,9 +11,17 @@ import Maps from '../components/detail/vue/maps';
 import Editors from '../components/detail/vue/editors';
 
 const VueComponent = () => {
+	const [fontSizeLocal, setFontSizeLocal] = useState('increase'); 
+
+	const headerContext = useContext(HeaderContext);
+	const HeaderContextObj = headerContext.HeaderContext;
+
+	useEffect(()=>{
+	   setFontSizeLocal('font-'+HeaderContextObj.fontSize);
+	},[HeaderContextObj])
 	return(
 		<Layout>
-		<div className="col-xxl-10 col-xl-9 content component-col">
+		<div className={`col-xxl-10 col-xl-9 content component-col ${fontSizeLocal}`}>
 			<div id="section-1">
 	          <div className="card">
 	            <div className="card-body">
